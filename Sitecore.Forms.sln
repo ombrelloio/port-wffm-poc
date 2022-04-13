@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.WFFM.Update", "Sit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.WFFM.Analytics", "Sitecore.WFFM.Analytics\Sitecore.WFFM.Analytics.csproj", "{0F48C05D-3DC7-464A-A1D4-4D813C8A1F13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.WFFM.Web", "Sitecore.WFFM.Web\Sitecore.WFFM.Web.csproj", "{940880C4-300F-44BD-A2BC-AB43017980E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0F48C05D-3DC7-464A-A1D4-4D813C8A1F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F48C05D-3DC7-464A-A1D4-4D813C8A1F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F48C05D-3DC7-464A-A1D4-4D813C8A1F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940880C4-300F-44BD-A2BC-AB43017980E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940880C4-300F-44BD-A2BC-AB43017980E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940880C4-300F-44BD-A2BC-AB43017980E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940880C4-300F-44BD-A2BC-AB43017980E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
