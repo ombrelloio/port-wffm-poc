@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Work\Assemblies\WFFM\Sitecore.WFFM.Abstractions.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AAF0701-6EAF-4736-BEDB-45089FEAB16C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sitecore.WFFM.Abstractions</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Sitecore.WFFM.Abstractions</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\SharedAssemblies\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharedAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\SharedAssemblies\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Marketing">
+      <HintPath>..\SharedAssemblies\Sitecore.Marketing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analytics\IModelCollectionMember.cs" />
+    <Compile Include="Analytics\IModelMember.cs" />
+    <Compile Include="Analytics\IModelMemberCollection.cs" />
+    <Compile Include="LogMessageType.cs" />
+    <Compile Include="RequiredAttribute.cs" />
+    <Compile Include="Utils\IConvertionUtil.cs" />
+    <Compile Include="Utils\IFormRegistryUtil.cs" />
+    <Compile Include="Utils\IParametersUtil.cs" />
+    <Compile Include="Utils\IWebUtil.cs" />
+    <Compile Include="Wrappers\ISitecoreContextWrapper.cs" />
+    <Compile Include="Wrappers\UI\ClientPageWrapper.cs" />
+    <Compile Include="Wrappers\UI\ClientResponseWrapper.cs" />
+    <Compile Include="Wrappers\UI\ISheerResponseWrapper.cs" />
+    <Compile Include="Wrappers\UI\SheerResponseWrapper.cs" />
+    <Compile Include="Pipeline\ExportArgs.cs" />
+    <Compile Include="ContentEditor\IGroupDefinition.cs" />
+    <Compile Include="ContentEditor\IListDefinition.cs" />
+    <Compile Include="ContentEditor\IListItemDefinition.cs" />
+    <Compile Include="Shared\IAnalyticsTracker.cs" />
+    <Compile Include="Shared\IAuthentificationManager.cs" />
+    <Compile Include="Shared\IContextProvider.cs" />
+    <Compile Include="Shared\IDatabaseRepository.cs" />
+    <Compile Include="Shared\IDbConnectionProvider.cs" />
+    <Compile Include="Shared\IFacetFactory.cs" />
+    <Compile Include="Shared\IFactoryObjectsProvider.cs" />
+    <Compile Include="Shared\IItemRepository.cs" />
+    <Compile Include="Shared\IFieldProvider.cs" />
+    <Compile Include="Shared\ILogger.cs" />
+    <Compile Include="Shared\IMailSender.cs" />
+    <Compile Include="Shared\IPerRequestStorage.cs" />
+    <Compile Include="Shared\IReflectionProvider.cs" />
+    <Compile Include="Shared\IRequirementsChecker.cs" />
+    <Compile Include="Shared\IResourceManager.cs" />
+    <Compile Include="Shared\ISettings.cs" />
+    <Compile Include="Shared\IWffmEventManager.cs" />
+    <Compile Include="Shared\ITranslationProvider.cs" />
+    <Compile Include="Mail\Constants.cs" />
+    <Compile Include="Mail\EmailAttributes.cs" />
+    <Compile Include="Mail\IEmailAttributes.cs" />
+    <Compile Include="Mail\MessageType.cs" />
+    <Compile Include="Mail\ProcessMessageArgs.cs" />
+    <Compile Include="Dependencies\DependenciesPaths.cs" />
+    <Compile Include="Dependencies\DependencyPathAttribute.cs" />
+    <Compile Include="Dependencies\DependenciesManager.cs" />
+    <Compile Include="Data\IFormContext.cs" />
+    <Compile Include="Data\ISitecoreItem.cs" />
+    <Compile Include="Data\ITrackingFactory.cs" />
+    <Compile Include="Data\IFieldDefinition.cs" />
+    <Compile Include="Data\IFieldItem.cs" />
+    <Compile Include="Data\IFieldTypeItem.cs" />
+    <Compile Include="Data\IFormDefinition.cs" />
+    <Compile Include="Data\IFormItem.cs" />
+    <Compile Include="Data\ISectionDefinition.cs" />
+    <Compile Include="Data\ISubFieldItem.cs" />
+    <Compile Include="Data\ITracking.cs" />
+    <Compile Include="Data\IValidationItem.cs" />
+    <Compile Include="Data\PageCriteria.cs" />
+    <Compile Include="Data\SortCriteria.cs" />
+    <Compile Include="Data\SortDirection.cs" />
+    <Compile Include="Data\Enums\FormType.cs" />
+    <Compile Include="Analytics\ClientEvent.cs" />
+    <Compile Include="Analytics\Constants.cs" />
+    <Compile Include="Analytics\IEventBase.cs" />
+    <Compile Include="Analytics\FacetNode.cs" />
+    <Compile Include="Analytics\FieldData.cs" />
+    <Compile Include="Analytics\FormData.cs" />
+    <Compile Include="Analytics\PageEventIds.cs" />
+    <Compile Include="Analytics\IAnalyticsSettings.cs" />
+    <Compile Include="Analytics\IContactManager.cs" />
+    <Compile Include="Analytics\IContactRepository.cs" />
+    <Compile Include="Analytics\IDs.cs" />
+    <Compile Include="Analytics\ServerEvent.cs" />
+    <Compile Include="Analytics\IContactFacetFactory.cs" />
+    <Compile Include="Analytics\IFieldValuesStatistic.cs" />
+    <Compile Include="Analytics\IFormContactsResult.cs" />
+    <Compile Include="Analytics\IFormFieldStatistics.cs" />
+    <Compile Include="Analytics\IFormStatistics.cs" />
+    <Compile Include="Analytics\IWffmDataProvider.cs" />
+    <Compile Include="Actions\ActionCallContext.cs" />
+    <Compile Include="Actions\ActionQueryContext.cs" />
+    <Compile Include="Actions\AdaptedResultList.cs" />
+    <Compile Include="Actions\IActionDefinition.cs" />
+    <Compile Include="Actions\IActionExecutor.cs" />
+    <Compile Include="Actions\IAction.cs" />
+    <Compile Include="Actions\ICheckAction.cs" />
+    <Compile Include="Actions\ISaveAction.cs" />
+    <Compile Include="Actions\ISystemAction.cs" />
+    <Compile Include="Actions\PostedFileData.cs" />
+    <Compile Include="Actions\AdaptedControlResult.cs" />
+    <Compile Include="Actions\ControlResult.cs" />
+    <Compile Include="Actions\ActionState.cs" />
+    <Compile Include="Actions\ActionType.cs" />
+    <Compile Include="Actions\ExecuteResult.cs" />
+    <Compile Include="Actions\IActionItem.cs" />
+    <Compile Include="Actions\PostedFile.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

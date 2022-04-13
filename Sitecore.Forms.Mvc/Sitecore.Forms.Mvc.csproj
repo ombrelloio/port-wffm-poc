@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Work\Assemblies\WFFM\Sitecore.Forms.Mvc.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D8A5D09-5364-40BA-A0E7-2831D8303513}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sitecore.Forms.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Sitecore.Forms.Mvc</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\SharedAssemblies\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SharedAssemblies\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\SharedAssemblies\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharedAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc">
+      <HintPath>..\SharedAssemblies\RazorGenerator.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\SharedAssemblies\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\SharedAssemblies\Sitecore.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SharedAssemblies\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\SharedAssemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\SharedAssemblies\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SharedAssemblies\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SharedAssemblies\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SharedAssemblies\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SharedAssemblies\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\SharedAssemblies\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\SharedAssemblies\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RazorGeneratorMvcStart.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Reflection\ReflectionUtil.cs" />
+    <Compile Include="Models\FormModel.cs" />
+    <Compile Include="Models\MetadataProviders\ModelTypeMetadataProvider.cs" />
+    <Compile Include="ViewModels\ValuedFieldViewModel`1.cs" />
+    <Compile Include="ViewModels\FieldViewModel.cs" />
+    <Compile Include="ViewModels\FormViewModel.cs" />
+    <Compile Include="ViewModels\SectionViewModel.cs" />
+    <Compile Include="ViewModels\Fields\CaptchaField.cs" />
+    <Compile Include="ViewModels\Fields\RecaptchaField.cs" />
+    <Compile Include="ViewModels\Fields\CheckboxField.cs" />
+    <Compile Include="ViewModels\Fields\CreditCardField.cs" />
+    <Compile Include="ViewModels\Fields\DateField.cs" />
+    <Compile Include="ViewModels\Fields\DatePickerField.cs" />
+    <Compile Include="ViewModels\Fields\DropListField.cs" />
+    <Compile Include="ViewModels\Fields\EmailField.cs" />
+    <Compile Include="ViewModels\Fields\FileUploadField.cs" />
+    <Compile Include="ViewModels\Fields\ListBoxField.cs" />
+    <Compile Include="ViewModels\Fields\CheckboxListField.cs" />
+    <Compile Include="ViewModels\Fields\MultipleLineTextField.cs" />
+    <Compile Include="ViewModels\Fields\NumberField.cs" />
+    <Compile Include="ViewModels\Fields\PasswordConfirmationField.cs" />
+    <Compile Include="ViewModels\Fields\PasswordField.cs" />
+    <Compile Include="ViewModels\Fields\RadioListField.cs" />
+    <Compile Include="ViewModels\Fields\SingleLineTextField.cs" />
+    <Compile Include="ViewModels\Fields\SmsTelephoneField.cs" />
+    <Compile Include="ViewModels\Fields\TelephoneField.cs" />
+    <Compile Include="Validators\CaptchaResponseValidatorAttribute.cs" />
+    <Compile Include="Validators\ReCaptchaResponse.cs" />
+    <Compile Include="Validators\DynamicRangeAttribute.cs" />
+    <Compile Include="Validators\DynamicValidationBase.cs" />
+    <Compile Include="Validators\DynamicEmailAttribute.cs" />
+    <Compile Include="Validators\MultiRegularExpressionAttribute.cs" />
+    <Compile Include="Validators\DynamicCompareAttribute.cs" />
+    <Compile Include="Validators\DynamicRegularExpressionAttribute.cs" />
+    <Compile Include="Validators\DynamicRequiredAttribute.cs" />
+    <Compile Include="Validators\DynamicStringLengthAttribute.cs" />
+    <Compile Include="Validators\RecaptchaResponseValidatorAttribute.cs" />
+    <Compile Include="Validators\Rules\ModelClientValidationCheckedRule.cs" />
+    <Compile Include="Helpers\RulesManager.cs" />
+    <Compile Include="Html\MvcTagElement.cs" />
+    <Compile Include="Html\ScriptsManager.cs" />
+    <Compile Include="Html\HtmlHelperExtensions.cs" />
+    <Compile Include="Services\AutoMapper.cs" />
+    <Compile Include="Services\FormProcessor.cs" />
+    <Compile Include="Services\ProcessorBase`1.cs" />
+    <Compile Include="Services\FormRepository.cs" />
+    <Compile Include="Metadata\PipelineBasedDataAnnotationsModelMetadataProvider.cs" />
+    <Compile Include="Pipelines\FormProcessorArgs`1.cs" />
+    <Compile Include="Pipelines\PipelineNames.cs" />
+    <Compile Include="Pipelines\FormProcessorBase`1.cs" />
+    <Compile Include="Pipelines\ExecuteSaveActions\SaveDataAndExecuteSaveActions.cs" />
+    <Compile Include="Pipelines\Submit\RegisterFormSubmitEvent.cs" />
+    <Compile Include="Pipelines\Error\FormatErrorMessage.cs" />
+    <Compile Include="Pipelines\Error\RegisterFormFailures.cs" />
+    <Compile Include="Pipelines\Initialize\InitializeFormFilters.cs" />
+    <Compile Include="Pipelines\Initialize\AddCustomMetadataProvider.cs" />
+    <Compile Include="Pipelines\Initialize\InitializeRoutes.cs" />
+    <Compile Include="Pipelines\CreateMetadata\AddWffmMetadata.cs" />
+    <Compile Include="Pipelines\CreateMetadata\CreateMetadataProcessorBase.cs" />
+    <Compile Include="Pipelines\CreateMetadata\CreateMetadataArgs.cs" />
+    <Compile Include="Interfaces\IHasErrors.cs" />
+    <Compile Include="Interfaces\IConfiguration.cs" />
+    <Compile Include="Interfaces\IStyleSettings.cs" />
+    <Compile Include="Interfaces\IHasId.cs" />
+    <Compile Include="Interfaces\IHasAnalyticsEvent.cs" />
+    <Compile Include="Interfaces\IAutoMapper`2.cs" />
+    <Compile Include="Interfaces\IHasIsRequired.cs" />
+    <Compile Include="Interfaces\IHasRegularExpression.cs" />
+    <Compile Include="Interfaces\IModelEntity.cs" />
+    <Compile Include="Interfaces\IRepository`1.cs" />
+    <Compile Include="Interfaces\IFormProcessor`1.cs" />
+    <Compile Include="Interfaces\IHasItem.cs" />
+    <Compile Include="Interfaces\ISubmitSettings.cs" />
+    <Compile Include="Interfaces\IViewModel.cs" />
+    <Compile Include="Interfaces\IContainerMetadata.cs" />
+    <Compile Include="Interfaces\IFieldResult.cs" />
+    <Compile Include="Interfaces\IFormModel.cs" />
+    <Compile Include="Interfaces\IPropertyBinder.cs" />
+    <Compile Include="Interfaces\ISelectList.cs" />
+    <Compile Include="Interfaces\IValidationRuleMetadata.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\ModelMetadataExtensions.cs" />
+    <Compile Include="Data\Wrappers\IDatabase.cs" />
+    <Compile Include="Data\Wrappers\IRendering.cs" />
+    <Compile Include="Data\Wrappers\IRenderingContext.cs" />
+    <Compile Include="Data\Wrappers\IRenderingParameters.cs" />
+    <Compile Include="Data\Wrappers\WrappedDatabase.cs" />
+    <Compile Include="Data\Wrappers\WrappedRendering.cs" />
+    <Compile Include="Data\Wrappers\WrappedRenderingContext.cs" />
+    <Compile Include="Data\Wrappers\WrappedRenderingParameters.cs" />
+    <Compile Include="TypeConverters\IsoDateTimeConverter.cs" />
+    <Compile Include="TypeConverters\ListItemsConverter.cs" />
+    <Compile Include="TypeConverters\ListSelectItemsConverter.cs" />
+    <Compile Include="Controllers\FormErrorResult`2.cs" />
+    <Compile Include="Controllers\FormResult`2.cs" />
+    <Compile Include="Controllers\JsonpResult.cs" />
+    <Compile Include="Controllers\ProcessedFormResult`2.cs" />
+    <Compile Include="Controllers\ClientEventController.cs" />
+    <Compile Include="Controllers\FormController.cs" />
+    <Compile Include="Controllers\ModelBinders\DefaultFormModelBinder.cs" />
+    <Compile Include="Controllers\ModelBinders\SectionModelBinder.cs" />
+    <Compile Include="Controllers\ModelBinders\FieldModelBinder.cs" />
+    <Compile Include="Controllers\ModelBinders\FormModelBinder.cs" />
+    <Compile Include="Controllers\ModelBinders\FieldBinders\CaptchaFieldBinder.cs" />
+    <Compile Include="Controllers\ModelBinders\FieldBinders\DefaultFieldValueBinder.cs" />
+    <Compile Include="Controllers\ModelBinders\FieldBinders\ListFieldValueBinder.cs" />
+    <Compile Include="Controllers\Filters\AllowCrossSiteJsonAttribute.cs" />
+    <Compile Include="Controllers\Filters\WffmLimitMultipleSubmitsAttribute.cs" />
+    <Compile Include="Controllers\Filters\WffmValidateAntiForgeryTokenAttribute.cs" />
+    <Compile Include="Controllers\Filters\SubmittedFormHandler.cs" />
+    <Compile Include="Attributes\FormErrorHandlerAttribute.cs" />
+    <Compile Include="Attributes\ParameterConverterAttribute.cs" />
+    <Compile Include="Attributes\ParameterNameAttribute.cs" />
+    <Compile Include="Attributes\PropertyBinderAttribute.cs" />
+    <Compile Include="Attributes\RequestFormValueAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Forms.Core\Sitecore.Forms.Core.csproj">
+      <Project>{11e68e05-f463-457d-a33f-d9434597acfb}</Project>
+      <Name>Sitecore.Forms.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.WFFM.Abstractions\Sitecore.WFFM.Abstractions.csproj">
+      <Project>{3aaf0701-6eaf-4736-bedb-45089feab16c}</Project>
+      <Name>Sitecore.WFFM.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

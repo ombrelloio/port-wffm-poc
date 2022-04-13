@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Work\Assemblies\WFFM\Sitecore.WFFM.Services.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00C956DD-130B-4B95-B697-34F22B81B482}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sitecore.WFFM.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Sitecore.WFFM</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharedAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\SharedAssemblies\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Web">
+      <HintPath>..\SharedAssemblies\Sitecore.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\SharedAssemblies\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\SharedAssemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Speak\ViewModel\FormPacket.cs" />
+    <Compile Include="Services\Constants.cs" />
+    <Compile Include="Services\Services\WebApiConfig.cs" />
+    <Compile Include="Services\Requests\Controllers\ExportFormDataController.cs" />
+    <Compile Include="Services\Requests\Controllers\FormReportsController.cs" />
+    <Compile Include="Services\Pipelines\FormExportArgs.cs" />
+    <Compile Include="Services\Pipelines\ExportCompleted.cs" />
+    <Compile Include="Services\Pipelines\SaveContent.cs" />
+    <Compile Include="Services\Pipelines\Initialize\RegisterHttpRoutes.cs" />
+    <Compile Include="Services\Pipelines\ExportToExcel\ExportFormDataToExcel.cs" />
+    <Compile Include="Services\Pipelines\ExportToXml\ExportFormDataToXml.cs" />
+    <Compile Include="Services\Filters\AuthorizeSitecoreAttribute.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.WFFM.Abstractions\Sitecore.WFFM.Abstractions.csproj">
+      <Project>{3aaf0701-6eaf-4736-bedb-45089feab16c}</Project>
+      <Name>Sitecore.WFFM.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

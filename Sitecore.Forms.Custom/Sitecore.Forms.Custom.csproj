@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Work\Assemblies\WFFM\Sitecore.Forms.Custom.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F54E9701-9E34-4960-997E-917678B585CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sitecore.Forms.Custom</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Sitecore</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\SharedAssemblies\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\SharedAssemblies\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\SharedAssemblies\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\SharedAssemblies\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Marketing">
+      <HintPath>..\SharedAssemblies\Sitecore.Marketing.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Marketing.Core">
+      <HintPath>..\SharedAssemblies\Sitecore.Marketing.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Xdb.MarketingAutomation.Core">
+      <HintPath>..\SharedAssemblies\Sitecore.Xdb.MarketingAutomation.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Xdb.MarketingAutomation.OperationsClient">
+      <HintPath>..\SharedAssemblies\Sitecore.Xdb.MarketingAutomation.OperationsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globalization\AssemblyMetadata.cs" />
+    <Compile Include="Form\UI\Adapters\DateAdapter.cs" />
+    <Compile Include="Form\UI\Adapters\FileUploadAdapter.cs" />
+    <Compile Include="Form\UI\UserControls\Captcha.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\UI\UserControls\CreditCard.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\UI\UserControls\PasswordConfirmation.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Web\UI\Controls\Checkbox.cs" />
+    <Compile Include="Form\Web\UI\Controls\CheckboxList.cs" />
+    <Compile Include="Form\Web\UI\Controls\DatePicker.cs" />
+    <Compile Include="Form\Web\UI\Controls\DateSelector.cs" />
+    <Compile Include="Form\Web\UI\Controls\DropList.cs" />
+    <Compile Include="Form\Web\UI\Controls\Email.cs" />
+    <Compile Include="Form\Web\UI\Controls\Label.cs" />
+    <Compile Include="Form\Web\UI\Controls\List.cs" />
+    <Compile Include="Form\Web\UI\Controls\MultipleLineText.cs" />
+    <Compile Include="Form\Web\UI\Controls\Number.cs" />
+    <Compile Include="Form\Web\UI\Controls\Password.cs" />
+    <Compile Include="Form\Web\UI\Controls\RadioList.cs" />
+    <Compile Include="Form\Web\UI\Controls\SingleLineText.cs" />
+    <Compile Include="Form\Web\UI\Controls\SmsTelephone.cs" />
+    <Compile Include="Form\Web\UI\Controls\Telephone.cs" />
+    <Compile Include="Form\Web\UI\Controls\UploadFile.cs" />
+    <Compile Include="Form\Core\Configuration\SubFieldIds.cs" />
+    <Compile Include="Form\Submit\CampaignAction.cs" />
+    <Compile Include="Form\Submit\EnrollInEngagementPlan.cs" />
+    <Compile Include="Form\Submit\MembershipCheckAction.cs" />
+    <Compile Include="Form\Submit\UserInRole.cs" />
+    <Compile Include="Form\Submit\ChangePassword.cs" />
+    <Compile Include="Form\Submit\CheckUserAction.cs" />
+    <Compile Include="Form\Submit\CheckUserPassword.cs" />
+    <Compile Include="Form\Submit\CreateUser.cs" />
+    <Compile Include="Form\Submit\EditRoleMembership.cs" />
+    <Compile Include="Form\Submit\LoginUserWithoutPassword.cs" />
+    <Compile Include="Form\Submit\LoginUserWithPassword.cs" />
+    <Compile Include="Form\Submit\RegisterConversionAction.cs" />
+    <Compile Include="Form\Submit\FormSaveEventTest.cs" />
+    <Compile Include="Form\Submit\CreateItem.cs" />
+    <Compile Include="Form\Submit\UserBaseAction.cs" />
+    <Compile Include="Form\Submit\UserExists.cs" />
+    <Compile Include="Form\Submit\UserLogout.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Forms.Core\Sitecore.Forms.Core.csproj">
+      <Project>{11e68e05-f463-457d-a33f-d9434597acfb}</Project>
+      <Name>Sitecore.Forms.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.WFFM.Abstractions\Sitecore.WFFM.Abstractions.csproj">
+      <Project>{3aaf0701-6eaf-4736-bedb-45089feab16c}</Project>
+      <Name>Sitecore.WFFM.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.WFFM.Actions\Sitecore.WFFM.Actions.csproj">
+      <Project>{170b0299-912f-4b23-beb6-d9f9e92ba1bf}</Project>
+      <Name>Sitecore.WFFM.Actions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

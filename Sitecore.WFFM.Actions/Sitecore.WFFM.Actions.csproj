@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Work\Assemblies\WFFM\Sitecore.WFFM.Actions.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{170B0299-912F-4B23-BEB6-D9F9E92BA1BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sitecore.WFFM.Actions</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Sitecore.WFFM.Actions</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\SharedAssemblies\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Client">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Client.Configuration">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Client.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Collection.Model">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Collection.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Core">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemActions\GoalAction.cs" />
+    <Compile Include="SystemActions\TagAction.cs" />
+    <Compile Include="SaveActions\AddContactToContactList.cs" />
+    <Compile Include="SaveActions\SendMessage.cs" />
+    <Compile Include="SaveActions\TellAFriend.cs" />
+    <Compile Include="SaveActions\UpdateContactDetails.cs" />
+    <Compile Include="Base\WffmAction.cs" />
+    <Compile Include="Base\WffmCheckAction.cs" />
+    <Compile Include="Base\WffmSaveAction.cs" />
+    <Compile Include="Base\WffmSystemAction.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.WFFM.Abstractions\Sitecore.WFFM.Abstractions.csproj">
+      <Project>{3aaf0701-6eaf-4736-bedb-45089feab16c}</Project>
+      <Name>Sitecore.WFFM.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

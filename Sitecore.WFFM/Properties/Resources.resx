@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CONFIGURE_THE_TEMPLATE_OF_YOUR_MAIL" xml:space="preserve">
+    <value>Configure the template of your mail.</value>
+  </data>
+  <data name="SELECT_COLUMNS_THAT_YOU_WNAT_TO_SEE" xml:space="preserve">
+    <value>Select the columns you want to see.</value>
+  </data>
+  <data name="CONFIRM_CONFIGURATION_OF_NEW_FORM" xml:space="preserve">
+    <value>Confirm the configuration of the new form.</value>
+  </data>
+  <data name="CHECK_ACTIONS" xml:space="preserve">
+    <value>Form Verification</value>
+  </data>
+  <data name="CONTAINS_VALUE" xml:space="preserve">
+    <value>The list already contains the '{0}' value.</value>
+  </data>
+  <data name="ENTITY_CANNOT_BE_CREATED" xml:space="preserve">
+    <value>Entity cannot be created.</value>
+  </data>
+  <data name="ONE_OR_MORE_ITEMS_HAVE_BEEN_CHANGED" xml:space="preserve">
+    <value>One or more items have been changed. Do you want to save these changes?</value>
+  </data>
+  <data name="EMPTY_FORM_TITLE" xml:space="preserve">
+    <value>This form does not contain any fields.</value>
+  </data>
+  <data name="EMPTY_FORM_SHORT" xml:space="preserve">
+    <value>The form doesn't contain any section or fields. </value>
+  </data>
+  <data name="FORM_ADDED_MESSAGE" xml:space="preserve">
+    <value>The form will be created in:&lt;ul&gt;&lt;li&gt;The '{0}' item&lt;/li&gt;&lt;li&gt;The '{1}' placeholder&lt;/li&gt;&lt;li&gt;The path: '{2}/{3}'&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="NOT_VALID" xml:space="preserve">
+    <value>The '{0}' contains (or lacks) some formatting attributes which could cause unexpected results in some browsers (such as Internet Explorer, Firefox, or Safari).</value>
+  </data>
+  <data name="NO_ENTRIES_SELECT" xml:space="preserve">
+    <value>The form does not contain any responses or no entries have been selected.</value>
+  </data>
+  <data name="LOCAL_FORMS_DESC" xml:space="preserve">
+    <value>Local Forms</value>
+  </data>
+  <data name="AUDIT_REMOVE_FROM_ROLE" xml:space="preserve">
+    <value>The user was removed from the {0} role. </value>
+  </data>
+  <data name="VERIFY_THAT_USER_AND_PASSWORD_MATCHE_SITECORE_USES" xml:space="preserve">
+    <value>Verify that the username and password entered in a form matches a Sitecore user.</value>
+  </data>
+  <data name="EMPTY_PROP_DESC" xml:space="preserve">
+    <value>The current field of the form doesn't contain any properties.</value>
+  </data>
+  <data name="SELECT_ROLE" xml:space="preserve">
+    <value>Select a role</value>
+  </data>
+  <data name="SELECT_FORM" xml:space="preserve">
+    <value>Select a Form</value>
+  </data>
+  <data name="SELECT_GOAL" xml:space="preserve">
+    <value>Select a Goal</value>
+  </data>
+  <data name="SELECT_ITEM" xml:space="preserve">
+    <value>Select the item you want to use as the directory for items. Then click the Select to continue.</value>
+  </data>
+  <data name="CONDITION" xml:space="preserve">
+    <value>Condition:</value>
+  </data>
+  <data name="MESSAGE_DELETE_ITEMS" xml:space="preserve">
+    <value>Are you sure you want to permanently delete {0} items?</value>
+  </data>
+  <data name="ENABLE_ATTACK_PROTECTION_BY_SHOWING_CAPTCHA" xml:space="preserve">
+    <value>Enable attack protection by showing CAPTCHA if</value>
+  </data>
+  <data name="DUE_TO_CONFLICT_DATA_WILL_BE_OVERWRITTEN" xml:space="preserve">
+    <value>Due to a field conflict the item's data will be overwritten:</value>
+  </data>
+  <data name="PREVIEW" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="WHEN_IS_NOT_SELECTED" xml:space="preserve">
+    <value>When {0} is not selected</value>
+  </data>
+  <data name="FROM_NUMBER" xml:space="preserve">
+    <value>From Number:</value>
+  </data>
+  <data name="FORM_INTRO_EMPTY" xml:space="preserve">
+    <value>Use this property to display a short description or any instructions, notes, or guidelines that the visitor should read when filling out the form. This will appear directly below the form name.</value>
+  </data>
+  <data name="SELECT_COLUMNS" xml:space="preserve">
+    <value>Select Columns</value>
+  </data>
+  <data name="LOCALIZED" xml:space="preserve">
+    <value>Localized</value>
+  </data>
+  <data name="ACTIONS_TITLE" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="CONTACT_DETAILS" xml:space="preserve">
+    <value>Contact Details:</value>
+  </data>
+  <data name="FORM_NAME" xml:space="preserve">
+    <value>Form Name</value>
+  </data>
+  <data name="FORM_TEXT" xml:space="preserve">
+    <value>Form Name</value>
+  </data>
+  <data name="FORM_PAGE" xml:space="preserve">
+    <value>Form Page</value>
+  </data>
+  <data name="SITECORE_ITEM" xml:space="preserve">
+    <value>Sitecore Item</value>
+  </data>
+  <data name="SHOW_FORM_USABILITY_CURRENT_FORM" xml:space="preserve">
+    <value>Shows the Form Usability report.</value>
+  </data>
+  <data name="FORM_SUBMIT_SUCCESS" xml:space="preserve">
+    <value>Form Submit Success</value>
+  </data>
+  <data name="UPDATE_CONTACT_OVERWRITE_OPTION" xml:space="preserve">
+    <value>Overwrite</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_REGULAR_EXPRESSION" xml:space="preserve">
+    <value>Regular Expression</value>
+  </data>
+  <data name="EMAIL_ADDRESS_OF_CURRENT_VISITOR" xml:space="preserve">
+    <value>Email address of the current visitor</value>
+  </data>
+  <data name="SELECTED_ROOT_ITEM" xml:space="preserve">
+    <value>Selected Root Item</value>
+  </data>
+  <data name="COMPLETE_CRM_FIELD" xml:space="preserve">
+    <value>Complete CRM Field:</value>
+  </data>
+  <data name="MAPPING" xml:space="preserve">
+    <value>Mapping</value>
+  </data>
+  <data name="PREVIOUS_PAGE" xml:space="preserve">
+    <value>Previous Page</value>
+  </data>
+  <data name="THE_VISITOR_IS_ROBOT" xml:space="preserve">
+    <value>the visitor is a robot</value>
+  </data>
+  <data name="FINISH" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="FOOTER" xml:space="preserve">
+    <value>Footer</value>
+  </data>
+  <data name="SUCCESS_MESSAGE" xml:space="preserve">
+    <value>Success Message:</value>
+  </data>
+  <data name="ENTER_FORM_NAME_HEADER" xml:space="preserve">
+    <value>Form Name</value>
+  </data>
+  <data name="MOVE_UP" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="SELECT_FORM_THAT_YOU_WANT_TO_USE" xml:space="preserve">
+    <value>Select the form that you want to use.</value>
+  </data>
+  <data name="ALWAYS" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="PLAY_AUDIT_VERSION_OF_TEXT" xml:space="preserve">
+    <value>Play audio version of text.</value>
+  </data>
+  <data name="CREATE_USER" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="ENTER_NAME_FOR_GOAL" xml:space="preserve">
+    <value>Enter a name for the goal to continue.</value>
+  </data>
+  <data name="USER_PROFILE_COLON" xml:space="preserve">
+    <value>User Profile:</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DESIGN" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="ROLE_MEMEBRSHIP" xml:space="preserve">
+    <value>Role Membership</value>
+  </data>
+  <data name="RECOMMENDED_FIEDLS" xml:space="preserve">
+    <value>Recommended Fields</value>
+  </data>
+  <data name="DOMAIN" xml:space="preserve">
+    <value>Domain:</value>
+  </data>
+  <data name="CONFIRM_RESET_ALL_POOLS" xml:space="preserve">
+    <value>Are you sure you want to permanently reset all pools?</value>
+  </data>
+  <data name="CONTACT_IS_NOT_FOUND" xml:space="preserve">
+    <value>Contact is not found</value>
+  </data>
+  <data name="CONFIRM_CONFIGURATION_OF_FORM" xml:space="preserve">
+    <value>Confirm the configuration of the form.</value>
+  </data>
+  <data name="MESSAGE" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="IF_TEXT_IS_LEFT_BLANK_VALUE_WILL_BE_DISPLAYED" xml:space="preserve">
+    <value>If ‘Text’ is left blank ‘Value’ will be displayed</value>
+  </data>
+  <data name="DESCRIPTION" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="RESTRINCTING_PLACEHOLDERS" xml:space="preserve">
+    <value>Restricting Placeholders</value>
+  </data>
+  <data name="BROWSE" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="DESTINATION_NOT_EXIST" xml:space="preserve">
+    <value>The '{0}' root for files doesn't exist  or you don't have access rights to it.</value>
+  </data>
+  <data name="DATACONTEXT_NOT_FOUND" xml:space="preserve">
+    <value>Datacontext \"{0}\" not found.</value>
+  </data>
+  <data name="EMAIL_IS_REQUIRED" xml:space="preserve">
+    <value>The email  is required.</value>
+  </data>
+  <data name="MANUAL" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="SET_FIELDS_WHERE_ACTION_WILL_TAKE_PARAMETERS" xml:space="preserve">
+    <value>Select the fields where actions can takes parameters.</value>
+  </data>
+  <data name="VISITOR_SUBMITS_FORM_MORE_THAN" xml:space="preserve">
+    <value>A visitor submits the form more than {0} times in {1} minutes</value>
+  </data>
+  <data name="CREATED_FIELD" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="CAPTION_VALUE" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="FORM_SUBMISSION_ATTEMPTS" xml:space="preserve">
+    <value>Form Submission Attempts</value>
+  </data>
+  <data name="OLD_PASSWORD" xml:space="preserve">
+    <value>Old Password:</value>
+  </data>
+  <data name="ADDITIONAL_USER_PROPERTIES" xml:space="preserve">
+    <value>Additional User Properties</value>
+  </data>
+  <data name="SHOW_FORM_DROPOUT_CURRENT_FORM" xml:space="preserve">
+    <value>Shows the Form Dropout report.</value>
+  </data>
+  <data name="MMS_GATEWAY" xml:space="preserve">
+    <value>MMS Gateway</value>
+  </data>
+  <data name="SELECT_FIELDS" xml:space="preserve">
+    <value>Select Fields</value>
+  </data>
+  <data name="CHANGE" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="LIST_ITEMS" xml:space="preserve">
+    <value>List Items</value>
+  </data>
+  <data name="SOURCE_TITLE" xml:space="preserve">
+    <value>Select a data source for the control</value>
+  </data>
+  <data name="DEVICES" xml:space="preserve">
+    <value>Devices:</value>
+  </data>
+  <data name="VISITOR_SUBMIT_FORM_MORE_THAN" xml:space="preserve">
+    <value>A visitor submits the form more than</value>
+  </data>
+  <data name="TITLE_TAG" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="THE_VISITOR_CANNOT_BE_ENROLL" xml:space="preserve">
+    <value>The visitor cannot be enrolled in the '{0}' engagement plan.</value>
+  </data>
+  <data name="RECIPIENT" xml:space="preserve">
+    <value>Recipient:</value>
+  </data>
+  <data name="SET_ITEMS_BY" xml:space="preserve">
+    <value>Set items by:</value>
+  </data>
+  <data name="PLEASE_SELECT_FORM_FIELD_YOU_WANT_USE_FOR_MMS" xml:space="preserve">
+    <value>Please select the form field you want to use for the recipient of the MMS and enter the message you want to send. You can also select whether you want to send an MMS based on the value of a form field.</value>
+  </data>
+  <data name="PLEASE_SELECT_FORM_FIELD_YOU_WANT_USE_FOR_SMS" xml:space="preserve">
+    <value>Please select the form field you want to use for the recipient of the SMS and enter the message you want to send. You can also select whether you want to send an SMS based on the value of a form field.</value>
+  </data>
+  <data name="ADD_CONTACT_TO_CONTACT_LIST" xml:space="preserve">
+    <value>Add Contact to Contact List</value>
+  </data>
+  <data name="LAYOUT" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="LOG_USER_IN_BASED_ON_INFORMATION_FROM_FORM" xml:space="preserve">
+    <value>Use the information entered in a form to log a user in. The user is logged in even if they do not provide a password. This action only works with existing users.</value>
+  </data>
+  <data name="LOG_USER_IN_BASED_ON_INFORMATION_FROM_FORM_WITH_PASSWORD" xml:space="preserve">
+    <value>Log a user in based on the information entered in the form. The user is only logged in if the password is valid. This action works only for existing users.</value>
+  </data>
+  <data name="UNSELECTED" xml:space="preserve">
+    <value>Not Selected</value>
+  </data>
+  <data name="LOOK_UP_RECORDS" xml:space="preserve">
+    <value>Look Up Records</value>
+  </data>
+  <data name="DOWNLOAD" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="VALUE_HIDDEN" xml:space="preserve">
+    <value>value hidden</value>
+  </data>
+  <data name="SELECT_AN_ENGAGEMENT_PLAN" xml:space="preserve">
+    <value>Select a state in an engagement plan.</value>
+  </data>
+  <data name="FORM_CONTENT_ON_LEAVING_PAGE" xml:space="preserve">
+    <value>Form content on leaving page</value>
+  </data>
+  <data name="PASWORD_CONFIRMATION" xml:space="preserve">
+    <value>Password\Confirmation</value>
+  </data>
+  <data name="ENGAGEMENT_VALUE" xml:space="preserve">
+    <value>Engagement Value</value>
+  </data>
+  <data name="MESSAGE_RESTORE_ITEMS" xml:space="preserve">
+    <value>Do you wish to restore {0} items now?</value>
+  </data>
+  <data name="CRM_ENTITY" xml:space="preserve">
+    <value>CRM Entity:</value>
+  </data>
+  <data name="IS_NOT_FORM" xml:space="preserve">
+    <value>is not a form.</value>
+  </data>
+  <data name="RESTRINCTING_PLACEHOLDERS_TEXT" xml:space="preserve">
+    <value>Restricting Placeholders shown in the Placeholder List.</value>
+  </data>
+  <data name="ROBOT_SUSPECTED" xml:space="preserve">
+    <value>We suspect that your Web browser is a robot session, and robot sessions are unable to perform the current action. Confirm that you are not a robot by entering showed CAPTCHA</value>
+  </data>
+  <data name="MULTIPLE" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="SELECT_FIELDS_DETAILED" xml:space="preserve">
+    <value>Select fields which you want to use.</value>
+  </data>
+  <data name="REQUIRED_FIELDS" xml:space="preserve">
+    <value>Required Fields</value>
+  </data>
+  <data name="FORM_CANT_BE_INSERTED" xml:space="preserve">
+    <value>The form is already inserted on the page</value>
+  </data>
+  <data name="ACTION_SINGLECALL" xml:space="preserve">
+    <value>This action can only be added once.</value>
+  </data>
+  <data name="MARKETING_ANALYTICS" xml:space="preserve">
+    <value>Marketing Analytics</value>
+  </data>
+  <data name="ANALYTICS" xml:space="preserve">
+    <value>Analytics</value>
+  </data>
+  <data name="ENGAGEMENT_ANALYTICS" xml:space="preserve">
+    <value>Engagement Analytics</value>
+  </data>
+  <data name="USER_PROFILE" xml:space="preserve">
+    <value>User Profile</value>
+  </data>
+  <data name="GOAL_NAME_IS_NOT_VALID" xml:space="preserve">
+    <value>The '{0}' goal name is not valid.</value>
+  </data>
+  <data name="USER_EXISTS" xml:space="preserve">
+    <value>User Exists</value>
+  </data>
+  <data name="VISITS" xml:space="preserve">
+    <value>Visits</value>
+  </data>
+  <data name="EMAIL_IS_BASED_ON_INFO" xml:space="preserve">
+    <value>The email is based on information entered in form fields:</value>
+  </data>
+  <data name="SELECT_CAMPAIGN_EVENT_TO_ASSOCIATE_WITH_FORM" xml:space="preserve">
+    <value>Select Campaign Event to associate with this form.</value>
+  </data>
+  <data name="SHOW_SUMMARY_CURRENT_FORM" xml:space="preserve">
+    <value>Shows a summary for the current form.</value>
+  </data>
+  <data name="WARNING_EMAIL" xml:space="preserve">
+    <value>Warning Email</value>
+  </data>
+  <data name="CHECK_WHETHER_USER_IS_SITECORE_USER" xml:space="preserve">
+    <value>Check whether the user is a Sitecore user.</value>
+  </data>
+  <data name="KEY_FIELD_IS_UNDEFINED" xml:space="preserve">
+    <value>Key field is undefined.</value>
+  </data>
+  <data name="DROPOUT_INFO" xml:space="preserve">
+    <value>The form reports are available in the Form Reports application.</value>
+  </data>
+  <data name="INSERT_FORM_HEADER" xml:space="preserve">
+    <value>Insert Form</value>
+  </data>
+  <data name="MAPPING_FORM_FIELDS" xml:space="preserve">
+    <value>Map the Form Fields</value>
+  </data>
+  <data name="SELECT_ENGAGEMENT_PLAN" xml:space="preserve">
+    <value>Select Engagement Plan State</value>
+  </data>
+  <data name="FROM_TO_MAIL_EMPTY" xml:space="preserve">
+    <value>The 'Tell a Friend' Save Action must have the "From", "To" and "Mail"  fields filled in. Click "Edit" to configure the Save Action.</value>
+  </data>
+  <data name="EXPORT_TO_ASCX_FILE" xml:space="preserve">
+    <value>Create an .ascx file with form’s code, either by copying the code to the clipboard or by downloading it as a file.</value>
+  </data>
+  <data name="PERSONALIZE_MESSAGE" xml:space="preserve">
+    <value>Personalize Message</value>
+  </data>
+  <data name="AUDIT_USER_LOGIN" xml:space="preserve">
+    <value>The {0} user is logged in. </value>
+  </data>
+  <data name="NEW_CONDITION" xml:space="preserve">
+    <value>New Condition</value>
+  </data>
+  <data name="CONTACT_LISTS" xml:space="preserve">
+    <value>Contact Lists:</value>
+  </data>
+  <data name="IS_NOT_VALID_NAME" xml:space="preserve">
+    <value>is not a valid name.</value>
+  </data>
+  <data name="FORM_IS_SUBMITTED_MORE_THAN" xml:space="preserve">
+    <value>The form is submitted more than</value>
+  </data>
+  <data name="CREATE_BLANK_FORM" xml:space="preserve">
+    <value>Create a blank form</value>
+  </data>
+  <data name="SELECT_IT_TO_TRACK_INFORMATION_ENTERED_IN_FORM" xml:space="preserve">
+    <value>Select this checkbox to track all the information entered in this form. You will receive reports containing details about potential leads and usability problems.</value>
+  </data>
+  <data name="COPY_EXISTING_FORM" xml:space="preserve">
+    <value>Copy an existing form.</value>
+  </data>
+  <data name="REMOVE" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="SET_ATTACK_DETECTION_THRESHOLDS" xml:space="preserve">
+    <value>Set attack detection thresholds and configure warning notifications. You can also select whether you want to display the form on a different page.</value>
+  </data>
+  <data name="VISITOR_IDENTIFIED_AS_ROBOTS" xml:space="preserve">
+    <value>Visitors are robots.</value>
+  </data>
+  <data name="SUCCESS_PAGE" xml:space="preserve">
+    <value>Success Page:</value>
+  </data>
+  <data name="DROPOUT_TRACKING" xml:space="preserve">
+    <value>Dropout Tracking</value>
+  </data>
+  <data name="SUCCESS" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="SUBJECT" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="NOT_FOUND_TEMPLATE" xml:space="preserve">
+    <value>The {0} template has not been found.</value>
+  </data>
+  <data name="SAVE_FAILURE_REPORT" xml:space="preserve">
+    <value>Save Failure Report</value>
+  </data>
+  <data name="SUMMARY" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="SELECT_CAMPAIGN_EVENT" xml:space="preserve">
+    <value>Select a campaign event.</value>
+  </data>
+  <data name="NO_STATE_IN_ENGAGEMENT_PLAN_SELECTED" xml:space="preserve">
+    <value>No state in an engagement plan was selected.</value>
+  </data>
+  <data name="ITEMS_LOW_CASE" xml:space="preserve">
+    <value>items</value>
+  </data>
+  <data name="CHOOSE_EXISTING_GOAL" xml:space="preserve">
+    <value>Select existing goal</value>
+  </data>
+  <data name="PREVIOUSE_SAVE_ACTION" xml:space="preserve">
+    <value>Previous Save Action</value>
+  </data>
+  <data name="ITEM_HAS_NO_LAYOUT" xml:space="preserve">
+    <value>You can't select this item. It has no layout.</value>
+  </data>
+  <data name="SUBMIT" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="ADD_SECTION" xml:space="preserve">
+    <value>Add Section</value>
+  </data>
+  <data name="MAPPING_FORM_FIELDS_DOT" xml:space="preserve">
+    <value>Select the fields in the created item which will be populated with values from selected form fields.</value>
+  </data>
+  <data name="SEARCH" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="SELECT" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="UPDATE_EXISTING_RECORDS" xml:space="preserve">
+    <value>Update Existing Records</value>
+  </data>
+  <data name="SINGLE" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="SAVE_SHORT_DESC" xml:space="preserve">
+    <value>Use these to perform specific actions when a form is successfully submitted. If a Save Action fails, the form is processed but the visitor is shown an error message.</value>
+  </data>
+  <data name="ENROLL_VISITOR" xml:space="preserve">
+    <value>Enroll the visitor:</value>
+  </data>
+  <data name="SECTION_NAME_EMPTY" xml:space="preserve">
+    <value>Enter the name of the section</value>
+  </data>
+  <data name="SELECT_STATE_AND_PLAN" xml:space="preserve">
+    <value>Engagement Plan State:</value>
+  </data>
+  <data name="THIS_TEXT_WILL_BE_SHOWN_ON_FORM" xml:space="preserve">
+    <value>This text will be shown on the form. The text displayed below is the text for the current language of the form. Other languages may have different texts.</value>
+  </data>
+  <data name="USABILITY_REPORT" xml:space="preserve">
+    <value>Usability Report</value>
+  </data>
+  <data name="SELECT_CHECK_TITLE" xml:space="preserve">
+    <value>Form Verification</value>
+  </data>
+  <data name="DO_NOT_SAVE" xml:space="preserve">
+    <value>Don’t save</value>
+  </data>
+  <data name="CHANGE_TYPE" xml:space="preserve">
+    <value>If you change the field type the data in the following fields may be lost:{0}{2}{1}.{0}Would you like to continue?</value>
+  </data>
+  <data name="EMPTY_FORM_LONG" xml:space="preserve">
+    <value>You have deleted all sections and fields.</value>
+  </data>
+  <data name="EMPTY_FORM_NAME" xml:space="preserve">
+    <value>You must enter a name for the form</value>
+  </data>
+  <data name="CHECK_USER_AND_PASSWORD" xml:space="preserve">
+    <value>Check User and Password</value>
+  </data>
+  <data name="FORM_DISPLAY_PAGE" xml:space="preserve">
+    <value>Form Display Page</value>
+  </data>
+  <data name="SEND_MAIL_EDITOR" xml:space="preserve">
+    <value>Send Email Editor</value>
+  </data>
+  <data name="REMOVE_USER_FROM_ROLE" xml:space="preserve">
+    <value>Remove User from Role:</value>
+  </data>
+  <data name="ENABLE_FORM_DROPOUT_TRACKING" xml:space="preserve">
+    <value>Enable Form Dropout Tracking</value>
+  </data>
+  <data name="SUSPICIOUS_FORM_ACTIVITY_DETECTED" xml:space="preserve">
+    <value>Suspicious form activity is detected.</value>
+  </data>
+  <data name="FAST_QUERY" xml:space="preserve">
+    <value>Fast Query</value>
+  </data>
+  <data name="NO_ACTIONS_SPECIFIED" xml:space="preserve">
+    <value>[No actions specified]</value>
+  </data>
+  <data name="RESET_ALL" xml:space="preserve">
+    <value>Reset All</value>
+  </data>
+  <data name="DROPOUT_REPORT" xml:space="preserve">
+    <value>Dropout Report</value>
+  </data>
+  <data name="DROPOUT" xml:space="preserve">
+    <value>Dropout</value>
+  </data>
+  <data name="ACTION_HAS_NO_EDITOR" xml:space="preserve">
+    <value>The action has no editor.</value>
+  </data>
+  <data name="SELECT_MUST_SELECT_PLACEHOLDER" xml:space="preserve">
+    <value>You must select a placeholder in order to create the new form.</value>
+  </data>
+  <data name="SELECT_SAVE_TITLE" xml:space="preserve">
+    <value>Save Actions</value>
+  </data>
+  <data name="FORM_WITH_CAPTCHA" xml:space="preserve">
+    <value>Display the form with CAPTCHA on a different page if:</value>
+  </data>
+  <data name="CAMPAIGN_WITHOUT_EVENT" xml:space="preserve">
+    <value>You must use a campaign event.</value>
+  </data>
+  <data name="INSERT_FIELDS" xml:space="preserve">
+    <value>Insert Field.</value>
+  </data>
+  <data name="NO_BUTTON_NAME" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="USER_NAME" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="SHOW_STANDARD_FIELDS" xml:space="preserve">
+    <value>Show Standard Fields</value>
+  </data>
+  <data name="USING_XPATH_QUERY" xml:space="preserve">
+    <value>Using Xpath Query</value>
+  </data>
+  <data name="SELECT_NEW_OR_EXISTEN_GOAL" xml:space="preserve">
+    <value>Select a new or existing goal that is achieved when the form is successfully submitted.</value>
+  </data>
+  <data name="AUDIT_ADD_TO_ROLE" xml:space="preserve">
+    <value>The user was added to the {0} role. </value>
+  </data>
+  <data name="EMAIL_ADDRESS_IS_NOT_VALID" xml:space="preserve">
+    <value>The email address is not valid.</value>
+  </data>
+  <data name="DISPLAY_ANOTHER_TEXT" xml:space="preserve">
+    <value>Display another text.</value>
+  </data>
+  <data name="HAS_NO_LAYOUT" xml:space="preserve">
+    <value>You cannot add a form to the current item because the item does not have an associated layout. Please contact a site administrator.</value>
+  </data>
+  <data name="MARKETING_INFO" xml:space="preserve">
+    <value>To configure the goal, open the Form Designer and in the Analytics Group click “Profiles”.</value>
+  </data>
+  <data name="SEND_CONFIRMATION_EMAIL" xml:space="preserve">
+    <value>Send confirmation mail</value>
+  </data>
+  <data name="YOU_CAN_PESONALIZE_MESSAGE" xml:space="preserve">
+    <value>You can personalize the standard message with information stored in form fields. You can do this by creating tokens in the format $token_name$ in the standard message and selecting a form field. To preview the message, click Next.</value>
+  </data>
+  <data name="SETTINGS" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="IF_ENABLED_ANY_DATA_ENTERED_IS_SAVED_IN_ANALYTICS" xml:space="preserve">
+    <value>If this is enabled any data entered by visitors is saved in the analytics database, whether the visitor completes the form or not.</value>
+  </data>
+  <data name="ALWAYS_SHOW_CAPTCHA" xml:space="preserve">
+    <value>Always show CAPTCHA</value>
+  </data>
+  <data name="EMAIL_ADDRESS_OF_EXISITNG_USER" xml:space="preserve">
+    <value>Email address of an existing user</value>
+  </data>
+  <data name="REQUIRED_CAPTION" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="ASOCIATED_GOAL" xml:space="preserve">
+    <value>Associated Goal</value>
+  </data>
+  <data name="DOMAIN_IS_REQUIRED" xml:space="preserve">
+    <value>The domain is required.</value>
+  </data>
+  <data name="CHOOSE_WHICH_ANALYTICS_OPTIONS_WILL_BE_USED" xml:space="preserve">
+    <value>Choose which Analytics options you want to use with this form.</value>
+  </data>
+  <data name="TITLE_CAPTION" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="INSERT_FORM" xml:space="preserve">
+    <value>Insert an existing form</value>
+  </data>
+  <data name="SMS_GATEWAY" xml:space="preserve">
+    <value>SMS Gateway</value>
+  </data>
+  <data name="CREATE_NEW_FORM" xml:space="preserve">
+    <value>Create a New Form</value>
+  </data>
+  <data name="CREATE_NEW_GOAL" xml:space="preserve">
+    <value>Create a new goal</value>
+  </data>
+  <data name="WHEN_FORM_SUCCESSFULLY_SUBMITTED" xml:space="preserve">
+    <value>When a form is successfully submitted, you can display a specific page or a success message.</value>
+  </data>
+  <data name="SELECT_TEMPLATE_AND_DESTINATION_FOR_ITEMS" xml:space="preserve">
+    <value>Select a template and a destination for the items.</value>
+  </data>
+  <data name="ITEMS_WILL_BE_STORED" xml:space="preserve">
+    <value>The items will be stored:</value>
+  </data>
+  <data name="VIEW_ALL_FORMS_DROPOUT_REPORT" xml:space="preserve">
+    <value>View All Forms Dropout report</value>
+  </data>
+  <data name="CHECK_WHETHER_USER_IN_SELECTED_ROLE" xml:space="preserve">
+    <value>Check whether a user is in a selected role. You can select the scenario in which the Form Verification will fail.</value>
+  </data>
+  <data name="SOURCE_DESC" xml:space="preserve">
+    <value>Please select the item you want to use as a source for the control. Then click 'Select' to continue.</value>
+  </data>
+  <data name="TYPE_SUCCESS_MESSAGE" xml:space="preserve">
+    <value>Enter success message which will be displayed after a successful form submission.</value>
+  </data>
+  <data name="FORM_SUBMITTED_MORE_THAN" xml:space="preserve">
+    <value>The form is submitted more than {0} times in {1} minutes</value>
+  </data>
+  <data name="SELECT_CHECK_DESC" xml:space="preserve">
+    <value>Select the method you want to use to verify the information when the form is submitted. If form verification fails, the visitor is returned to the form, and an error message is displayed.</value>
+  </data>
+  <data name="ADDED_CHECK_ACTIONS" xml:space="preserve">
+    <value>Added Form Verifications:</value>
+  </data>
+  <data name="PLACEHOLDER" xml:space="preserve">
+    <value>Placeholder:</value>
+  </data>
+  <data name="SUCCESSFUL_SUBMISSIONS" xml:space="preserve">
+    <value>Successful Submissions</value>
+  </data>
+  <data name="NOT_DEFINED_ACTIONS" xml:space="preserve">
+    <value>The {0} form has no actions.</value>
+  </data>
+  <data name="FORM_WILL_BE_INSERTED_INTO_PLACEHOLDER" xml:space="preserve">
+    <value>The form will be inserted into the placeholder.</value>
+  </data>
+  <data name="HAS_NO_PROPERTIES" xml:space="preserve">
+    <value>The field has no properties.</value>
+  </data>
+  <data name="OPEN_FORM_VERIFICATION_EDIT_WINDOW" xml:space="preserve">
+    <value>Open Form Verification edit window when adding a new Form Verification</value>
+  </data>
+  <data name="SELECT_FIELDS_TO_USE" xml:space="preserve">
+    <value>Select Fields</value>
+  </data>
+  <data name="USER_PASSWORD" xml:space="preserve">
+    <value>User Password:</value>
+  </data>
+  <data name="FURTHER_INFORMATION" xml:space="preserve">
+    <value>Further information</value>
+  </data>
+  <data name="ADD_USER_TO_ROLE" xml:space="preserve">
+    <value>Add User to Role:</value>
+  </data>
+  <data name="INSERT_FORM_TEXT" xml:space="preserve">
+    <value>Create a blank form, copy an existing one or insert an existing one.</value>
+  </data>
+  <data name="WHNE_ACTION_FAILED_SHOW" xml:space="preserve">
+    <value>If '{0}' fails display this message:</value>
+  </data>
+  <data name="FULL_NAME" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="APPEARANCE" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="INFORMATION_FROM_FIELDS_WILL_BE_LOST" xml:space="preserve">
+    <value>The information from the following fields will be lost:</value>
+  </data>
+  <data name="ADD_FIELD" xml:space="preserve">
+    <value>Add Field</value>
+  </data>
+  <data name="SAVE_AUDIT_INFORMATION_TO" xml:space="preserve">
+    <value>Save Audit Information to:</value>
+  </data>
+  <data name="NOT_SUPPORT" xml:space="preserve">
+    <value>The '{0}' type doesn't support the '{1}' interface  or it doesn't have the default constructor.</value>
+  </data>
+  <data name="REGISTER_SELECTED_GOAL_AS_CONVERSION" xml:space="preserve">
+    <value>Select a goal and register it as a conversion. You can also decide that a conversion should only be registered when a specific checkbox is selected.</value>
+  </data>
+  <data name="USER_LOGIN" xml:space="preserve">
+    <value>User Login</value>
+  </data>
+  <data name="DOMAIN_IS_NOT_SPECIFIED" xml:space="preserve">
+    <value>Domain is not specified</value>
+  </data>
+  <data name="SELECT_FORM_FIELD_WHOSE_VALUE" xml:space="preserve">
+    <value>Select a form field whose values will be displayed in place of the token.</value>
+  </data>
+  <data name="GLOBAL_SETTINGS_ITEM_MISSED_OR_NO_RIGHTS" xml:space="preserve">
+    <value>The Global Settings item is missed or you do not have enough security rights.</value>
+  </data>
+  <data name="USER_LOGIN_WITH_PASSWORD" xml:space="preserve">
+    <value>User Login with Password</value>
+  </data>
+  <data name="SEND_MESSAGE" xml:space="preserve">
+    <value>Send Message:</value>
+  </data>
+  <data name="SELECT_CAMPAIGN_EVENT_COLON" xml:space="preserve">
+    <value>Select Campaign Event:</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_ATTACK_PROTECTION" xml:space="preserve">
+    <value>Attack Protection</value>
+  </data>
+  <data name="BASIC_USER_INFORMATION" xml:space="preserve">
+    <value>Basic User Information</value>
+  </data>
+  <data name="ITEM_VALUE_IS_EMPTY" xml:space="preserve">
+    <value>"Item Value" cannot be empty.</value>
+  </data>
+  <data name="SELECT_ROLE_THAT_YOU_WANT_TO_USE" xml:space="preserve">
+    <value>Select the role that you want to use.</value>
+  </data>
+  <data name="LOC_FIELD_NAME_EMPTY" xml:space="preserve">
+    <value>Enter the name of the '{0}' field</value>
+  </data>
+  <data name="FORM_NAME_FORM_COMPLETED" xml:space="preserve">
+    <value>(Form Name) Form Completed</value>
+  </data>
+  <data name="SELECT_STANDARD_MESSAGE1" xml:space="preserve">
+    <value>Select a standard message</value>
+  </data>
+  <data name="XPATH_QUERY" xml:space="preserve">
+    <value>XPath Query</value>
+  </data>
+  <data name="REGISTER_CONVERSION_COLON" xml:space="preserve">
+    <value>Register Conversion:</value>
+  </data>
+  <data name="WAIT_FOR_SEND_CONFIRMATION_RECEIPT" xml:space="preserve">
+    <value>Wait for the send confirmation receipt</value>
+  </data>
+  <data name="CC" xml:space="preserve">
+    <value>CC:</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>id</value>
+  </data>
+  <data name="TO" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="UPDATE_CONTACT_HEADER" xml:space="preserve">
+    <value>Update Contact Details</value>
+  </data>
+  <data name="ROBOT_ATTACK_PROTECTION" xml:space="preserve">
+    <value>Robot Attack Protection</value>
+  </data>
+  <data name="TYPE_VALUE_OF_LIST_ITEM" xml:space="preserve">
+    <value>Enter the value of the list item</value>
+  </data>
+  <data name="ITEM_LOW_CASE" xml:space="preserve">
+    <value>item</value>
+  </data>
+  <data name="ENROLL_IN_ENGAGEMENT_PLAN" xml:space="preserve">
+    <value>Enroll in Engagement Plan</value>
+  </data>
+  <data name="THIS_VALUE_DISPLAYED_IS_VALUE_IN_FIELD" xml:space="preserve">
+    <value>This value displayed is the value in the field selected. This value is the same for all languages.</value>
+  </data>
+  <data name="TYPE_TEXT_OF_LIST_ITEM" xml:space="preserve">
+    <value>Enter a text to display on the form</value>
+  </data>
+  <data name="SELECT_FORM_DISPLAY_PAGE" xml:space="preserve">
+    <value>Select Form Display Page</value>
+  </data>
+  <data name="AUDIT_NOT_OVERWRITE_START" xml:space="preserve">
+    <value>The following additional information is available as a result of the visitor filling out the {0} Form. </value>
+  </data>
+  <data name="OVERWRITE_USER_FIELDS_IF_THEY_CONTAINS_VALUE" xml:space="preserve">
+    <value>Overwrite the User Profile field if it already contains a value.</value>
+  </data>
+  <data name="AUDIT_NOT_OVERWRITE_ENTRY" xml:space="preserve">
+    <value>The {0} field has not been overwritten. The visitor entered "{1}" in the {2} form field. </value>
+  </data>
+  <data name="SEND_MESSAGE_ACTION" xml:space="preserve">
+    <value>Send Standard Message action</value>
+  </data>
+  <data name="SELECT_CAMPAIGN" xml:space="preserve">
+    <value>Select a campaign</value>
+  </data>
+  <data name="SELECT_GOAL_CAPTION" xml:space="preserve">
+    <value>Select Goal</value>
+  </data>
+  <data name="LOADING" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="CHANGE_ROLE_MEMEBRSHIP" xml:space="preserve">
+    <value>Change Role Membership:</value>
+  </data>
+  <data name="TAG_LABEL_COLON" xml:space="preserve">
+    <value>Tag:</value>
+  </data>
+  <data name="EMPTY_FIELD_SHORT" xml:space="preserve">
+    <value>The '{0}' field is empty.</value>
+  </data>
+  <data name="MESSAGE_AND_RECIPIENT" xml:space="preserve">
+    <value>Message &amp;amp; Recipient</value>
+  </data>
+  <data name="THIS_PAGE_DISPLAYS_FINAL_APPEARANCE" xml:space="preserve">
+    <value>This page displays the message that you have modified. If you are happy with the result, click Finish. If you want to edit the message, click Back.</value>
+  </data>
+  <data name="PLACEHOLDERS" xml:space="preserve">
+    <value>Placeholders:</value>
+  </data>
+  <data name="ADD" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="DAY" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="BCC" xml:space="preserve">
+    <value>BCC:</value>
+  </data>
+  <data name="CRM" xml:space="preserve">
+    <value>CRM</value>
+  </data>
+  <data name="TOP" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="USER_NAME_OR_PASSWORD_IS_INCORRECT" xml:space="preserve">
+    <value>The user name or password is incorrect.</value>
+  </data>
+  <data name="EMAIL" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="MESSAGE_BODY" xml:space="preserve">
+    <value>Message Body</value>
+  </data>
+  <data name="ADDITIONAL_FIELDS" xml:space="preserve">
+    <value>Additional Fields</value>
+  </data>
+  <data name="FIELD" xml:space="preserve">
+    <value>Field:</value>
+  </data>
+  <data name="SELECT_PAGE_YOU_WANT_TO_USE" xml:space="preserve">
+    <value>Select the aspx page that you want to use.</value>
+  </data>
+  <data name="AUDIT" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="MONTH" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="NEVER" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="ITEMS" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="VALUE" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="VISIT" xml:space="preserve">
+    <value>Visit</value>
+  </data>
+  <data name="RULES" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="RESET" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="SELECT_PLACEHOLDER_YOU_WANT_USE" xml:space="preserve">
+    <value>Select a placeholder that you want to use.</value>
+  </data>
+  <data name="RIGHT" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="STATE" xml:space="preserve">
+    <value>State:</value>
+  </data>
+  <data name="PLEASE_SELECT_VALUES_TO_CREATE_ACCOUNT" xml:space="preserve">
+    <value>Please select the values for the CRM fields you want to use to create the account. You can also select under what conditions values should be entered and where those values should come from. If the account already exists it will be updated.</value>
+  </data>
+  <data name="USER_IS_IN_ROLE" xml:space="preserve">
+    <value>The user is in the {0} role.</value>
+  </data>
+  <data name="EMPTY_FIELD_NAME" xml:space="preserve">
+    <value>The form contains a field or section  without a name. Unnamed elements will be deleted from this form. Would you still like to continue and save the form anyway?</value>
+  </data>
+  <data name="EMPTY_FIELD_LONG" xml:space="preserve">
+    <value>Click '{0}' button to start editing '{1}' field.</value>
+  </data>
+  <data name="SELECT_THE_CONTACT_LIST" xml:space="preserve">
+    <value>Select the Contact Lists that you want to add the Contact to</value>
+  </data>
+  <data name="ADD_FIRST_FIELD" xml:space="preserve">
+    <value>&lt;span class='scFbLargeButton'&gt;Add a Field&lt;span&gt;</value>
+  </data>
+  <data name="TYPE_CAPTION" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="PASWORD_CONFIRMATION_EMPTY" xml:space="preserve">
+    <value>The 'Compare Password - Confirmation' action cannot be used for the forms that doesn't contain the "Password" and "Confirmation" fields. Use the editor of the action to configure it.</value>
+  </data>
+  <data name="ADD_OR_REMOVE_USER_FROM_ROLE" xml:space="preserve">
+    <value>Add or remove the user from a role.</value>
+  </data>
+  <data name="FORM_DROPOUTS" xml:space="preserve">
+    <value>Form Dropouts</value>
+  </data>
+  <data name="MESSAGE_DELETE_ITEM" xml:space="preserve">
+    <value>Are you sure you want to permanently delete this item?</value>
+  </data>
+  <data name="NO_ENGAGEMENT_PLAN_SPECIFIED" xml:space="preserve">
+    <value>[No engagement plan specified]</value>
+  </data>
+  <data name="OLD_PASSWORD_IS_INCORECT" xml:space="preserve">
+    <value>The old password is incorrect or the new one does not meet the rules</value>
+  </data>
+  <data name="DUMPING_DATA" xml:space="preserve">
+    <value>Dumping data</value>
+  </data>
+  <data name="OPEN_SAVE_ACTION_EDIT_WINDOW" xml:space="preserve">
+    <value>Open Save Action edit window when adding a new Save Action</value>
+  </data>
+  <data name="SELECTED" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="GLOBAL_FORMS_DESC" xml:space="preserve">
+    <value>Global Forms</value>
+  </data>
+  <data name="ADD_A_FIELD" xml:space="preserve">
+    <value>Add a field</value>
+  </data>
+  <data name="FORM_FIELDS" xml:space="preserve">
+    <value>Form Fields</value>
+  </data>
+  <data name="DESTINATION" xml:space="preserve">
+    <value>Destination:</value>
+  </data>
+  <data name="VALIDATION_ERROR_MESSAGES" xml:space="preserve">
+    <value>Validation Error Messages (MVC)</value>
+  </data>
+  <data name="SEND_MMS" xml:space="preserve">
+    <value>Send MMS</value>
+  </data>
+  <data name="SEND_SMS" xml:space="preserve">
+    <value>Send SMS</value>
+  </data>
+  <data name="YOU_HAVE_SELECTED_THE_FOLLOWING_SETTINGS" xml:space="preserve">
+    <value>You have selected the following settings</value>
+  </data>
+  <data name="IS_USER_IN_ROLE" xml:space="preserve">
+    <value>Is User In Role</value>
+  </data>
+  <data name="ATTACK_PROTECTION" xml:space="preserve">
+    <value>Attack Protection</value>
+  </data>
+  <data name="CONFIRMATION" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="SEND_THE_MESSAGE_TO" xml:space="preserve">
+    <value>Send the message to</value>
+  </data>
+  <data name="STANDARD_MESSAGE_COLUMN" xml:space="preserve">
+    <value>Standard Message:</value>
+  </data>
+  <data name="ERROR_PATH_NOT_EXIT" xml:space="preserve">
+    <value>No item with the path: '{0}' exists.</value>
+  </data>
+  <data name="SELECT_FORM_TO_COPY" xml:space="preserve">
+    <value>Select a form to copy</value>
+  </data>
+  <data name="USER_ALREADY_EXISTS" xml:space="preserve">
+    <value>The user already exists.</value>
+  </data>
+  <data name="SELECT_VALUE_FOR_REQUIRED" xml:space="preserve">
+    <value>Select a value for the required fields.</value>
+  </data>
+  <data name="ASSOCIATE_NEW_USER_WITH_THIS_VISITOR" xml:space="preserve">
+    <value>Associate new user with this visitor</value>
+  </data>
+  <data name="CREATE_CRM_ACCOUNT" xml:space="preserve">
+    <value>Create CRM Account</value>
+  </data>
+  <data name="SHOW_RESPONSES_CURRENT_FORM" xml:space="preserve">
+    <value>Shows responses for the current form.</value>
+  </data>
+  <data name="READING_DATA_FROM_DATABASE" xml:space="preserve">
+    <value>Reading data from the database</value>
+  </data>
+  <data name="FORM_VARIFICATION_WILL_FAIL_IF" xml:space="preserve">
+    <value>The form verification will fail if:</value>
+  </data>
+  <data name="COMMANDS" xml:space="preserve">
+    <value>Commands</value>
+  </data>
+  <data name="CREATE_CRM_ENTITY" xml:space="preserve">
+    <value>Create CRM Entity</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_RECAPTCHA" xml:space="preserve">
+    <value>Attack Protection</value>
+  </data>
+  <data name="SELECT_STANDARD_MESSAGE" xml:space="preserve">
+    <value>Select the standard message that you want to use to continue.</value>
+  </data>
+  <data name="ENTER_SEARCH_CRITERIA" xml:space="preserve">
+    <value>Enter search criteria...</value>
+  </data>
+  <data name="EMPTY_PROP_TITLE" xml:space="preserve">
+    <value>This field has no properties.</value>
+  </data>
+  <data name="MOVE_DOWN" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="DROPOUTS" xml:space="preserve">
+    <value>Dropouts</value>
+  </data>
+  <data name="OVERWRITE_CRM_FIELDS_IF_THEY_CONTAIN_VALUE" xml:space="preserve">
+    <value>Overwrite CRM fields if they already contain a value</value>
+  </data>
+  <data name="FORM_FOOTER_EMPTY" xml:space="preserve">
+    <value>Use this property to display a short description or any instructions, notes, or guidelines that the visitor should read when filling out the form. This will appear directly below the content of the form.</value>
+  </data>
+  <data name="TOTAL_FORM_DROPOUTS" xml:space="preserve">
+    <value>Total Form Dropouts</value>
+  </data>
+  <data name="CREATE_BLANK_OR_COPY_EXISTING_FORM" xml:space="preserve">
+    <value>Create a blank form or copy an existing one.</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_FIELD_REQUIRED" xml:space="preserve">
+    <value>Required Field</value>
+  </data>
+  <data name="IDENTIFY_USER" xml:space="preserve">
+    <value>Identify the User</value>
+  </data>
+  <data name="LOOK_FOR" xml:space="preserve">
+    <value>Look for:</value>
+  </data>
+  <data name="CAPTION_RESPONSE" xml:space="preserve">
+    <value>Responses</value>
+  </data>
+  <data name="VIEW_FORM_USABILITY_REPORT" xml:space="preserve">
+    <value>View Form Usability report</value>
+  </data>
+  <data name="USE_VALUE_FROM" xml:space="preserve">
+    <value>Use Value From:</value>
+  </data>
+  <data name="COMMENT" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="SELECT_EXISTING_GOAL_TO_ARCHIVE" xml:space="preserve">
+    <value>Select an existing goal that is achieved when the form is successfully submitted.</value>
+  </data>
+  <data name="EXPORT_RECORDS_TO_EXCEL" xml:space="preserve">
+    <value>Export records to Excel</value>
+  </data>
+  <data name="ANONYMOUS_SUBSCRIBER_CANNOT_BE_CREATED" xml:space="preserve">
+    <value>Anonymous subscriber cannot be created.</value>
+  </data>
+  <data name="OTHER_AVAILABLE_FIELDS" xml:space="preserve">
+    <value>Other Available Fields</value>
+  </data>
+  <data name="MESSAGE_IS_NOT_SET" xml:space="preserve">
+    <value>Message is not set</value>
+  </data>
+  <data name="PLEASE_SELECT_FORM" xml:space="preserve">
+    <value>Please select a form.</value>
+  </data>
+  <data name="VALUE_CAPTION" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="USER_NAME_BASED_ON_INFORMATION" xml:space="preserve">
+    <value>The user name is based on information entered in form fields:</value>
+  </data>
+  <data name="EMPTY_LAYOUT_DESC" xml:space="preserve">
+    <value>Add fields or sections to the form using the buttons in the toolbox in the top of window.</value>
+  </data>
+  <data name="EXPORTING_DATA" xml:space="preserve">
+    <value>Exporting data</value>
+  </data>
+  <data name="PROCESSING_REPORT" xml:space="preserve">
+    <value>Processing Report...</value>
+  </data>
+  <data name="STATISTIC_DESC" xml:space="preserve">
+    <value>Detailed summary:</value>
+  </data>
+  <data name="SELECT_VALUE" xml:space="preserve">
+    <value>Please select an item from the list.</value>
+  </data>
+  <data name="TEMPLATE_FOR_ITEMS" xml:space="preserve">
+    <value>The template for items:</value>
+  </data>
+  <data name="REGISTER_CONVERSION" xml:space="preserve">
+    <value>Register Conversion</value>
+  </data>
+  <data name="NEXT_PAGE_VISITED" xml:space="preserve">
+    <value>Next Page Visited</value>
+  </data>
+  <data name="CHOOSE_GOAL_AT_FIRST" xml:space="preserve">
+    <value>Please select a goal.</value>
+  </data>
+  <data name="DETECTION_THRESHOLDS" xml:space="preserve">
+    <value>Detection Thresholds</value>
+  </data>
+  <data name="THERE_IS_NO_RULES_FOR_THIS_ELEMENT" xml:space="preserve">
+    <value>There are no rules for this element.</value>
+  </data>
+  <data name="ENTITY_CANNOT_BE_FOUND_BY_PRIMARY_KEY" xml:space="preserve">
+    <value>The entity cannot be found with the defined primary key.</value>
+  </data>
+  <data name="SELECT_RECORDS_YOU_WANT_AND_CLICK_OK" xml:space="preserve">
+    <value>Select the record you want and click Ok.</value>
+  </data>
+  <data name="TELEPHONE_NUMBER" xml:space="preserve">
+    <value>Telephone Number</value>
+  </data>
+  <data name="CHANGE_PASSWORD" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="CHANGE_SUBSCRIPTION" xml:space="preserve">
+    <value>Change Subscription:</value>
+  </data>
+  <data name="UNTITLED_FORM" xml:space="preserve">
+    <value>Untitled Form</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_STRING_LENGTH" xml:space="preserve">
+    <value>String Length</value>
+  </data>
+  <data name="SELECT_TEMPLATE_THAT_YOU_WANT" xml:space="preserve">
+    <value>Select the template that you want to use. Click OK to continue.</value>
+  </data>
+  <data name="SELECT_TEMPLATE" xml:space="preserve">
+    <value>Please select a template.</value>
+  </data>
+  <data name="NEW_PASSWORD" xml:space="preserve">
+    <value>New Password:</value>
+  </data>
+  <data name="MESSAGE_ARCHIVE_ITEMS" xml:space="preserve">
+    <value>Do you wish to archive {0} items now?</value>
+  </data>
+  <data name="TEMPLATE" xml:space="preserve">
+    <value>Template:</value>
+  </data>
+  <data name="ACTION_DISABLED" xml:space="preserve">
+    <value>This action cannot be added. Your configuration does not support it.</value>
+  </data>
+  <data name="CREATED" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="SELECT_DATE_DESC" xml:space="preserve">
+    <value>Select the date that you want to use.</value>
+  </data>
+  <data name="ADD_ACTIONS_ON_TAB_AT_FIRST" xml:space="preserve">
+    <value>Add actions on the {0} tab at first.</value>
+  </data>
+  <data name="ENGAGEMENT_PLAN" xml:space="preserve">
+    <value>Engagement Plan:</value>
+  </data>
+  <data name="USING_FAST_QUERY" xml:space="preserve">
+    <value>Using Fast Query</value>
+  </data>
+  <data name="RECIPIENT_NUMBER_EMPTY" xml:space="preserve">
+    <value>Please select the recipient telephone number to continue.</value>
+  </data>
+  <data name="ADD_FIELDS" xml:space="preserve">
+    <value>Add Fields</value>
+  </data>
+  <data name="FORM_FIELD" xml:space="preserve">
+    <value>Form Field:</value>
+  </data>
+  <data name="HORIZONTAL" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="SUCCESS_PAGE_CAPTION" xml:space="preserve">
+    <value>Success Page</value>
+  </data>
+  <data name="NOD_DEFINED" xml:space="preserve">
+    <value>Not Defined</value>
+  </data>
+  <data name="FIELDS_SETTINGS" xml:space="preserve">
+    <value>Field Settings:</value>
+  </data>
+  <data name="USE_EMAIL_ADDRESS" xml:space="preserve">
+    <value>Use an email address</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_COMPARE" xml:space="preserve">
+    <value>Fields Must Contain The Same Value</value>
+  </data>
+  <data name="USING_SITECORE_QUERY" xml:space="preserve">
+    <value>Using Sitecore Query</value>
+  </data>
+  <data name="DELETE_SELECTED_FIELDS" xml:space="preserve">
+    <value>Delete the selected field</value>
+  </data>
+  <data name="ERROR_IDENTICAL_NAME" xml:space="preserve">
+    <value>Two fields have identical names: '{0}'. Please rename one of these fields.</value>
+  </data>
+  <data name="FINAL_SUBMISSION_RESULT" xml:space="preserve">
+    <value>Final Submission Result</value>
+  </data>
+  <data name="FAILURE_MESSAGES" xml:space="preserve">
+    <value>Error Messages</value>
+  </data>
+  <data name="FORM_DROPOUT_TRACKING" xml:space="preserve">
+    <value>Form Dropout Tracking</value>
+  </data>
+  <data name="SELECT_VALUES_AND_TEXT_TO_DISPLAY" xml:space="preserve">
+    <value>Select the values and texts to display in the list. You can manually enter these or use Sitecore items or queries.</value>
+  </data>
+  <data name="SELECT_DATE_TITLE" xml:space="preserve">
+    <value>Select Date</value>
+  </data>
+  <data name="FAILED_SUBMIT" xml:space="preserve">
+    <value>We experienced a technical difficulty while processing your request. Your data may not have been correctly saved.</value>
+  </data>
+  <data name="GOAL_ALREADY_EXISTS" xml:space="preserve">
+    <value>The '{0}' goal already exists. Enter an unique name to continue.</value>
+  </data>
+  <data name="ENTER_FORM_NAME_TEXT" xml:space="preserve">
+    <value>Enter new form name.</value>
+  </data>
+  <data name="CHOOSE_GOAL" xml:space="preserve">
+    <value>You must select a goal in order to enable Marketing Analytics.</value>
+  </data>
+  <data name="CHOOSE_PAGE" xml:space="preserve">
+    <value>Select the page to display after a successful form submission.</value>
+  </data>
+  <data name="USER_DOES_NOT_EXIST" xml:space="preserve">
+    <value>The user does not exist.</value>
+  </data>
+  <data name="DRAG_COLUMN_TO_AREA_TO_GROUP_BY_IT" xml:space="preserve">
+    <value>Drag a column to this area to group by it.</value>
+  </data>
+  <data name="STANDARD_MESSAGE" xml:space="preserve">
+    <value>Standard Message</value>
+  </data>
+  <data name="SHOW_SAVE_FAILURE_CURRENT_FORM" xml:space="preserve">
+    <value>Shows the Save failures report.</value>
+  </data>
+  <data name="SITECORE_QUERY" xml:space="preserve">
+    <value>Sitecore Query</value>
+  </data>
+  <data name="ASSOCIATE_EXISTING_USER_WITH_THIS_WISITOR" xml:space="preserve">
+    <value>Associate existing user with this visitor</value>
+  </data>
+  <data name="EMPTY_LAYOUT_SHORT" xml:space="preserve">
+    <value>Change a layout of the form!</value>
+  </data>
+  <data name="AUDIT_NEW_START" xml:space="preserve">
+    <value>The following fields have been changed as a result of the visitor filling out the {0} Form. </value>
+  </data>
+  <data name="INTRODUCTION" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="WHEN_IS_SELECTED" xml:space="preserve">
+    <value>When {0} is selected</value>
+  </data>
+  <data name="AUDIT_NEW_ENTRY" xml:space="preserve">
+    <value>The {0} field entry "{1}" has been overwritten with "{2}".</value>
+  </data>
+  <data name="FORM_TITLE_EMPTY" xml:space="preserve">
+    <value>Use this property to display the title of the form.</value>
+  </data>
+  <data name="EMPTY_INPUT" xml:space="preserve">
+    <value>Please enter a value in the Add input box.</value>
+  </data>
+  <data name="ROBOT_DETECTED" xml:space="preserve">
+    <value>We have detected that your Web browser is a robot session, and robot sessions are unable to perform the current action.</value>
+  </data>
+  <data name="EDIT_ROLE_MEMEBRSHIP" xml:space="preserve">
+    <value>Edit Role Membership</value>
+  </data>
+  <data name="BUTTONS" xml:space="preserve">
+    <value>Buttons</value>
+  </data>
+  <data name="PLACE_VISITOR_IN_SPECIFIC_STATE" xml:space="preserve">
+    <value>Place the visitor in a specific state in an engagement plan. The visitor must be a user in Sitecore.</value>
+  </data>
+  <data name="UPDATE_CONTACT_DESCRIPTION" xml:space="preserve">
+    <value>Map the fields in the form to the Contact Details that you want to update.
+This save action only updates the contact details of logged in users.</value>
+  </data>
+  <data name="INSERT_FIELD" xml:space="preserve">
+    <value>Insert field</value>
+  </data>
+  <data name="SHOW_CAPTCHA" xml:space="preserve">
+    <value>Show CAPTCHA</value>
+  </data>
+  <data name="TO_MAKE_SURE_USER_NAME_IS_UNIQUE" xml:space="preserve">
+    <value>To ensure that the user name is unique, you must select an email field.</value>
+  </data>
+  <data name="FOLDER_IS_EMPTY" xml:space="preserve">
+    <value>The folder is empty.</value>
+  </data>
+  <data name="FORM_DESIGNER" xml:space="preserve">
+    <value>Form Designer</value>
+  </data>
+  <data name="THERE_ARE_NO_PLANS" xml:space="preserve">
+    <value>There are no  engagement plans</value>
+  </data>
+  <data name="MESSAGE_ARCHIVE_ITEM" xml:space="preserve">
+    <value>Do you wish to archive the item now?</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_MULTI_REGULAR_EXPRESSION" xml:space="preserve">
+    <value>Multi Regular Expression</value>
+  </data>
+  <data name="CRM_AGR_QUERY_ERROR" xml:space="preserve">
+    <value>Cannot get the result for aggregate query.</value>
+  </data>
+  <data name="TIMES_IN" xml:space="preserve">
+    <value>times in</value>
+  </data>
+  <data name="IF_ANY_THRESHOLD_EXCEEDED_SEND_EMAIL" xml:space="preserve">
+    <value>If visitors are robots or any of the thresholds are exceeded send a warning email</value>
+  </data>
+  <data name="SELECT_TEMPLATE_CAPTION" xml:space="preserve">
+    <value>Select Template</value>
+  </data>
+  <data name="SELECT_ENGAGEMENT_PLAN_YOU_WANT_USE" xml:space="preserve">
+    <value>Select the Engagement Plan that you want to use.</value>
+  </data>
+  <data name="FUTHER_INFO" xml:space="preserve">
+    <value>Further information</value>
+  </data>
+  <data name="USE_CURRENT_VISITOR" xml:space="preserve">
+    <value>Use the current visitor</value>
+  </data>
+  <data name="NO_SUCH_USER_EXISTS" xml:space="preserve">
+    <value>no such user exists</value>
+  </data>
+  <data name="MESSAGE_SELECT_TEMPLATE" xml:space="preserve">
+    <value>You must select a template.</value>
+  </data>
+  <data name="USER_NAME_IS_NULL_OR_EMPTY" xml:space="preserve">
+    <value>The user name is null or empty.</value>
+  </data>
+  <data name="SELECT_GOAL_TEXT" xml:space="preserve">
+    <value>Select the goal you want to use.</value>
+  </data>
+  <data name="SELECT_FORM_FIELD_VALUES_TO_CREATE_USER" xml:space="preserve">
+    <value>Select the form field values which will be used to create the user.&lt;br/&gt;If the user already exists, the user's information will be updated.</value>
+  </data>
+  <data name="MANUALLY_ENTERING_NAMES" xml:space="preserve">
+    <value>Manually entering names</value>
+  </data>
+  <data name="ACTION_WILL_STORE_SELECTED_FIELDS" xml:space="preserve">
+    <value>The action will store selected field's content in the new user's email property.</value>
+  </data>
+  <data name="SELECT_EXISTING_GOAL_COLON" xml:space="preserve">
+    <value>Select an existing goal:</value>
+  </data>
+  <data name="SELECT_GOAL_CONVERSION" xml:space="preserve">
+    <value>Click Select Goal and select a goal to continue.</value>
+  </data>
+  <data name="VERTICAL" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="CHANGE_PASSWORD_OF_USER" xml:space="preserve">
+    <value>Change the password of a user.</value>
+  </data>
+  <data name="NOT_FOUND_ITEM" xml:space="preserve">
+    <value>The '{0}' item has not been found.</value>
+  </data>
+  <data name="EXPORT_RECORDS_TO_XML" xml:space="preserve">
+    <value>Export records to XML</value>
+  </data>
+  <data name="FORM_ADDED_IN_MESSAGE" xml:space="preserve">
+    <value>The form will be created in:&lt;ul&gt;&lt;li&gt;The path: '{0}/{1}'&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="VALIDATE_INPUT_FAILED_MULTIPLE" xml:space="preserve">
+    <value>The {0} fields contains content that may present a security risk. Please enter appropriate information</value>
+  </data>
+  <data name="THERE_ARE_NO_PLACEHOLDERS_TO_INSERT" xml:space="preserve">
+    <value>There are no allowed placeholders in order to insert a new form.</value>
+  </data>
+  <data name="SHOW_CAPTCHA_IF" xml:space="preserve">
+    <value>Show CAPTCHA if</value>
+  </data>
+  <data name="TAG_PROPERTY_DESCRIPTION" xml:space="preserve">
+    <value>Select this checkbox to add the value of the selected field to the "Tag" information in the Engagement Analytics session report.</value>
+  </data>
+  <data name="SELECT_PLACEHOLDER" xml:space="preserve">
+    <value>Select a Placeholder</value>
+  </data>
+  <data name="CAPTION_NAME" xml:space="preserve">
+    <value>Field Name</value>
+  </data>
+  <data name="ADDED_ACTIONS" xml:space="preserve">
+    <value>Added Actions:</value>
+  </data>
+  <data name="MESSAGE_RESTORE_ITEM" xml:space="preserve">
+    <value>Do you wish to restore the item now?</value>
+  </data>
+  <data name="SUSPICIOUS_VISITOR_DETECTED" xml:space="preserve">
+    <value>A suspicious visitor is detected.</value>
+  </data>
+  <data name="RANDOM_PASSWORD" xml:space="preserve">
+    <value>Random password</value>
+  </data>
+  <data name="REQUIRED_ERROR" xml:space="preserve">
+    <value>The '{0}' field should not be empty!</value>
+  </data>
+  <data name="CONFIRM_RESET_POOL" xml:space="preserve">
+    <value>Do you wish to reset the pool now?</value>
+  </data>
+  <data name="SELECT_SAVE_DESC" xml:space="preserve">
+    <value>Select the Save Actions to perform when a form is submitted. If a Save Action fails, the form is submitted successfully and the visitor is shown an error message.</value>
+  </data>
+  <data name="IS_NOT_UNIQUE_NAME" xml:space="preserve">
+    <value>is not a unique name.</value>
+  </data>
+  <data name="SELECT_CAMPAIGN_HEADER" xml:space="preserve">
+    <value>Select Campaign</value>
+  </data>
+  <data name="SELECT_ITEM_TITLE" xml:space="preserve">
+    <value>Select Directory</value>
+  </data>
+  <data name="USER_NOT_IN_ROLE" xml:space="preserve">
+    <value>The user is not in the {0} role.</value>
+  </data>
+  <data name="BUTTON_NAME" xml:space="preserve">
+    <value>Button Name</value>
+  </data>
+  <data name="SELECT_ITEM_FIRST" xml:space="preserve">
+    <value>You must first select an item.</value>
+  </data>
+  <data name="USER_NAME_IS_NOT_SET" xml:space="preserve">
+    <value>The user name is not set</value>
+  </data>
+  <data name="FORM_VERIFICATION" xml:space="preserve">
+    <value>Form Verification</value>
+  </data>
+  <data name="VALIDATE_INPUT_FAILED" xml:space="preserve">
+    <value>The {0} field contains content that may present a security risk. Please enter appropriate information</value>
+  </data>
+  <data name="USER_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>The user name is required.</value>
+  </data>
+  <data name="DO_YOU_REALLY_WANT_TO_CHANGE_THE_VALUE" xml:space="preserve">
+    <value>Do you really want to change the value? This will change the value for all languages. Any statistics and reports based on these values may change.</value>
+  </data>
+  <data name="SELECT_FORM_THAT_FORM_WILL_BE_DISPLAYED" xml:space="preserve">
+    <value>Select the page that the form will be displayed on when attack protection is activated. You can either select a Sitecore item or use a separate file.</value>
+  </data>
+  <data name="BLANK_PASSWORD" xml:space="preserve">
+    <value>Blank password</value>
+  </data>
+  <data name="SELECT_ROLE_TO_CONTINUE" xml:space="preserve">
+    <value>Select a role to continue.</value>
+  </data>
+  <data name="SUCCESS_MESSAGE_CAPTION" xml:space="preserve">
+    <value>Success Message</value>
+  </data>
+  <data name="ADDED_SAVE_ACTIONS" xml:space="preserve">
+    <value>Added Save Actions:</value>
+  </data>
+  <data name="SELECT_FIELDS_FOR_EXPORT" xml:space="preserve">
+    <value>Select the fields you want export.</value>
+  </data>
+  <data name="SELECT_RECORD" xml:space="preserve">
+    <value>Select a record to continue.</value>
+  </data>
+  <data name="USER_NAME_WILL_BE_CREATED_WITH_FORMAT" xml:space="preserve">
+    <value>If the selected domain does not support the  ‘@’ or ’.’ characters, the user name will be created with the &amp;lt;localpart_at_domain_dot_topleveldomain&amp;gt; format.</value>
+  </data>
+  <data name="CREATE_OR_UPDATE_USER_PROFILE" xml:space="preserve">
+    <value>User Profile</value>
+  </data>
+  <data name="SELECTING_SITECORE_ITEMS" xml:space="preserve">
+    <value>Selecting Sitecore items</value>
+  </data>
+  <data name="EXPORT_TO_ASCX" xml:space="preserve">
+    <value>Export to .ascx file</value>
+  </data>
+  <data name="DOWNLOAD_SELECTED_FILE" xml:space="preserve">
+    <value>Download the selected file.</value>
+  </data>
+  <data name="DO_NOT_USE_DIFFERENT_TEXT" xml:space="preserve">
+    <value>Display values as text on the form</value>
+  </data>
+  <data name="CHECK_SHORT_DESC" xml:space="preserve">
+    <value>Use these actions to verify the data submitted in the form, for example, by comparing the values with other data sources. If a Form Verification fails, the visitor is returned to the form, and an error message is displayed.</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_EMAIL" xml:space="preserve">
+    <value>Email Address Validation</value>
+  </data>
+  <data name="MESSAGE_SELECT_DESTINATION" xml:space="preserve">
+    <value>You must select the destination where items will be stored.</value>
+  </data>
+  <data name="GOAL_COLON" xml:space="preserve">
+    <value>Goal:</value>
+  </data>
+  <data name="TITLE_ERROR_MESSAGE_RANGE" xml:space="preserve">
+    <value>Number Range</value>
+  </data>
+  <data name="LOC_SECTION_NAME_EMPTY" xml:space="preserve">
+    <value>Enter the name of the '{0}' section</value>
+  </data>
+  <data name="SELECT_STANDARD_MESSAGE_AND_USER_TO_SEND" xml:space="preserve">
+    <value>Select the standard message that you want to send and the user that you want to send the message to.</value>
+  </data>
+  <data name="SELECT_EXISTING_GOAL" xml:space="preserve">
+    <value>Select an existing goal</value>
+  </data>
+  <data name="FIELD_NAME_EMPTY" xml:space="preserve">
+    <value>Enter the name of the field</value>
+  </data>
+  <data name="SAVE_ACTIONS" xml:space="preserve">
+    <value>Save actions:</value>
+  </data>
+  <data name="ENTER_DIFFERENT_TEXT_TO_DISPLAY" xml:space="preserve">
+    <value>Display a different text on the form</value>
+  </data>
+  <data name="CHOOSE_THE_CRM_ENTITY_YOU_WOULD_LIKE_TO_CREATE" xml:space="preserve">
+    <value>Choose the CRM entity you would like to create. Then select the values you want to use to create the entity. You can select under what conditions the values should be entered, and where those values should come from.</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="FILE" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="FORM" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="FROM" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="AUTO" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="DATA" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="GOAL" xml:space="preserve">
+    <value>Goal</value>
+  </data>
+  <data name="MAIL" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="NONE" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NEXT" xml:space="preserve">
+    <value>Next &amp;gt;</value>
+  </data>
+  <data name="LEFT" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="TEXT" xml:space="preserve">
+    <value>Text:</value>
+  </data>
+  <data name="ROLE" xml:space="preserve">
+    <value>Role:</value>
+  </data>
+  <data name="PAGE" xml:space="preserve">
+    <value>Page:</value>
+  </data>
+  <data name="YEAR" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="PREVIEW_MESSAGE" xml:space="preserve">
+    <value>Message Preview</value>
+  </data>
+  <data name="USE_EXISTING_USER" xml:space="preserve">
+    <value>Use an existing user</value>
+  </data>
+  <data name="SELECT_PAGE_OR_CREATE_SUCCESS_MESSAGE" xml:space="preserve">
+    <value>Select the page or create the message that you want to display when the form is committed successfully.</value>
+  </data>
+  <data name="CONFIRM_MAPPING_FORM_TO_ITEM" xml:space="preserve">
+    <value>Confirm that you have selected the correct template and folder for the new item, and that the form fields are mapped correctly.</value>
+  </data>
+  <data name="FORM_SAVE_ACTION_FAILURES" xml:space="preserve">
+    <value>Form Save Action FormFailures</value>
+  </data>
+  <data name="MINUTES" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+</root>

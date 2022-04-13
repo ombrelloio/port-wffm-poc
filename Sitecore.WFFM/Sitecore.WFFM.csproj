@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Work\Assemblies\WFFM\Sitecore.WFFM.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F4D34C1-1270-4204-974C-F8068704F5E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sitecore.WFFM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Sitecore.WFFM.Core</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\SharedAssemblies\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Dependencies\DefaultImplResourceManager.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Resources\Captcha\_0.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_1.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_2.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_3.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_4.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_5.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_6.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_7.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_8.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_9.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_a.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_b.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_c.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_d.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_e.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_f.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_g.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_h.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_i.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_j.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_k.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_l.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_m.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_n.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_o.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_p.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_q.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_r.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_s.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_t.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_u.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_v.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_w.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_x.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_y.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\_z.mp3" />
+    <EmbeddedResource Include="Resources\Captcha\ding.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.WFFM.Abstractions\Sitecore.WFFM.Abstractions.csproj">
+      <Project>{3aaf0701-6eaf-4736-bedb-45089feab16c}</Project>
+      <Name>Sitecore.WFFM.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

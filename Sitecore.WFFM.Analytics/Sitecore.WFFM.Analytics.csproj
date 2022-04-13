@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Work\Assemblies\WFFM\Sitecore.WFFM.Analytics.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F48C05D-3DC7-464A-A1D4-4D813C8A1F13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sitecore.WFFM.Analytics</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>9.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Sitecore.WFFM.Analytics</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharedAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Aggregation">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.Aggregation.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Core">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>..\SharedAssemblies\Sitecore.Analytics.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\SharedAssemblies\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Marketing">
+      <HintPath>..\SharedAssemblies\Sitecore.Marketing.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Client">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Client.Configuration">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Client.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Collection.Model">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Collection.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.XConnect.Core">
+      <HintPath>..\SharedAssemblies\Sitecore.XConnect.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Xdb.Reporting">
+      <HintPath>..\SharedAssemblies\Sitecore.Xdb.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContactFacetFactory.cs" />
+    <Compile Include="FieldEvent.cs" />
+    <Compile Include="Queries\FormStatisticsByContactReportQuery.cs" />
+    <Compile Include="Queries\FormFieldsStatisticsReportQuery.cs" />
+    <Compile Include="Queries\FormDataReportQuery.cs" />
+    <Compile Include="Queries\FormSummaryReportQuery.cs" />
+    <Compile Include="Providers\AnalyticsFormsDataProvider.cs" />
+    <Compile Include="Providers\SqlConnectionProvider.cs" />
+    <Compile Include="Providers\SqlFormsDataProvider.cs" />
+    <Compile Include="Providers\CombinedFormsDataProvider.cs" />
+    <Compile Include="Model\FieldData.cs" />
+    <Compile Include="Model\FieldValueStatistics.cs" />
+    <Compile Include="Model\FormContactsResult.cs" />
+    <Compile Include="Model\FormData.cs" />
+    <Compile Include="Model\FormFieldStatistics.cs" />
+    <Compile Include="Model\FormStatistics.cs" />
+    <Compile Include="Model\FormSubmitFinalResult.cs" />
+    <Compile Include="Model\SubmitResult.cs" />
+    <Compile Include="Core\DateUtil.cs" />
+    <Compile Include="Core\Json.cs" />
+    <Compile Include="Core\IJson.cs" />
+    <Compile Include="Dependencies\ContactRepositoryWrapper.cs" />
+    <Compile Include="Dependencies\FieldData.cs" />
+    <Compile Include="Dependencies\DefaultImplAnalyticsTracker.cs" />
+    <Compile Include="Dependencies\DefaultImplFacetFactory.cs" />
+    <Compile Include="Dependencies\ReportDataProviderWrapper.cs" />
+    <Compile Include="Aggregation\Processors\Helper.cs" />
+    <Compile Include="Aggregation\Processors\FormSummary\FormSummary.cs" />
+    <Compile Include="Aggregation\Processors\FormSummary\FormSummaryKey.cs" />
+    <Compile Include="Aggregation\Processors\FormSummary\FormSummaryProcessor.cs" />
+    <Compile Include="Aggregation\Processors\FormSummary\FormSummaryValue.cs" />
+    <Compile Include="Aggregation\Processors\FormFieldValues\FormFieldValues.cs" />
+    <Compile Include="Aggregation\Processors\FormFieldValues\FormFieldValuesKey.cs" />
+    <Compile Include="Aggregation\Processors\FormFieldValues\FormFieldValuesValue.cs" />
+    <Compile Include="Aggregation\Processors\FormEvents\FormEvents.cs" />
+    <Compile Include="Aggregation\Processors\FormEvents\FormEventsKey.cs" />
+    <Compile Include="Aggregation\Processors\FormEvents\FormEventsProcessor.cs" />
+    <Compile Include="Aggregation\Processors\FormEvents\FormEventsValue.cs" />
+    <Compile Include="Aggregation\Processors\FormStatisticsByContact\FormStatisticsByContact.cs" />
+    <Compile Include="Aggregation\Processors\FormStatisticsByContact\FormStatisticsByContactKey.cs" />
+    <Compile Include="Aggregation\Processors\FormStatisticsByContact\FormStatisticsByContactProcessor.cs" />
+    <Compile Include="Aggregation\Processors\FormStatisticsByContact\FormStatisticsByContactValue.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.WFFM.Abstractions\Sitecore.WFFM.Abstractions.csproj">
+      <Project>{3aaf0701-6eaf-4736-bedb-45089feab16c}</Project>
+      <Name>Sitecore.WFFM.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
