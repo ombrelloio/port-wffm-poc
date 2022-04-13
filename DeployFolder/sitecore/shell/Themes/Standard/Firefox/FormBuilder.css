@@ -1,0 +1,172 @@
+
+.scFbArrow
+{
+    left: 0px;
+}
+
+.scFbArrowSection
+{
+    background-image: url(/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/arrow.png);
+}
+
+.scFbArrowField
+{
+    background-image: url(/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/arrow.png);
+}
+
+.scFbTableSectionDeleteButton
+{
+    background-image: url(/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/delete2.png);
+}
+
+.scBrowseButton {
+    padding: 0px 0px;
+}
+
+.scFbTableFieldDeleteButton
+{
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-image: url(/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/delete2.png);
+    margin-right: 4px;
+}
+
+.FormPabelTable
+{
+    height: 400px;
+}
+
+.scFbWorkPanel
+{
+    width: auto;
+    height: 100%;
+}
+
+.scFbFrameContent
+{
+	padding:0;
+	background: white;
+	width: 100%;
+	height: 100%;
+}
+
+.scFbTitleGrid
+{
+    padding-top :5px;
+}
+
+.scFbFrameGrid
+{
+	background-color: white;
+	border: solid 1px white;
+	width: 100%;
+	padding: 0px 0px 0px 10px;
+	display: block;
+}
+
+#FormTablePanel
+{
+    padding: 0px;
+    margin: 0px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+.scFbButtonContainer
+{
+    width: 100%;
+    text-align: right;
+}
+
+.scFbTableFieldType
+{
+    padding-left: 7px;
+    padding-bottom: 2px;
+}
+
+.scFbPeLabel
+{
+    display: block;    
+}
+
+.scFbPeEntry select
+{
+    width: 69%;
+}
+
+.scFbPeEntry textarea
+{
+    width: 67.5%;
+}
+
+.scFbPeInfo
+{
+    padding: 2px 5px 5px 30%;    
+    width: 69%;
+    white-space:normal;
+    display : block;
+}
+
+.scFbPeValueProperty
+{
+     display: inline;
+}
+
+.scFbInlineImage
+{
+    margin-bottom: 5px;
+}
+
+
+.sc-accordion-header
+{
+    margin: 0px 5px 0px 0px;
+    font-weight: bold;
+    border: 0px;
+    padding: 0px;
+}
+
+.sc-accordion-header-left
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.sc-accordion-header-right
+{       
+    display:block;
+    float:right;
+}
+
+.sc-accordion-header-center
+{
+    display: block;
+    float: left;
+}
+
+
+.sc-accordion-header table
+{
+    padding: 0px 5px;
+    table-layout: fixed;
+    margin: 0px;
+    width: 100%;
+    border: 0px;
+}
+
+.robot-modes
+{
+    padding-top : 20px;
+}
+
+.list-items-value
+{
+    margin-left:0px;
+}
+
+.tableSendEmail
+{
+    height: 100%;    
+}

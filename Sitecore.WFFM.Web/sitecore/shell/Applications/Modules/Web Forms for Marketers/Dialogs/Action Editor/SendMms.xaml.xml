@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xamlControls
+  xmlns:x="http://www.sitecore.net/xaml"
+  xmlns:ajax="http://www.sitecore.net/ajax"
+  xmlns:rest="http://www.sitecore.net/rest"
+  xmlns:r="http://www.sitecore.net/renderings"
+  xmlns:xmlcontrol="http://www.sitecore.net/xmlcontrols"
+  xmlns:p="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+  xmlns:asp="http://www.sitecore.net/microsoft/webcontrols"
+  xmlns:html="http://www.sitecore.net/microsoft/htmlcontrols"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:wfm="http://www.sitecore.net/wfm/webcontrols">
+
+  <Sitecore.Forms.Shell.UI.Dialogs.SendMMS x:inherits="Sitecore.Forms.Shell.UI.Dialogs.SendMmsPage,Sitecore.Forms.Core">
+    <x:register assembly="ComponentArt.Web.UI" namespace="ComponentArt.Web.UI" />
+    <x:register assembly="Sitecore.Forms.Core" namespace="Sitecore.Forms.Shell.UI.Controls"/>
+
+
+    <Sitecore.Controls.DialogPage Icon="Applications/32x32/document_cup.png" runat="server">
+
+      <AjaxScriptManager runat="server"/>
+      <ContinuationManager runat="server" />
+
+      <Style runat="server" x:placeholder="Stylesheets">
+      </Style>
+
+      <Stylesheet Src="WFM/ComboBoxWithNestedContent.css" DeviceDependant="true" runat="server" />
+      <Stylesheet Src="SendMMSAction.css" DeviceDependant="true" runat="server"/>
+
+      <Script runat="server" Src="/sitecore/shell/controls/lib/jquery/jquery.js"/>
+      <Script type="text/javascript" runat="server">
+        var $j = jQuery.noConflict();
+      </Script>
+      <Script runat="server" Src="/sitecore/shell/Controls/Sitecore.Runtime.js"/>
+      <Script runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Utils.js"/>
+      <Script runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Sitecore.EmailEditor.js"/>
+      <Script runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Sitecore.Forms.PopupMenu.js"/>
+
+        
+      
+      <script type="text/javascript" runat="server">
+        //<![CDATA[
+                      
+              function OnItemStateChanged(sender, args){
+              
+               var nodes = sender.select('input[type="checkbox"]');
+
+               if (nodes.first().checked){
+        var element = nodes.first().next();
+        ModeCombobox.set_text(element.innerText || element.innerHTML);
+               }
+                else
+                {
+                var text = "";
+                nodes.each(function(node){
+                if (node.checked){
+                text = text + ", " + node.next().innerHTML;
+                }
+                });
+
+                if (text.blank()){
+                  text = sc.dictionary['Never'];
+                }
+
+                if (text.startsWith(",")){
+                text = text.substring(2);
+                }
+                ModeCombobox.set_text(text);
+                }
+                
+                }
+                
+       
+      if (!window.ctl00_ctl00_ctl00_ctl00_ctl05_ModeCombobox || window.ctl00_ctl00_ctl00_ctl00_ctl05_ModeCombobox == 'undefined') {
+       window.ctl00_ctl00_ctl00_ctl00_ctl05_ModeCombobox = new Object();
+       window.ctl00_ctl00_ctl00_ctl00_ctl05_ModeCombobox.HandleInputMouseOut = function(){};
+       window.ctl00_ctl00_ctl00_ctl00_ctl05_ModeCombobox.HandleInputMouseOver = function(){};
+    }
+    
+       
+       document.observe('dom:loaded', function() {
+        $('ctl00_ctl00_ctl00_ctl00_ctl05_ModeCombobox_Input').readOnly = true;
+        })
+                            
+    //]]>
+      </script>
+
+
+      <table class="scTableHeight" width="100%" cellpadding="0" cellspacing="0" border="0" style="position:relative">
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td height="100%" vAlign="top">
+            <GridPanel runat="server" Width="100%" Height="100%"  Style="table-layout:fixed">
+              <GridPanel runat="server" Width="100%" Columns="2" Margin="0px 0px 5px 0px" >
+
+                <Literal runat="server"/>
+                <GridPanel runat="server" GridPanel.Width="80%" Width="100%" Columns="2" cellpadding="0" cellspacing="0">
+                  <Literal runat="server" ID="TelephoneNumberLiteral" style="font-size:xx-small;" GridPanel.Width="50%"></Literal>
+                  <Literal runat="server" ID="MMSGatewayLiteral" style="font-size:xx-small;" Margin="0px 0px 0px 2px" GridPanel.Width="50%"></Literal>
+                </GridPanel>
+
+                <Literal runat="server" ID="RecipientLiteral" GridPanel.Align="left" Margin="0px 10px 0px 0px"></Literal>
+                <GridPanel runat="server" GridPanel.Width="80%" Width="100%" Columns="2" cellpadding="0" cellspacing="0">
+                  <asp:DropDownList ID="RecipientNumber" runat="server" GridPanel.Width="50%" Width="100%"/>
+                  <asp:TextBox runat="server" ID="RecipientGatewayEdit" Value="@mms.example.com" GridPanel.Width="50%" Width="100%" Margin="0px 0px 0px 2px">
+                  </asp:TextBox>
+
+                </GridPanel>
+
+                <Literal runat="server" ID="FromNumberLiteral" GridPanel.Align="left" Margin="0px 10px 0px 0px"></Literal>
+                <asp:TextBox runat="server" ID="FromEdit" Width="100%" GridPanel.Width="80%"></asp:TextBox>
+
+                <Literal ID="SendMessageLiteral" runat="server"   GridPanel.Align="left" Margin="0px 10px 0px 0px"/>
+                <Border runat="server" ID="ModeComboboxHolder" style="overflow:hide;" Padding="1px 0px 0px 0px">
+                  <ComboBox ID="ModeCombobox"
+                            runat="server"
+                            KeyboardEnabled="false"
+                            AutoFilter="false"
+                            AutoHighlight="false"
+                            AutoComplete="false"
+                            DropHoverImageUrl="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/ddn-hover.png"
+                            DropImageUrl="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/ddn.png"
+                            Width="393"
+                            Height="18"
+                            DropDownWidth="393"
+                            DropDownHeight="230"
+                            DropDownOffsetY="2"
+                            DropDownOffsetX="0"
+                            ItemCssClass="ddn-item"
+                            ItemHoverCssClass="ddn-item-hover"
+                            CssClass="cmb"
+                            HoverCssClass="cmb-hover"
+                            TextBoxCssClass="txt"
+                            DropDownResizingMode="bottom"
+                            DropDownCssClass="ddn"
+                            DropDownContentCssClass="ddn-con"
+                            Margin="0px 0px 0px 3px"
+                            CollapseDuration="0">
+                    <DropDownContent>
+                      <ComboBoxContent runat="server">
+                        <ControlledChecklist ID="EditModeList" runat="server" ClientSideOnNodeStateChanged="OnItemStateChanged" />
+                      </ComboBoxContent>
+                    </DropDownContent>
+                  </ComboBox>
+                </Border>
+              </GridPanel>
+
+              <Border runat="server" Height="100%" GridPanel.Width="100%" GridPanel.Height="100%" GridPanel.VAlign="top">
+
+                <Border runat="server" ID="HtmlEditorPane" Visible="false" Height="100%">
+                  <GridPanel runat="server" Width="100%" Height="100%" Style="table-layout:fixed">
+                    <Memo runat="server" ID="HtmlEditor" Style="width:100%;height:100%;border:none;margin:0px" Wrap="soft" GridPanel.Height="100%"/>
+                  </GridPanel>
+                
+                  
+                </Border>
+
+                <Frame runat="server" ID="Editor" Width="100%" Height="100%"/>
+                <script type="text/javascript" runat="server">
+                  $j("#Editor").bind("load", function() {
+                  $j(this).contents().find(".InsertSitecoreLinkWFFM").attr("style", "background-image:url(/sitecore/shell/themes/standard/images/editor/linkmanager.gif) !important;background-position: -2px -2px;");})
+                </script>
+              </Border>
+
+              <Toolbar style="display:none" runat="server">
+
+                <Border runat="server" Class="scModeButtons" NoWrap="true" Width="49%" Style="display:inline">
+                  <Toolbutton runat="server" ID="DesignButton" Icon="Applications/16x16/text_view.png" IconSize="id16x16" Down="true" Click="ShowDesign"/>
+                  <Toolbutton runat="server" ID="HtmlButton" Icon="Software/16x16/text_code.png" IconSize="id16x16" Click="ShowHtml"/>
+                  <Space runat="server" Width="4"/>
+                </Border>
+              </Toolbar>
+
+
+            </GridPanel>
+          </td>
+        </tr>
+      </table>
+
+    </Sitecore.Controls.DialogPage>
+  </Sitecore.Forms.Shell.UI.Dialogs.SendMMS>
+
+
+</xamlControls>
+

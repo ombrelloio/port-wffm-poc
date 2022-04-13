@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense" xmlns:content="http://www.sitecore.net/content">
+  <Form.SelectPage>
+
+    <FormDialog ID="Dialog" Icon="Applications/32x32/window.png">
+
+      <Script runat="server" Src="/sitecore/shell/controls/Sitecore.js"/>
+      <Script runat="server" Src="/sitecore/shell/controls/SitecoreObjects.js"/>
+
+      <Script runat="server" Src="/sitecore/shell/Controls/Sitecore.Runtime.js"/>
+
+      <Script runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Sitecore.PlaceholderManager.js"/>
+
+
+      <Stylesheet Src="FormBuilder.css" DeviceDependant="true"/>
+
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SelectPage,Sitecore.Forms.Core"/>
+
+      <GridPanel Width="100%" Height="100%" vAlign="top">
+
+        <DataContext   ID="ItemDataContext" DataViewName="Master" ShowRoot="false" />
+
+        <GridPanel Width="100%" Height="100%" GridPanel.Height="100%">
+
+          <GridPanel  Columns="1" Width="100%" Height="100%" Fixed="true" Border="1px inset"  GridPanel.Height="90%" >
+
+            <Scrollbox GridPanel.vAlign="top" Padding="10 10 10 10" Width="100%"  Height="100%" Background="window" Border="none" Style="filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#ffffff', EndColorStr='#DFE6EC')" GridPanel.ID="FoldersPane" GridPanel.Width="100%">
+
+              <DataTreeview Width="100%" ID="ItemTreeView" DataContext="ItemDataContext" AllowDragging="false" />
+
+            </Scrollbox>
+
+          </GridPanel>
+
+          <input type="hidden" id="PageHolder" name="PageHolder" />
+          <input type="hidden" id="CurrentPlaceholder" name="CurrentPlaceholder" />
+          <GridPanel Columns="3" GridPanel.Height="10%">
+            <Literal Text="Placeholder:" GridPanel.Width="10%"></Literal>
+            <Combobox ID="PlaceholderList" Class="PlaceholderList" Style="font:8pt tahoma;width:100%"  GridPanel.Width="85%" GridPanel.Style="padding:0 0 0 10"/>
+            <Border GridPanel.Width="50px">
+            <ThemedImage ID="LoadImage" runat="server" Src="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/spinner.gif" style="padding:0 0; margin:0 0 0 7"/>
+            <Literal ID="StarLabel" Text="*" runat="server" style="padding:0 0;margin:0 0 0 7;display:none"/>
+            </Border>
+          </GridPanel>
+
+        </GridPanel>
+
+      </GridPanel>
+
+      <script type="text/javascript" runat="server">
+
+        document.observe('dom:loaded', function() {
+        Sitecore.Wfm.PlaceholderManager.getPlaceholders($$('.PlaceholderList')[0].readAttribute('page'), ExpandOptions, ClearOptions);
+        });
+
+        function ExpandOptions(options){
+
+        var placeholders = $$('.PlaceholderList')[0];
+
+        ClearOptions();
+
+        options.split(',').each(function(placeholder){
+        var option = document.createElement('option');
+        option.text = placeholder;
+        option.value = placeholder;
+
+        if (option.value == $('CurrentPlaceholder').value)
+        {
+        option.selected = true;
+        }
+
+        if (placeholders.readAttribute('placeholder') == placeholder)
+        {
+        option.selected = true;
+        }
+
+        try {
+        placeholders.add(option, null);
+        }
+        catch (ex) {
+        placeholders.add(option);
+        }
+        })
+
+        }
+
+        function ClearOptions(){
+
+        $('PageHolder').value = '';
+        var placeholders = $$('.PlaceholderList')[0];
+
+        if (placeholders.getValue() != null)
+        {
+        if ( placeholders.getValue() != '' )
+        {
+        $('CurrentPlaceholder').value = placeholders.getValue();
+        }
+        }
+
+        while (placeholders.length > 0) {
+        placeholders.remove(placeholders.length - 1);
+        }
+
+        $('LoadImage').style.display = 'none';
+        $('StarLabel').style.display = 'block';
+        }
+
+
+      </script>
+
+    </FormDialog>
+  </Form.SelectPage>
+</control>

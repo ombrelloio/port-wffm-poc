@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.SaveToAscx.Preview>
+
+    <Stylesheet Key="SelectFields">
+
+      .scfPreview{
+      padding:5px;
+      font:9pt verdana;
+      text-decoration:none;
+      background-color:white;
+      }
+
+    </Stylesheet>
+
+    <FormDialog ID="Dialog" Icon="Applications/16x16/checkbox.png">
+
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SaveToAscxPreview,Sitecore.Forms.Core"/>
+
+
+        <Toolbar>
+          <Toolbutton Icon="Network/16x16/download.png" ID="DownloadToolbutton" Click="dialog:download"/>
+        </Toolbar>
+     
+        <Scrollbox contenteditable="true" Class="scfPreview"  Width="99%" height="460px" ID="Preview" Style="overflow:auto;">
+        </Scrollbox>
+
+
+
+    </FormDialog>
+  </Forms.SaveToAscx.Preview>
+</control>

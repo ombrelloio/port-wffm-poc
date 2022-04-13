@@ -1,0 +1,305 @@
+/* Form */
+.scfForm
+{
+}
+
+/* Form Title*/
+.scfTitleBorder
+{
+    color: #000000;
+}
+
+/* Form Introduction*/
+.scfIntroBorder
+{
+}
+
+/* Form Footer*/
+.scfFooterBorder
+{
+}
+
+/* Submit Button*/
+.scfSubmitButtonBorder
+{
+}
+
+.scfSubmitButton
+{
+}
+
+/* Validation */
+.scfError, .scfValidationSummary, .scfValidatorRequired, .scfValidator
+{
+    color: red;
+}
+
+.scfRequired
+{
+    color: #000000;
+}
+
+/* Forms section*/
+.scfSectionBorderAsFieldSet
+{
+    border-top-color: #000000;
+}
+
+.scfSectionLegend
+{
+    color: #000000;
+}
+
+.scfSectionBorder
+{
+}
+
+.scfSectionContent
+{
+}
+
+
+.scfSectionUsefulInfo
+{
+}
+
+/* Form fields */
+/* Checkbox */
+.scfCheckboxBorder
+{
+}
+
+.scfCheckbox
+{
+}
+
+.scfCheckboxUsefulInfo
+{
+    color: silver;
+}
+/* DropList */
+.scfDropListBorder
+{
+}
+
+.scfDropListLabel
+{
+}
+
+.scfDropList
+{
+}
+
+.scfDropListUsefulInfo
+{
+    color: silver;
+}
+/* Email */
+.scfEmailBorder
+{
+}
+
+.scfEmailLabel
+{
+}
+
+.scfEmailTextBox
+{
+}
+
+.scfEmailUsefulInfo
+{
+    color: silver;
+}
+/* Label */
+.scfLabel
+{
+}
+/* Multiple-Line Text */
+.scfMultipleLineTextBorder
+{
+}
+
+.scfMultipleLineTextBox
+{
+}
+
+.scfMultipleLineTextLabel
+{
+}
+
+.scfMultipleLineTextUsefulInfo
+{
+    color: silver;
+}
+/* Password */
+.scfPasswordBorder
+{
+}
+
+.scfPasswordTextBox
+{
+}
+
+.scfPasswordLabel
+{
+}
+
+.scfPasswordUsefulInfo
+{
+    color: silver;
+}
+
+/* Single-Line Text */
+.scfSingleLineTextBorder
+{
+}
+
+.scfSingleLineTextBox
+{
+}
+
+.scfSingleLineTextLabel
+{
+}
+
+.scfSingleLineTextUsefulInfo
+{
+    color: silver;
+}
+
+/* Number */
+.scfNumberBorder
+{
+}
+
+.scfNumberTextBox
+{
+}
+
+.scfNumberLabel
+{
+}
+.scfNumberUsefulInfo
+{
+    color: silver;
+}
+
+/* Date Picker*/
+.scfDatePickerTextBox
+{
+}
+
+.scfDatePickerUsefulInfo
+{
+    color: silver;
+}
+
+.scfDatePickerLabel
+{
+}
+
+/* DateTime */
+.scfDateBorder
+{
+}
+
+.scfDateTextBox
+{
+}
+
+.scfDateLabel
+{
+}
+
+.scfDateUsefulInfo
+{
+    color: silver;
+}
+
+/* Radio Button List */
+.scfRadioButtonListBorder
+{
+}
+
+.scfRadioButtonList
+{
+}
+
+.scfRadioButtonListLabel
+{
+}
+
+.scfRadioButtonListUsefulInfo
+{
+    color: silver;
+}
+
+/* ListBox */
+.scfListBoxBorder
+{
+}
+
+.scfListBox
+{
+}
+
+.scfListBoxLabel
+{
+}
+
+.scfListBoxUsefulInfo
+{
+    color: silver;
+}
+
+/* CheckBoxList */
+.scfCheckBoxListBorder
+{
+}
+
+.scfCheckBoxList
+{
+}
+
+.scfCheckBoxListLabel
+{
+}
+
+.scfCheckBoxListUsefulInfo
+{
+    color: silver;
+}
+
+/* File Upload */
+.scfFileUploadBorder
+{
+}
+
+.scfFileUpload
+{
+}
+
+.scfFileUploadLabel
+{
+}
+
+.scfFileUploadUsefulInfo
+{
+    color: silver;
+}
+
+.scfCreditCardTextUsefulInfo, .scfConfirmPasswordUsefulInfo, .scfDateSelectorUsefulInfo, .scfCaptchaUsefulInfo, .scfTelephoneUsefulInfo, .scfSmsTelephoneUsefulInfo
+{
+    color: silver;
+}
+
+.scfDateSelectorShortLabelDay, .scfDateSelectorShortLabelMonth, .scfDateSelectorShortLabelYear
+{
+    color: #000000;
+}
+
+.ui-widget
+{
+    font-size: 10px;
+}

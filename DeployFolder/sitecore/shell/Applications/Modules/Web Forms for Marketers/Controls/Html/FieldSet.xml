@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition">
+  <Form.FieldSet>
+    <fieldset class="sc-accordion-header">
+      <legend class="sc-accordion-header-left ui-state-active">
+        <span class="sc-accordion-header-center">
+          <ThemedImage Src="$Icon" Width="16" Height="16" Align="absmiddle"/>
+          <strong>
+            <Literal Text="$Header"/>
+          </strong>
+          <div class="sc-accordion-header-right">
+            &amp;nbsp;
+          </div>
+        </span>
+      </legend>
+        <Border class="sc-accordion-body">
+          <GridPanel Width="100%" Fixed="true" Margin="0" Padding="0" CellPadding="0" CellSpacing="0">
+           <def:Placeholder GridPanel.Container="true" />
+          </GridPanel>
+        </Border>
+    </fieldset>
+  </Form.FieldSet>
+</control>

@@ -1,0 +1,7 @@
+﻿@using Sitecore.Forms.Mvc.Html
+@model Sitecore.Forms.Mvc.ViewModels.Fields.MultipleLineTextField
+
+@using (Html.BeginField())
+{
+    @Html.TextAreaFor(x => Model.Value, Model.Rows, Model.Columns, new { @class = "form-control"})
+}

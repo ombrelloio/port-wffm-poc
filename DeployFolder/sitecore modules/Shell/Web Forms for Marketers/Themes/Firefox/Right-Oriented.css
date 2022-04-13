@@ -1,0 +1,4 @@
+﻿.scfDropListBorder, .scfEmailBorder, .scfMultipleLineTextBorder, .scfSingleLineTextBorder, .scfPasswordBorder, .scfNumberBorder, .scfDatePickerBorder, .scfDateBorder, .scfRadioButtonListBorder, .scfListBoxBorder, .scfCheckBoxListBorder, .scfFileUploadBorder, .scfCreditCardBorder, .scfConfirmPasswordBorder, .scfTelephoneBorder, .scfDateSelectorBorder, .scfSmsTelephoneBorder, .scfShortDate, .scfShortText
+{
+	overflow : auto;
+}

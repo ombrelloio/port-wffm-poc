@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition">
+  <FormSettingsDesigner def:inherits="Sitecore.Forms.Shell.UI.Controls.FormSettingsDesigner,Sitecore.Forms.Core">
+
+    <Scrollbox ID="ContentTitle" Class="scFbTab" Height="100%" Align="left" style="padding:0px;display:none" Depend="TitleBorder" Edit="TitleEdit">
+      <Form.FieldSet ID="TitleFieldSet" Icon="Business/16x16/table_new.png">
+        <Border ID="TitleScope"  class="scFbSettingSection">
+          <Literal ID="TitleLiteral" class="scFbLabel" />
+          <Edit Class="scFbSettingsEdit" ID="TitleEdit" onclick="javascript:return Sitecore.FormBuilder.selectControl(this,event,'TitleBorder','ContentTitle', true, 'TitleEdit')" onchange="Sitecore.FormBuilder.moveValue('TitleEdit', 'FormTitle')" onkeyup="Sitecore.FormBuilder.moveValue('TitleEdit', 'FormTitle')" oncut="('TitleEdit', 'FormTitle')" onpaste="('TitleEdit', 'FormTitle')"/>
+        </Border>
+        <Border ID="TitleTagScope" class="scFbSettingSection">
+          <Literal ID="TitleTagLiteral" class="scFbLabel" />
+          <Listbox Class="scFbSettingsEdit" ID="TitleTagListbox" />
+        </Border>
+      </Form.FieldSet>
+    </Scrollbox>
+
+    <Scrollbox ID="ContentIntro" Class="scFbTab" Align="left" style="padding:0px;display:none" Depend="Intro" Edit="IntroHtml">
+      <Form.FieldSet ID="IntroFieldSet" Icon="WordProcessing/24x24/header.png">
+        <Border class="scFbSettingSection" ID="IntroScope">
+          <Literal class="scFbLabel" ID="IntroductionLiteral"/>
+          <GridPanel Columns="2" Width="100%" Height="100%">
+            <Memo ID="IntroHtml" class="scFbMultiEdit" GridPanel.Width="100%" onclick="javascript:return Sitecore.FormBuilder.selectControl(this,event,'Intro','ContentIntro', true, 'IntroHtml')" onkeyup="Sitecore.FormBuilder.moveValue('IntroHtml', 'Forms.RichText.Html', 'Introduction', 'IntroGrid_frame')" oncut="Sitecore.FormBuilder.moveValue('IntroHtml', 'Forms.RichText.Html', 'Introduction', 'IntroGrid_frame')" onpaste="Sitecore.FormBuilder.moveValue('IntroHtml', 'Forms.RichText.Html', 'Introduction', 'IntroGrid_frame')"/>
+          </GridPanel>
+          <Border Class="scFbActionButton">
+          </Border>
+        </Border>
+      </Form.FieldSet>
+    </Scrollbox>
+
+    <Scrollbox ID="ContentFooter" Class="scFbTab" Align="left" style="padding:0px;display:none" Depend="Footer" Edit="FooterHtml">
+      <Form.FieldSet ID="FooterFieldSet" Icon="WordProcessing/24x24/footer.png">
+        <Border class="scFbSettingSection" ID="FooterScope">
+          <Literal class="scFbLabel" ID="FooterLiteral" />
+          <GridPanel Columns="2" Width="100%" Height="100%">
+            <Memo ID="FooterHtml" class="scFbMultiEdit"  onclick="javascript:return Sitecore.FormBuilder.selectControl(this,event,'Footer','ContentFooter', true, 'FooterHtml')" onkeyup="Sitecore.FormBuilder.moveValue('FooterHtml', 'Forms.RichText.Html', 'Footer', 'FooterGrid_frame')" oncut="Sitecore.FormBuilder.moveValue('FooterHtml', 'Forms.RichText.Html', 'Footer', 'FooterGrid_frame')" onpaste="Sitecore.FormBuilder.moveValue('FooterHtml', 'Forms.RichText.Html', 'Footer', 'FooterGrid_frame')"/>
+          </GridPanel>
+          <Border Class="scFbActionButton">
+          </Border>
+        </Border>
+      </Form.FieldSet>
+    </Scrollbox>
+
+    <Scrollbox ID="SubmitTab"  Class="scFbTab" Align="left" style="padding:0px;display:none" Depend="SubmitGrid" >
+      <Form.FieldSet ID="SubmitFieldSet" Icon="Applications/32x32/document_out.png">
+        <Border class="scFbSettingSection">
+          <Literal class="scFbLabel" ID="ButtonNameLiteral" />
+          <GridPanel Columns="2" Width="100%" CellPadding="0px" CellSpacing="0px">
+            <Edit Class="scFbSettingsEdit" ID="SubmitEdit" Width="100%" GridPanel.Width="100%" onchange="Sitecore.FormBuilder.moveValue('SubmitEdit', 'FormSubmit')" onkeyup="Sitecore.FormBuilder.moveValue('SubmitEdit', 'FormSubmit')" oncut="('SubmitEdit', 'FormSubmit')" onpaste="('SubmitEdit', 'FormSubmit')"/>
+          </GridPanel>
+        </Border>
+        <Border class="scFbSettingSection" ID="SubmitCommands" Margin="5px 0px 0px 0px">
+        </Border>
+        <GridPanel Width="100%" CellPadding="0px" CellSpacing="0px">
+          <Border Class="scContentControlLayoutDeviceRenderings" style="padding-left:0px" GridPanel.Width="100%" GridPanel.VAlign="top">
+            <Border Foreground="" Border="0" Margin="0 1 0 0" Padding="0">
+              <Border style="float:right; padding-right:15px;margin-top:3px">
+                <a class="scwfmEditLink" href="#" OnClick="javascript:return scForm.postEvent(this,event,'forms:editsuccess')" Padding="0px 0px 0px 0px">
+                  <Literal ID="EditLiteral" class="scwfmEditLabel" Padding="0 10 0 10"/>
+                </a>
+              </Border>
+              <a Class="scFbGroup" href="#" OnClick="javascript:return scForm.postEvent(this,event,'forms:editsuccess')" Style="font-weight:bold" Border="0" Margin="0">
+                <ThemedImage width="16" height="16" border="0" align="middle" alt=""
+                     style="margin: -4px 4px 0px 0px;" class=""
+                     src="People/32x32/sun.png" />
+                <Literal ID="SuccessLiteral" Margin="0" Padding="0"/>
+              </a>
+              <Border Background="#dddddd" Margin="2px 0px 2px 0px">
+                <Space/>
+              </Border>
+            </Border>
+            <Border Style="color:#8e8e8e" Margin="4px 0px 4px 0px" >
+              <div class="scwfmActionShortDesc">
+                <Literal ID="SuccessDescriptionLiteral" />
+              </div>
+            </Border>
+            <Border Padding="0 0 0 23px" ID="SuccessSettings">
+              <Border ID="SuccessPageSection" >
+                <Literal class="scWfmCaption" ID="SuccessPageLiteral" />
+                <Literal ID="SuccessPage" Class="scWfmSuccessPage" style="display:inline"/>
+              </Border>
+              <Border ID="SuccessMessageSection">
+                <Literal class="scWfmCaption" ID="SuccessMesssageLiteral"/>
+                <Literal ID="SuccessMessage" Class="scWfmSuccessMessage" style="display:inline"/>
+              </Border>
+            </Border>
+          </Border>
+        </GridPanel>
+        <Border GridPanel.Height="100%">
+
+        </Border>
+      </Form.FieldSet>
+
+    </Scrollbox>
+
+    <Scrollbox ID="PropertySettings" Class="scFbTab" Align="left" style="padding:0px;display:none" />
+
+  </FormSettingsDesigner>
+</control>

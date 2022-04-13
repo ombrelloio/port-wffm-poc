@@ -1,0 +1,150 @@
+﻿form[data-wffm] fieldset,
+.form-group {
+  clear: both;
+}
+
+form[data-wffm] .halfAvailableWidth,
+form[data-wffm] .thirdAvailableWidth {
+  clear: none;
+}
+
+.halfAvailableWidth {
+  float: left;
+  text-align: left;
+  display: inline;
+  margin: 5px 0;
+  width: 50%;
+  vertical-align: top;
+}
+
+.thirdAvailableWidth {
+  float: left;
+  text-align: left;
+  display: inline;
+  margin: 5px 0;
+  width: 33%;
+  vertical-align: top;
+}
+
+.halfLeft {
+  width: 50%;
+}
+
+.halfRight {
+  width: 50%;
+  float: right;
+}
+
+  .halfLeft .scfSectionBorderAsFieldSet,
+  .halfRight .scfSectionBorderAsFieldSet {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+  }
+
+  .halfLeft .scfEmailGeneralPanel,
+  .halfLeft .scfMultipleLineGeneralPanel,
+  .halfLeft .scfSingleLineGeneralPanel,
+  .halfLeft .scfPasswordGeneralPanel,
+  .halfLeft .scfNumberGeneralPanel,
+  .halfLeft .scfDatePickerGeneralPanel,
+  .halfLeft .scfDateGeneralPanel,
+  .halfLeft .scfRadioButtonListGeneralPanel,
+  .halfLeft .scfCheckBoxListGeneralPanel,
+  .halfLeft .scfFileUploadGeneralPanel,
+  .halfLeft .scfDateSelectorGeneralPanel,
+  .halfRight .scfEmailGeneralPanel,
+  .halfRight .scfMultipleLineGeneralPanel,
+  .halfRight .scfSingleLineGeneralPanel,
+  .halfRight .scfPasswordGeneralPanel,
+  .halfRight .scfNumberGeneralPanel,
+  .halfRight .scfDatePickerGeneralPanel,
+  .halfRight .scfDateGeneralPanel,
+  .halfRight .scfRadioButtonListGeneralPanel,
+  .halfRight .scfCheckBoxListGeneralPanel,
+  .halfRight .scfFileUploadGeneralPanel,
+  .halfRight .scfDateSelectorGeneralPanel {
+    margin: 0;
+    width: 80%;
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+  }
+
+
+  .halfLeft .scfDropListBorder,
+  .halfLeft .scfEmailBorder,
+  .halfLeft .scfMultipleLineTextBorder,
+  .halfLeft .scfSingleLineTextBorder,
+  .halfLeft .scfPasswordBorder,
+  .halfLeft .scfNumberBorder,
+  .halfLeft .scfDatePickerBorder,
+  .halfLeft .scfDateBorder,
+  .halfLeft .scfRadioButtonListBorder,
+  .halfLeft .scfListBoxBorder,
+  .halfLeft .scfCheckBoxListBorder,
+  .halfLeft .scfFileUploadBorder,
+  .halfRight .scfDropListBorder,
+  .halfRight .scfEmailBorder,
+  .halfRight .scfMultipleLineTextBorder,
+  .halfRight .scfSingleLineTextBorder,
+  .halfRight .scfPasswordBorder,
+  .halfRight .scfNumberBorder,
+  .halfRight .scfDatePickerBorder,
+  .halfRight .scfDateBorder,
+  .halfRight .scfRadioButtonListBorder,
+  .halfRight .scfListBoxBorder,
+  .halfRight .scfCheckBoxListBorder,
+  .halfRight .scfFileUploadBorder {
+    text-align: left;
+    display: block;
+    margin: 0;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .halfLeft .scfDropListLabel,
+  .halfLeft .scfEmailLabel,
+  .halfLeft .scfMultipleLineTextLabel,
+  .halfLeft .scfSingleLineTextLabel,
+  .halfLeft .scfPasswordLabel,
+  .halfLeft .scfNumberLabel,
+  .halfLeft .scfDatePickerLabel,
+  .halfLeft .scfDateLabel,
+  .halfLeft .scfRadioButtonListLabel,
+  .halfLeft .scfCheckBoxListLabel,
+  .halfLeft .scfListBoxLabel,
+  .halfLeft .scfFileUploadLabel,
+  .halfLeft .scfDateSelectorLabel,
+  .halfRight .scfDropListLabel,
+  .halfRight .scfEmailLabel,
+  .halfRight .scfMultipleLineTextLabel,
+  .halfRight .scfSingleLineTextLabel,
+  .halfRight .scfPasswordLabel,
+  .halfRight .scfNumberLabel,
+  .halfRight .scfDatePickerLabel,
+  .halfRight .scfDateLabel,
+  .halfRight .scfRadioButtonListLabel,
+  .halfRight .scfCheckBoxListLabel,
+  .halfRight .scfListBoxLabel,
+  .halfRight .scfFileUploadLabel,
+  .halfRight .scfDateSelectorLabel {
+    padding-bottom: 0;
+  }
+
+
+
+  .halfLeft .scfValidator,
+  .halfRight .scfValidator {
+    margin: 0;
+    display: block;
+    font-size: 0.8em;
+    position: absolute;
+  }
+
+  .halfLeft .scfValidatorRequired,
+  .halfLeft .scfRequired,
+  .halfRight .scfValidatorRequired,
+  .halfRight .scfRequired {
+    float: left;
+  }

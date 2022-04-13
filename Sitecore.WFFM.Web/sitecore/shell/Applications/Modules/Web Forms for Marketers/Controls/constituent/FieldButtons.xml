@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <FieldButtons def:inherits="Sitecore.Forms.Shell.UI.Controls.XmlControl,Sitecore.Forms.Core">
+    <Border Padding="0px" Margin="0px" ID="$ButtonsID">
+      <Border Width="100%" Class="scFbMessage" ID="$MessageContentID" Style="display:none"/>
+
+      <Border  Margin="0">
+        <Inline/>
+      </Border>
+
+      <Border Width="100%" Padding="0px">
+
+        <Border Class="scFbActionLeft" Align="left" ID="$LeftConteiner" />
+
+        <Border Class="scFbActionRight" Margin="10px 0px 0px 16px" Padding="0px 0px 0px 0px" Width="200px" Align="left" ID="$RightConteiner"/>
+        
+      </Border>
+      
+    </Border>
+  </FieldButtons>
+</control>

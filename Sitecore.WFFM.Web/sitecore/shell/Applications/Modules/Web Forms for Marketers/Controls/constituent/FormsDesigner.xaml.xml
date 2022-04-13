@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xamlControls
+  xmlns:x="http://www.sitecore.net/xaml"
+  xmlns:ajax="http://www.sitecore.net/ajax"
+  xmlns:rest="http://www.sitecore.net/rest"
+  xmlns:r="http://www.sitecore.net/renderings"
+  xmlns:xmlcontrol="http://www.sitecore.net/xmlcontrols"
+  xmlns:p="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+  xmlns:asp="http://www.sitecore.net/microsoft/webcontrols"
+  xmlns:html="http://www.sitecore.net/microsoft/htmlcontrols"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <Sitecore.Shell.Applications.Forms.Editors.FormDesigner x:inherits="Sitecore.Forms.Shell.UI.Controls.Xaml.FormsDesignerPage,Sitecore.Forms.Core">
+    <Sitecore.Controls.HtmlPage runat="server">
+      <Stylesheet runat="server" Src="Content Manager.css" DeviceDependant="true" x:placeholder="Stylesheets"/>
+      <Stylesheet runat="server" Src="FormBuilder.css" DeviceDependant="true" x:placeholder="Stylesheets"/>     
+      <Stylesheet runat="server" Src="Default.css" DeviceDependant="true" x:placeholder="Stylesheets" />
+
+      <AjaxScriptManager runat="server"/>
+      <ContinuationManager runat="server" />
+
+      <Script runat="server" Src="/sitecore/shell/controls/SitecoreObjects.js"/>
+      <Script runat="server" Src="/sitecore/shell/controls/SitecoreVSplitter.js"/>
+      <Script runat="server" Src="/sitecore/shell/controls/SitecoreKeyboard.js"/>
+      <Script runat="server" Src="/sitecore/shell/Controls/Sitecore.Runtime.js"/>
+      <Script runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/scripts/Sitecore.FormBuilder.js"/>
+      <Script runat="server" Src="/sitecore/shell/Applications/Content Manager/Content Editor.js"/>
+      
+      <input ID="Structure" Type="hidden" />
+      <input ID="AddNewSectionText" Type="hidden" />
+      <input ID="AddNewFieldText" Type="hidden" />
+      <input ID="FieldTypes" Type="hidden" />
+      <input ID="TemplateID" Type="hidden" />
+      <input ID="Caption" Type="hidden" />
+      <input ID="Active" Type="hidden" />
+      
+      <GridPanel runat="server" Width="100%" Height="100%">
+        <Scrollbox runat="server" ID="FormPanel" Width="100%" Height="100%" Border="none" Padding="0px" Background="transparent" GridPanel.Height="100%" />
+      </GridPanel>
+
+    </Sitecore.Controls.HtmlPage>
+    
+  </Sitecore.Shell.Applications.Forms.Editors.FormDesigner>
+
+</xamlControls>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.CustomizeAnalyticsWizard>
+
+    <Stylesheet runat="server" Src="MultiTreeView.css" DeviceDependant="true"/>
+    <Stylesheet runat="server" Src="default.css" DeviceDependant="true"/>
+    <Stylesheet runat="server" Src="Content Manager.css" DeviceDependant="true"/>
+    <Stylesheet runat="server" Src="/webedit.css" DeviceDependant="true"/>
+
+    <WizardForm CodeBeside="Sitecore.Forms.Shell.UI.CustomizeAnalyticsWizard, Sitecore.Forms.Core">
+
+      <WizardFormPage ID="AnalyticsPage" Icon="Business/32x32/chart.png">
+
+        <Border Padding="10px">
+          <GridPanel Cellpadding="2" Style="table-layout:fixed" >
+
+            <Groupbox ID="AnalyticsOptions"  Width="100%" Height="100%"  Cellpadding="0" Style="table-layout:fixed;border-left:0px;border-right:0px;border-bottom:0px" Margin="0px 10px 0px 10px" >
+
+              <Border Padding="10 10 0 10" >
+                <Literal ID="SlectExistingGoalLiteral" Margin="0px 0px 0px 10px"/>
+                <DataContext ID="GoalsDataContext" Database="master" DataViewName="Master" ShowRoot="false" Root="{0CB97A9F-CAFB-42A0-8BE1-89AB9AE32BD9}" Filter="Contains('{059CFBDF-49FC-4F14-A4E5-B63E1E1AFB1E},{475E9026-333F-432D-A4DC-52E03B75CB6B}, {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}, {DB6E13B8-786C-4DD6-ACF2-3E5E6A959905}', @@templateid)" DefaultItem="{0CB97A9F-CAFB-42A0-8BE1-89AB9AE32BD9}"/>
+                <TreePickerEx ID="Goals" DataContext="GoalsDataContext" SelectOnly="true" AllowNone="false" Width="90%" Margin="3px 0px 0px 10px"/>
+              </Border>
+              
+              <Border Padding="10" Margin="0px 0px 0px 10px" Style="color:#999999">
+                <Literal ID="SelectGoalDescriptionLiteral" />
+              </Border>
+              
+            </Groupbox>
+
+            <Groupbox ID="DropoutOptions"   Width="100%" Height="100%"  Cellpadding="5" Style="table-layout:fixed;border-left:0px;border-right:0px;border-bottom:0px" Margin="10px" >
+
+              <Checkbox  ID="EnableFormDropoutTracking" Click="form:trackingenable"  style="margin-top:10px"/>
+              <Border Padding="10px 0px 0px 20px" Style="color:#999999">
+                <Literal ID="EnableFormDropoutTrackingLiteral" />
+                <br/>
+                <Literal ID="EnableDropoutSavedToLiteral"/>
+              </Border>
+
+            </Groupbox>
+
+          </GridPanel>
+        </Border>
+
+      </WizardFormPage>
+
+      <WizardFormPage ID="ConfirmationPage"  Icon="Business/32x32/chart.png">
+        <Scrollbox Border="none" Background="transparent" Height="100%" Padding="10px"  >
+          <Border ID="ChoicesPanel" Height="90%"  Margin="0px 0px 16px 0px" >
+            <Border Padding="0 10 10 10" ID="ChoicesPane" >
+              <Literal ID="ChoicesLiteral" />
+            </Border>
+          </Border>
+        </Scrollbox>
+      </WizardFormPage>
+
+
+    </WizardForm>
+  </Forms.CustomizeAnalyticsWizard>
+</control>

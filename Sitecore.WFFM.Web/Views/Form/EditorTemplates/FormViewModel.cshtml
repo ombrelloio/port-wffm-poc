@@ -1,0 +1,82 @@
+﻿@using Sitecore.Forms.Mvc
+@using Sitecore.Forms.Mvc.Html
+@using Sitecore.Globalization
+@model Sitecore.Forms.Mvc.ViewModels.FormViewModel
+
+@{
+  var attributes = new RouteValueDictionary()
+    {
+        { "enctype", "multipart/form-data" },
+        { "class", @Model.CssClass },
+        { "id", Model.ClientId },
+        { "role", "form" },
+        { Constants.Wffm, Model.Item.ID }
+    };
+
+  var queryString = new RouteValueDictionary(Request.QueryString.AllKeys.OfType<string>().ToDictionary(key => key, key => (object)Request.QueryString[key]));
+
+  string routeName;
+  
+  if (Model.IsAjaxForm)
+  {
+    attributes.Add("data-wffm-ajax", true);
+
+    if (!IsPost)
+    {
+      queryString.Add("wffm." + Constants.FormItemId, Model.Item.ID.ToGuid());
+      queryString.Add("wffm." + Constants.Id, Model.UniqueId);
+    }
+
+    routeName = Constants.Routes.Form;
+  }
+  else
+  {
+    attributes.Add("action", Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item));
+    routeName = Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName;
+  }
+
+  using (Html.BeginRouteForm(routeName, queryString, FormMethod.Post, attributes))
+  {
+    var uniqueId = Model.UniqueId.ToString();
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+    @Html.AntiForgeryToken()
+    @Html.Hidden(Constants.Id, uniqueId)
+    @Html.Hidden(Constants.FormItemId, Model.Item.ID)
+
+    if (Model.ShowTitle)
+    {
+      var headerText = Html.BootstrapText("Title");
+      @Html.BootstrapHeader(headerText.ToString(), Model.TitleTag)
+    }
+
+    if (Model.SuccessSubmit)
+    {
+	  @Html.Raw(Html.Encode(!string.IsNullOrEmpty(Model.SuccessMessage) ? Model.SuccessMessage : Translate.Text("Default success message.")))
+      return;
+    }
+
+    if (Model.Errors.Any())
+    {
+      @Html.BootstrapWarningsList(Model.Errors)
+    }
+
+    if (Model.ShowInformation)
+    {
+      @Html.BootstrapText("Information")
+    }
+
+    <div class="has-error has-feedback">
+      @Html.BootstrapValidationSammary(false)
+    </div>
+
+    @Html.EditorFor(x => Model.Sections)
+
+    if (Model.ShowFooter)
+    {
+      @Html.BootstrapText("Footer")
+    }
+
+    @Html.BootstrapSubmit()
+  }
+}

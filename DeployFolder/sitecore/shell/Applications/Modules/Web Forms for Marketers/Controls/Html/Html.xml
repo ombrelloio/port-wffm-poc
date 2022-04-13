@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.RichText.Html def:inherits="Sitecore.Forms.Shell.UI.Controls.RichHTML,Sitecore.Forms.Core">
+    <body Style="overflow-y:auto;background:transparent;font: 9pt Verdana;padding:15px 0;width:100%;height: auto;color: #072d6b;" onclick="window.top.Sitecore.FormBuilder.selectControl(this,event,window,'Content', true, 'Html');"  onmouseover="javascript:return window.top.Sitecore.FormBuilder.mouseMove(this,event,window)" onmouseout="javascript:return window.top.Sitecore.FormBuilder.mouseOver(this,event,window)">
+
+    </body>
+  </Forms.RichText.Html>
+</control>
+
+  

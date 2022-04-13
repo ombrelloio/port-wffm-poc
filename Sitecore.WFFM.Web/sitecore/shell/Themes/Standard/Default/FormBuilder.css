@@ -1,0 +1,1014 @@
+.scRibbon {
+  background-color: #4E4E4E;
+  background-image: url("/sitecore/shell/themes/standard/gradients/gray1.gif");
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+  background-attachment: scroll;
+}
+
+.scFbTab {
+  padding: 0;
+}
+
+.scFbTable {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.scBrowseButton {
+  padding: 2px 5px;
+  margin: 0 2px;
+}
+
+.scFbPhantom {
+  width: 90%;
+  background: #d2d5da;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  filter: alpha(opacity=50);
+  -moz-opacity: .720;
+  -ms-opacity: .720;
+  opacity: .720;
+  z-index: 1000;
+}
+
+.scFbTableSectionScope {
+  padding: 0 0 3px 0;
+  border: solid 1px transparent;
+  cursor: hand;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.scFbTableSectionHeader {
+  width: 100%;
+}
+
+.scFbTableSectionScope table {
+  table-layout: fixed;
+}
+
+.scDragHover {
+  border: solid 4px black;
+}
+
+.scFbTableSection {
+  width: 100%;
+}
+
+.scFbSelected {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #FFFFFF;
+  border-top: solid 1px;
+  border-right: solid 1px;
+  border-bottom: solid 1px;
+}
+
+.scFbTableSectionRow {
+  padding: 0 0 0 0;
+  border: solid 0 #ffffff;
+  width: 100%;
+  margin: 0;
+}
+
+.scFbTableSectionName {
+  width: 100%;
+  margin: 0 0 0 15px;
+}
+
+.scFbSectionButtonDeleteScope {
+  width: 8%;
+  text-align: right;
+  vertical-align: middle;
+  padding: 24px 2px 2px 0;
+}
+
+.scFbSectionNameInputScope {
+  width: 93%;
+  padding: 10px 5px 0 0;
+}
+
+.scFbButtonContainer {
+  visibility: hidden;
+  padding: 0 0 0 3px;
+  width: 100%;
+  height: 100%;
+  width: 16px;
+  text-align: center;
+}
+
+.scFbButtonContainerSection {
+  padding: 0 1px;
+  display: inline;
+  width: 16px;
+  height: 16px;
+  text-align: right;
+  visibility: hidden;
+}
+
+.scFbTableSectionDeleteButton {
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src= "/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/delete2.png", sizingMethod= 'scale' );
+}
+
+.scFbTableFieldScope {
+  border: 1px solid transparent;
+  cursor: hand;
+  padding: 3px 0;
+  margin: 0;
+  position: relative;
+}
+
+  .scFbTableFieldScope table {
+    table-layout: fixed;
+  }
+
+.scFbTableFieldRow {
+  padding: 0;
+  border: solid 0 transparent;
+  width: 100%;
+}
+
+.scFbTableFieldName {
+  padding: 0 0 0 45px;
+  width: 58%;
+}
+
+.scFbTableBottomShadow {
+  display: block;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr= '#BEBEBE', EndColorStr= '#FFFFFF' );
+}
+
+.scFbSeparator {
+  width: 8px;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr= '#BEBEBE', EndColorStr= '#FFFFFF' );
+}
+
+.scFbVisiblePart {
+  width: 100%;
+  background: white;
+}
+
+.scFbTableFieldDeleteButtonScorpe {
+  padding: 18px 2px 0 2px;
+  vertical-align: top;
+  text-align: right;
+  width: 8%;
+}
+
+
+.scFbTableFieldDeleteButton {
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src= '/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/delete2.png', sizingMethod= 'scale' );
+}
+
+.scFbTableFieldType {
+  padding: 0 0 0 3px;
+  width: 28%;
+}
+
+.scFbTableFieldValidate {
+  padding: 0 0 0 3px;
+  width: 8%;
+  text-align: center;
+}
+
+.scFbTableFieldNameInput {
+  margin: 0 0 0 0;
+  width: 100%;
+}
+
+.scFbTableFieldTypeInput {
+  margin-top: -1px;
+  width: 100%;
+}
+
+.scFbTableFieldValidateInput {
+  width: 32px;
+}
+
+.scFbTableFieldNameHeader {
+  width: 70%;
+}
+
+.scFbTableFieldTypeHeader {
+  width: 20%;
+}
+
+.scFbTableFieldValidateHeader {
+  width: 32px;
+}
+
+.scPropertiesTable {
+  width: 100%;
+  margin: 0;
+  padding: 6px 6px 6px 6px;
+}
+
+.scPropertiesCaption {
+  background: threedface url(/sitecore/shell/themes/standard/images/listviewheader16x17.png) repeat-x;
+  border-left: 1px solid #E0E0E0;
+  border-right: 1px solid #FFF;
+  color: #373738;
+  height: 17px;
+  padding: 1px 3px 1px 3px;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#FormTablePanel {
+  border: solid 1px white;
+  padding: 15px 0;
+}
+
+.scPropertiesPanel {
+  background: none repeat scroll 0 0 #f0f3f7;
+  border: 1px solid #B6BABF;
+  color: #3B3B3B;
+  font-family: "Segoe UI",Tahoma, "Lucida Sans",Verdana,Helvetica,Arial,sans-serif;
+  width: 100%;
+  vertical-align: top;
+  text-align: left;
+  display: block;
+  vertical-align: top;
+  text-align: left;
+  margin: 0;
+  padding: 4px 0 4px 2px;
+  overflow: auto;
+  overflow-x: hidden;
+  /*background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/bge.png") repeat scroll 0 0 transparent; /*     -webkit-border-radius: 10px;     -moz-border-radius: 10px;     border-radius: 10px;     behavior: url(/sitecore/shell/Themes/standard/default/wfm/PIE.htc); */
+}
+
+.scMessage {
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+}
+
+.scFbSplitrer {
+  width: 6px;
+  background: #d2d5da url('/sitecore/shell/themes/standard/Images/Content Editor/Splitter.png') repeat-y;
+  border: none;
+  cursor: move;
+  height: 100%;
+  width: 6px;
+}
+
+.scSplitterFill {
+  background: #d2d5da url('/sitecore/shell/themes/standard/Images/Content Editor/Splitter.png') repeat-y;
+  border: none;
+  cursor: move;
+  height: 100%;
+  width: 6px;
+}
+
+.scFbTitleU {
+  width: 100%;
+  font: 8pt tahoma;
+  font-weight: bold;
+  padding: 8px 4px 4px 4px;
+  margin: 3px;
+  border-bottom: 1px solid #999999;
+}
+
+.scFbTitle {
+  font: 9pt Verdana;
+  font-weight: bold;
+  padding: 8px 4px 4px 4px;
+  margin: 0 10px 0 10px;
+  color: #072d6b;
+}
+
+.scFbEdit {
+  width: 100%;
+  margin: 3px;
+}
+
+.scPropertyStateSection {
+  border-right: 1px solid #EBEBED;
+  margin: 0;
+  padding: 5px;
+  vertical-align: top;
+  width: 25px;
+  height: 100%;
+}
+
+.scPlaneTable {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.scPlaceNameProperty {
+  display: inline;
+  width: 29%;
+}
+
+.scPlaceValueProperty {
+  display: inline;
+  width: 70%;
+  text-align: left;
+}
+
+.scNameProperty {
+  width: 100%;
+}
+
+.AttribTable {
+  padding: 0 15px 0 0;
+}
+
+.scDivLine {
+  background: #dddddd;
+  margin: 1px 50px 1px 50px;
+  height: 1px;
+  width: 100%;
+}
+
+.scFbrichFrame {
+  height: 0;
+}
+
+.scFbMessage {
+  width: 100%;
+  padding: 10px;
+}
+
+.scFbTitleForm {
+  background-color: white;
+  color: #ffffff;
+}
+
+.scFbTitle:hover, .scFbTitle:active {
+  cursor: pointer;
+  background-color: white;
+  color: #000000;
+  border: 2px;
+}
+
+.scFbRollOver {
+  cursor: hand;
+  text-decoration: none;
+  padding: 0 0 0 0;
+}
+
+.scFbInlineImage {
+  margin: -2px 2px 0 0;
+}
+
+.scFbLargeButton {
+  cursor: hand;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.scEmptyFormMessage {
+  padding: 0 10px;
+  width: 100%;
+}
+
+.scFbButton {
+  text-align: center;
+  margin: 2px;
+  color: black;
+  background: #d9dbe1 url('/sitecore/shell/themes/standard/images/RibbonNavigatorButtonActive.png') repeat-x;
+  border: 1px solid #bebebe;
+}
+
+.scFbSubmitEdit {
+  border: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  font: 12pt tahoma;
+  text-align: center;
+}
+
+.scFbWelcomeButton {
+  width: 100%;
+}
+
+.scFbWelcomeGrid {
+  width: 100%;
+  border: solid 1px white;
+  position: relative;
+}
+
+.scFbTitleGrid {
+  background: white;
+  border: solid 1px white;
+  width: 100%;
+  vertical-align: middle;
+  padding: 20px 0 0 10px;
+  display: block;
+}
+
+.scFbFrameGrid {
+  background-color: white;
+  border: solid 1px white;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0 0 0 20px;
+  margin-bottom: 1px;
+  display: block;
+}
+
+  .scFbFrameGrid:hover, .scFbTitleGrid:hover, .scFbTableFieldScope:hover {
+    border: 1px dashed #555555;
+    text-decoration: none;
+  }
+
+.scFbSettingSection {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.scFbLabel {
+  color: #333333;
+  font-size: 11px;
+  text-align: left;
+  border: medium none;
+  display: block;
+  line-height: 150%;
+  padding: 0 0 1px;
+  font-weight: bold;
+}
+
+.scFbMultiEdit {
+  height: 80px;
+  width: 100%;
+  margin: 0 5px 0 0;
+  border: 1px solid #CCCCCC;
+}
+
+.scFbSettingsEdit {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  margin: 0 5px 0 0;
+}
+
+.scValueProperty {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+}
+
+.scFbActionButton {
+  width: 100%;
+  text-align: right;
+  padding: 0 10px 0 0;
+}
+
+
+.scFbSettingSection table {
+  padding: 0;
+  margin: 0;
+}
+
+.scFbPairTable {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 0;
+}
+
+.scFbSmallLabel {
+  clear: both;
+  color: #444444;
+  display: block;
+  font-size: 9px;
+  line-height: 9px;
+  margin: 0;
+  padding-top: 3px;
+}
+
+.scFbFrame, .scFbFrame span {
+  height: 60px;
+  margin: 0;
+}
+
+.scFbFrameContent, .scFbWorkPanel {
+  background: white;
+  height: 100%;
+}
+
+.scFbWorkPanel {
+  /*padding: 20px;*/
+  overflow: auto;
+  overflow-x: hidden;
+  /*height: 680px;*/
+  height: 100% !important;
+}
+
+table#FormGrid td {
+  height: 100%;
+  vertical-align: top !important;
+}
+
+
+.scFbEditorWarningPanelTable {
+  background: #ffffe4;
+  border: 1px solid #c9c9c9;
+  border-left: none;
+  border-right: none;
+  padding: 4px 2px 4px 2px;
+}
+
+.scFbCommand, .scFbSystemCommand {
+  background: white;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.scFbSelectedCommand, .scFbSystemSelectedCommand {
+  background: #EDB078;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+  .scFbSystemCommand b, .scFbSystemCommand .scWfmActionDesc, .scFbSystemSelectedCommand b, .scFbSystemSelectedCommand .scWfmActionDesc {
+    color: #8E8E8E;
+  }
+
+.scFbCommandsList {
+  border: 0;
+}
+
+.scFbMemo {
+  width: 100%;
+  height: 150px;
+  margin: 0 10px 0 0;
+}
+
+.scFbValidate {
+  height: 100%;
+  border-left: 4px solid #cccccc;
+}
+
+.scFbNotValide {
+  border-left: 4px solid #ce130a;
+  height: 100%;
+}
+
+.scFbPeValueProperty {
+  width: 69%;
+  display: block;
+}
+
+.scFbWide {
+  width: 69%;
+  height: 1px;
+  border: 0;
+  display: none;
+}
+
+.scFbPeEntry {
+  margin: 5px;
+  vertical-align: bottom;
+}
+
+.scFbText {
+  font-weight: normal;
+  white-space: normal;
+  margin: 5px;
+  color: #8E8E8E;
+  font-size: 11px;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: top;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.scFbPeEntry textarea {
+  height: 60px;
+  /*width: 69%;*/
+  width: 65.5%;
+  display: inline;
+}
+
+.scFbPeEntry select {
+  width: 67%;
+}
+
+.scFbSettingSectionEmpty {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.scFbHasNoPropLabel {
+  color: #999999;
+  font-style: italic;
+  padding: 4px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.scFbPeLabel, .scFbPeLabelFullWidth {
+  color: #333333;
+  font-size: 11px;
+  text-align: left;
+  padding: 2px 2px 1px 0;
+  width: 30%;
+  font-weight: normal;
+  vertical-align: top;
+  display: inline;
+  table-layout: fixed;
+  float: left;
+}
+
+.scFbPeLabelFullWidth
+{
+    width: 100%;
+}
+
+.scFbPeInfo {
+  color: #999999;
+  font-size: 11px;
+  text-align: left;
+  padding: 2px 2px 5px 30%;
+  font-weight: normal;
+  vertical-align: top;
+  width: 100%;
+  display: inline;
+  white-space: normal;
+  table-layout: fixed;
+}
+
+.scFbPeCategory {
+  vertical-align: bottom;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.noticeMessage {
+  -moz-border-radius-bottomleft: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  margin: 20px 10px 0;
+  padding: 25px 10px;
+  white-space: normal;
+}
+
+.scFbMainMessage {
+  font: 12pt tahoma;
+  font-weight: bold;
+  text-align: center;
+}
+
+.scFbChildMessage {
+  text-align: center;
+  font-size: 12px;
+}
+
+.scfEmptyName {
+  color: #7c94c8;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+.scFbArrow {
+  left: 0;
+  height: 28px;
+  margin: 5px 6px 0 0;
+  position: absolute;
+  right: 100%;
+  visibility: hidden;
+  width: 16px;
+  z-index: 50;
+}
+
+
+.scFbArrowSection {
+  height: 28px;
+  margin: 5px 6px 0 0;
+  position: absolute;
+  right: 100%;
+  visibility: hidden;
+  top: 0;
+  left: -21px;
+  width: 16px;
+  z-index: 50;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src= '/sitecore/shell/Applications/Modules/Web Forms for Marketers/images/arrow.png', sizingMethod= 'scale' );
+}
+
+.scFbArrowField {
+  height: 28px;
+  margin: 5px 6px 0 0;
+  position: absolute;
+  right: 100%;
+  visibility: hidden;
+  left: -22px;
+  width: 16px;
+  top: 0;
+  z-index: 50;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src= '/sitecore/shell/Applications/Modules/Web Forms for Marketers/images/arrow.png', sizingMethod= 'scale' );
+}
+
+.scFbActionLeft {
+  margin: 0 0 0 47px;
+  padding: 10px 20px 0 0;
+  width: 200px;
+}
+
+.scFbActionRight {
+  margin: 10px 0 0 16px;
+  padding: 5px 0 0 0;
+  width: 200px;
+}
+
+.form, form {
+  height: 400px;
+  overflow: hidden;
+}
+
+#FormDesignerSplitter > div {
+  height: 100% !important;
+}
+
+/*#FromFieldsPane {
+    width: 100% !important;
+}*/
+
+.SplitterLeft {
+  display: inline;
+}
+
+.SplitterRight {
+  display: inline;
+}
+
+.SplitterMiddle {
+  display: inline;
+}
+
+.scwfmEditLink, .scwfmEditLink:visited, .scwfmEditLink:active {
+  padding: 0 10px 0 10px;
+}
+
+.scWfmActionHeader, .scWfmActionDesc {
+  margin-left: 5px;
+}
+
+.scFbListItemSystem {
+  color: #8E8E8E;
+}
+
+.scWfmCaption {
+  white-space: nowrap;
+}
+
+.scWfmSuccessMessage, .scWfmSuccessPage {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.scWfmSuccessChoice, .scWfmSuccessChoiceGrey {
+  padding-top: 5px;
+}
+
+  .scWfmSuccessChoiceGrey, .scWfmSuccessChoiceGrey span {
+    color: #8e8e8e;
+  }
+
+.scwfmActionShortDesc {
+  padding: 0 0 0 10px;
+  color: #8e8e8e;
+  white-space: normal;
+}
+
+.scwfmHidden {
+  display: none;
+}
+
+.scWfmActionTitle {
+  width: 100%;
+  display: block;
+}
+
+.scWfmActionFailedText {
+  width: 99%;
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+.GreyTab, .GreyPanel {
+  background-color: #FCFCFE;
+}
+
+.scWfmMessageHolder {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 20px;
+  /*width: 100%;*/
+  text-align: center;
+}
+
+.scContentControlLayoutDeviceRenderings label input {
+  margin-bottom: -5px;
+}
+
+.sc-accordion-header {
+  margin: 0 5px 0 0;
+  font-weight: bold;
+  border: 0;
+  padding: 0 0 0 0;
+  width: 100%;
+}
+
+.sc-accordion-header-center {
+  height: 32px;
+  padding: 0;
+  margin: 0 0 0 3px;
+  width: 100%;
+  /*float: left;*/
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") repeat scroll right -240px transparent;
+}
+
+  .sc-accordion-header-center img {
+    margin: 7px 5px 0 5px;
+    display: block;
+    float: left;
+  }
+
+  .sc-accordion-header-center strong {
+    /*display: block;*/
+    margin-top: 0;
+    padding-left: 5px;
+  }
+
+.ui-state-active .sc-accordion-header-center {
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") repeat scroll right -304px transparent;
+}
+
+.ui-state-hover .sc-accordion-header-center {
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") repeat scroll right -173px transparent;
+}
+
+
+.sc-accordion-header-left {
+  height: 32px;
+  padding: 0;
+  border: 0;
+  margin: 0 -7px;
+  color: #3B3B3B;
+  cursor: default;
+  line-height: 32px;
+  text-decoration: none;
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") no-repeat scroll 0 -208px transparent;
+}
+
+.ui-state-active {
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") no-repeat scroll 0 -272px transparent;
+}
+
+.ui-state-hover {
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") no-repeat scroll 0 -113px transparent;
+}
+
+
+.sc-accordion-header-right {
+  float: right;
+  height: 32px;
+  width: 3px;
+  padding: 0;
+  border: 0;
+  color: #3B3B3B;
+  cursor: default;
+  line-height: 32px;
+  text-decoration: none;
+  margin: 0 0 0 -1px;
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") no-repeat scroll -10px -208px transparent;
+  position: relative;
+}
+
+.ui-state-active .sc-accordion-header-right {
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") no-repeat scroll -10px -272px transparent;
+}
+
+.ui-state-hover .sc-accordion-header-right {
+  background: url("/sitecore/shell/Applications/Modules/Web%20Forms%20for%20Marketers/images/header.png") no-repeat scroll -10px -113px transparent;
+}
+
+.sc-accordion-header table {
+  padding: 0 5px;
+  table-layout: fixed;
+  vertical-align: top;
+  margin: 0;
+  width: 100%;
+  border: 0;
+}
+
+.ui-accordion-content td {
+  vertical-align: top;
+}
+
+.sc-accordion-body {
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 0 5px 0 5px;
+  margin-right: -1px;
+}
+
+.sc-accordion-field-body {
+  margin: 0 3px 0 0;
+  overflow: auto;
+}
+
+.scContentControlLayoutDeviceRenderings .scRollOver {
+  display: block;
+  padding: 3px;
+}
+
+
+#AttackProtection {
+  margin-left: 23px;
+}
+
+
+.list-items-value {
+  margin-left: -5px;
+}
+
+.section-content {
+  font-weight: normal;
+  padding: 0 5px;
+  margin: 10px 0 10px 0;
+}
+
+.edit-button {
+  float: right;
+}
+
+.condition-container {
+  margin-top: 5px;
+}
+
+.scRule {
+  margin: 5px 0 0 5px;
+}
+
+  .scRule ul {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .scRule li {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+    .scRule li span {
+      margin-left: -3px;
+    }
+
+.scConditionsActions {
+  margin: 0 0 10px 5px;
+}
+
+.condition-container hr {
+  display: none;
+}
+
+.no-conditions {
+  padding-left: 20px;
+}
+
+.robot-modes {
+  padding-top: 20px;
+}
+
+.splitter-bar-vertical {
+  background: #d2d5da url('/sitecore/shell/themes/standard/Images/seperator.png') no-repeat center center;
+}

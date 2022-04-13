@@ -1,0 +1,63 @@
+﻿@using System.Web.Mvc.Html
+@using Sitecore.Forms.Mvc
+@using Sitecore.Forms.Mvc.Html
+@using Sitecore.Globalization
+@using Sitecore.Resources
+@using Sitecore.WFFM.Mvc.MsCaptcha.Helpers
+@model Sitecore.WFFM.Mvc.MsCaptcha.ViewModels.Fields.CaptchaField
+
+<link href="/sitecore%20modules/Web/Web%20Forms%20for%20Marketers/mvc/content/mscaptcha.css" rel="stylesheet" />
+
+@Html.GenerateCaptcha(Model)
+
+@if (!Model.Visible)
+{
+  @Html.HiddenFor(x => Model.FieldItemId)
+  return;
+}
+
+@{
+  var id = "field" + Html.IdFor(m => Model.PostedCaptchaUniqueId).ToString();
+
+  var refreshButtonHint = Translate.Text("Display another text.");
+  var audioButtonHint = Translate.Text("Play audio version of text.");
+  var enterCaptchaPlaceholder = Translate.Text("Enter the captcha");
+
+  var refreshButtonImageUrl = Images.GetThemedImageSource("Applications/16x16/refresh.png");
+  var audioButtonImageUrl = Images.GetThemedImageSource("People/16x16/loudspeaker.png");
+
+  string imageHandlerUrl = string.Format("CaptchaImage.axd?guid={0}&s={1}&srvnocache=" + DateTime.Now.Ticks, Model.PostedCaptchaUniqueId, Model.UseSession ? "1" : "0");
+  string audioHandlerUrl = string.Format("CaptchaAudio.axd?guid={0}&s={1}&srvnocache=" + DateTime.Now.Ticks, Model.PostedCaptchaUniqueId, Model.UseSession ? "1" : "0");
+}
+
+<div class="@Model.CssClass">
+  <div id="@id" class="@Model.CssClass mscaptcha" data-audiourl="@audioHandlerUrl">
+
+    @Html.HiddenFor(x => Model.FieldItemId)
+    @Html.HiddenFor(x => Model.Visible)
+
+    <input type="hidden" name="@Html.NameFor(x => Model.PostedCaptchaUniqueId)" value="@Model.PostedCaptchaUniqueId" />
+
+    <div class="field-captcha-image-container" style="height: @(Model.Captcha.Height)px; width: @(Model.Captcha.Width)px">
+      <img id="@id" src="@Html.Raw(imageHandlerUrl)" width="@Model.Captcha.Width" height="@Model.Captcha.Height" alt="Enter the captcha" />
+    </div>
+
+    <div class="field-captcha-controls">
+      <div>
+        <input class="selector-field-captcha-refresh" type="image" src="@refreshButtonImageUrl" alt="@refreshButtonHint" title="@refreshButtonHint" />
+      </div>
+      <div>
+        <input class="selector-field-captcha-play" type="image" src="@audioButtonImageUrl" alt="@audioButtonHint" title="@audioButtonHint" />
+      </div>
+      <div class="field-captcha-audio">
+      </div>
+    </div>
+
+    <div class="field-captha-input">
+      <input id="@Html.IdFor(m => m.Value)" name="@Html.NameFor(m => m.Value)" type="text" value="@Model.Value" />
+    </div>
+  </div>
+</div>
+
+@Html.RenderScripts(Constants.ScriptsBaseUrl + "libs/jquery/jquery-2.1.3.min.js")
+@Html.RenderScripts(Constants.ScriptsBaseUrl + "mscaptcha.js")

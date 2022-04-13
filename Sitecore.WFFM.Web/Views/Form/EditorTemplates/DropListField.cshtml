@@ -1,0 +1,8 @@
+﻿@using Sitecore.Forms.Mvc.Html
+@using Sitecore.Forms.Mvc.ViewModels.Fields
+@model DropListField
+
+@using (Html.BeginField())
+{
+    @Html.DropDownListFor(x => Model.Value, Model.Items, new { @class = "form-control"})
+}

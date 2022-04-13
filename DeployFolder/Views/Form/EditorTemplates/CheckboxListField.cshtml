@@ -1,0 +1,99 @@
+﻿@using Sitecore.Forms.Mvc.ViewModels.Fields
+@using Sitecore.WFFM.Abstractions.Data.Enums
+@using Sitecore.Forms.Mvc.Html
+@model CheckboxListField
+
+@{
+    List<string> selectedValues = Model.Value;
+    if (selectedValues != null)
+    {
+        Model.Items.ForEach(delegate (SelectListItem x)
+        {
+            x.Selected = selectedValues.Contains(x.Value);
+        });
+    }
+}
+
+@using (Html.BeginField())
+{
+    var notInline = Model.FormType != FormType.Inline;
+    string direction = Model.Direction;
+    int columns = Model.Columns;
+    if (columns == 0)
+    {
+        columns = 1;
+    }
+    var colMod = Model.Items.Count % columns;
+    var rows = colMod > 0 ? Model.Items.Count / columns + 1 : Model.Items.Count / columns;
+    var index = 0;
+    var css = Model.CssClass;
+
+    using (Html.BeginTag("div", () => notInline, new {@class = css + " checkbox"}))
+    {
+        if (!String.IsNullOrEmpty(direction) && direction.Equals("Horizontal"))
+        {
+            <table class="@css">
+                @for (int col = 0; col < columns; col++)
+                {
+                    <tr>
+                        @{
+                            for (int i = 0; i < rows; i++)
+                            {
+                                if (Model.Items.Count == index)
+                                {
+                                    break;
+                                }
+                                <td>
+                                    @using (Html.BeginTag("label"))
+                                    {
+                                        <input type="checkbox" value="@Model.Items[index]" id="@Html.IdFor(x => Model.Value)" name="@Html.NameFor(x => Model.Value)" @(Model.Items[index].Selected ? "checked" : string.Empty)/>
+                                        @Html.DisplayFor(m => Model.Items[index].Text)
+                                    }
+                                </td>
+                                index++;
+                            }
+                        }
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <table class="@css">
+                @for (int row = 0; row < rows; row++)
+                {
+                    index = row;
+                    <tr>
+                        @for (int column = 1; column <= columns; column++)
+                        {
+                            if (index >= Model.Items.Count)
+                            {
+                                break;
+                            }
+                            <td>
+                                @using (Html.BeginTag("label"))
+                                {
+                                    <input type="checkbox" value="@Model.Items[index].Value" id="@Html.IdFor(x => Model.Value)" name="@Html.NameFor(x => Model.Value)" @(Model.Items[index].Selected ? "checked" : string.Empty)/>
+                                    @Html.DisplayFor(m => Model.Items[index].Text)
+                                }
+                            </td>
+
+                            if (colMod > 0 && column > colMod)
+                            {
+                                index += rows - 1;
+                            }
+                            else
+                            {
+                                if (row == rows - 1 && column >= colMod && colMod > 0)
+                                {
+                                    break;
+                                }
+                                index += rows;
+                            }
+                        }
+                    </tr>
+                }
+            </table>
+        }
+    }
+}

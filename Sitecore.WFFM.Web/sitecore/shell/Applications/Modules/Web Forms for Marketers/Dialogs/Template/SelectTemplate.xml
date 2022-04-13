@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense" xmlns:content="http://www.sitecore.net/content">
+  <Forms.SelectTemplate>
+
+    <FormDialog ID="Dialog" Icon="Applications/32x32/form_blue.png" >
+
+      <Stylesheet Key="TreeListExEditor">
+        .scContentControl {
+        height:100%;
+        }
+        .scContentControlMultilistBox {
+        height:100%;
+        }
+      </Stylesheet>
+
+
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SelectTemplateDialog,Sitecore.Forms.Core"/>
+
+      <TemplateDataContext ID="TemplatesDataContext"/>
+      
+      <GridPanel  Style="table-layout:fixed;width:100%;" VAlign="top">
+
+          <Scrollbox Style="overflow:auto;height:500px" Background="white" Border="1px inset" Padding="0">
+            <TreeviewEx  ID="TemplateLister" DataContext="TemplatesDataContext" />
+          </Scrollbox>
+
+      </GridPanel>
+
+    </FormDialog>
+  </Forms.SelectTemplate>
+</control>

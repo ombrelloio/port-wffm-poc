@@ -1,0 +1,14 @@
+﻿@using Sitecore.WFFM.Abstractions.Data.Enums
+@using Sitecore.Forms.Mvc.Html
+@model Sitecore.Forms.Mvc.ViewModels.Fields.CheckboxField
+
+@using (Html.BeginField())
+{
+    var cssclass = Model.FormType == FormType.Inline ? "checkbox-inline" : "checkbox";
+    <div class="@cssclass">
+        <label>
+            @Html.CheckBoxFor(x => Model.Value)
+            @Html.BootstrapText("Title")
+        </label>
+    </div>
+}

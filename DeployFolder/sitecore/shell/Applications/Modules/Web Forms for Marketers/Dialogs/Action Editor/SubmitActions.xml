@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <SubmitCommands.Editor>
+
+    <FormDialog ID="Dialog" Icon="Applications/32x32/exchange.png">
+
+      <Stylesheet Src="FormBuilder.css" DeviceDependant="true"/>
+
+      <style type="text/css">
+        #ActionsLablel,
+        #AddedActionsLablel,
+        #MessagesBorder {
+        color: black;
+        }
+      </style>
+      
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SubmitActions,Sitecore.Forms.Core"/>
+      <DataContext ID="CommandsDataContext" DataViewName="Master" ShowRoot="false" Root="{E5EABB1F-40BC-45BB-8D87-3B6C239B521B}" Filter="Contains('{DFDA9CDC-A4C8-456F-8A98-B79ED1F960B0},{E01318E7-CEED-4EA4-B107-1B8FAC3A3DB8},{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}', @@templateid)" />
+
+     
+        <Tabstrip ID="Tabs" Height="100%" Width="300px"  >
+
+          <Tab ID="ActionsTab" Class="GreyTab" Height="100%" >
+
+            <GridPanel Width="95%" Height="77%" Fixed="true" Margin="0px 10px 5px 10px" Padding="0px 0px 0px 5px">
+              <Border>
+                <Border Class="scContentLabel">
+                  <Literal ID="ActionsLablel"/>
+                </Border>
+
+                <GridPanel Columns="3" Width="100%">
+
+                  <TreePicker ID="Commands" DataContext="CommandsDataContext" SelectOnly="true" AllowNone="false" Width="100%" GridPanel.Width="100%"/>
+
+                  <Space Width="4" GridPanel.Width="4px"/>
+
+                  <Border Padding="0px 0px 2px 0px">
+                    <Button ID="AddButton" Click="forms:addcommand"/>
+                  </Border>
+
+                </GridPanel>
+
+              </Border>
+
+              <Border Class="scContentLabel" Padding="8px 0px 1px 0px">
+                <Literal ID="AddedActionsLablel"/>
+              </Border>
+
+              <GridPanel Columns="3" Width="100%" Height="100%" GridPanel.Height="100%">
+
+                <Scrollbox ID="AddedCommands" Width="100%" Height="255px" Padding="0px"
+                           GridPanel.Width="100%" GridPanel.Height="100%" GridPanel.VAlign="top"
+                           style="border:1px inset white;border-bottom:2px inset LightGrey;border-right:2px inset LightGrey;overflow:auto"/>
+
+                <Space Width="4" GridPanel.Width="4px"/>
+
+                <Border GridPanel.VAlign="top">
+
+                  <Border Padding="0px 0px 4px 0px">
+                    <Button ID="Edit" Click="forms:editcommand"/>
+                  </Border>
+                  <Border Padding="0px 0px 12px 0px">
+                    <Button ID="Remove" Click="forms:removecommand"/>
+                  </Border>
+
+                  <Border Padding="0px 0px 4px 0px">
+                    <Button ID="MoveUp" Click="actions:sortup"/>
+                  </Border>
+                  <Border Padding="0px 0px 4px 0px">
+                    <Button ID="MoveDown" Click="actions:sortdown"  Padding="8px 0px"/>
+                  </Border>
+
+                </Border>
+              </GridPanel>
+
+            </GridPanel>
+
+          </Tab>
+
+          <Tab ID="MessagesTab" Class="GreyTab"  Height="100%">
+            <Scrollbox style="border:0px; overflow:auto;" Class="GreyPanel" Height="450px">
+              <Border class="scContentLabel" ID="MessagesBorder" Padding="10" Width="100%" >
+
+              </Border>
+            </Scrollbox>
+          </Tab>
+        </Tabstrip>
+   
+    </FormDialog>
+  </SubmitCommands.Editor>
+</control>

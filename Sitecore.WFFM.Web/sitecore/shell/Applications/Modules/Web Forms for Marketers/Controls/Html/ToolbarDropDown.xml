@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition">
+  <ToolbarDropDown def:inherits="Sitecore.Form.Core.Dialogs.SendMail.Controls.ToolbarDropDown,Sitecore.Forms.Core"/>
+</control>

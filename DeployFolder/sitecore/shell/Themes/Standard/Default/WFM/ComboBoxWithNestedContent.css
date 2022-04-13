@@ -1,0 +1,76 @@
+﻿/* ComboBox dropdown menu */
+.ddn
+{
+    cursor: default;
+    color: #000;
+    background-color: transparent;
+    font-family: Tahoma, "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    border: 1px solid #58596d;
+    z-index: 20000 !important;
+}
+.ddn-ftr
+{
+    width: 190px;
+    height: 8px;
+    background: transparent url(    "/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/static.png" ) no-repeat 50% -82px;
+}
+.ddn-con
+{
+    width: 188px;
+    height: auto;
+    background-color: #fff;
+}
+.ddn-item
+{
+    width: 182px;
+    padding-left: 8px;
+    line-height: 22px;
+    background: none;
+}
+.ddn-item-hover
+{
+    background: transparent url(    "/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/static.png" ) no-repeat;
+    width: 182px;
+    padding-left: 8px;
+    line-height: 22px;
+    color: #000;
+}
+.cmb
+{
+    padding-left: 4px;
+    background-color: #f9f9f9;
+    border: 1px solid #b4b4bd;
+    border-right-color: #b4b4bd;
+    border-bottom-color: #b4b4bd;
+}
+.cmb-hover
+{
+    background-color: #fff;
+    border: 1px solid #58596d;
+}
+.txt
+{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    color: #333;
+}
+.cmb-hover .txt
+{
+    color: #000;
+}
+
+
+.scWfmCheckboxItem
+{
+    margin-left : 15px;
+}
+
+.scWfmCheckboxOptGroup
+{
+    margin-left : 9px;
+}

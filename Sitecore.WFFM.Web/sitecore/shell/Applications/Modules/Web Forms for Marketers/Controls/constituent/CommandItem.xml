@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <SubmitCommands.CommandItem>
+
+    <Border ID="$ID" Click="$Click" DblClick="$DblClick" Class="$Class">
+      <GridPanel Columns="2" Width="100%">
+
+        <ThemedImage Src="$Icon" Width="32" Height="32"/>
+
+        <Border GridPanel.Width="100%">
+          <b>
+            <Literal Class="scWfmActionHeader" Text="$Header"/>
+          </b>
+          <br/>
+          <Literal Class="scWfmActionDesc" Text="$Description"/>
+        </Border>
+
+      </GridPanel>
+    </Border>
+
+  </SubmitCommands.CommandItem>
+</control>
+

@@ -1,0 +1,18 @@
+/* Captcha Field */
+
+.field-captcha-image-container {
+  float: left;
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+}
+
+.field-captcha-controls {
+  float: left;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.field-captha-input {
+  margin-top: 5px;
+  clear: both;
+}

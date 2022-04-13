@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.SelectFields>
+
+    <Stylesheet Key="SelectFields">
+
+      .scSfCheckboxBorder,
+      .scSfCheckboxBorder:visited,
+      .scSfCheckboxBorder:active,
+      .scSfCheckboxBorder:link{
+      color:black;
+      cursor:default;
+      text-decoration:none;
+      padding:2px 4px 2px 4px;
+      font:9pt verdana;
+      height:30px;
+      width:100%;
+      text-decoration:none;
+      background-color: transparent
+      }
+
+      .scSfCheckboxBorder:hover {
+      background:#e8f5fd url(/sitecore/shell/themes/standard/Images/Tree/TreeNodeNormalBackground.png) repeat-x;
+      border: 1px solid #d8f0fa;
+      padding:1px 3px 1px 3px;
+      text-decoration:none;
+      }
+
+      .scSfContent{
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#BEBEBE',EndColorStr='#FFFFFF');
+      }
+
+      .scfOptGroup .scSfCheckboxBorder:visited,
+      .scfOptGroup .scSfCheckboxBorder:active,
+      .scfOptGroup .scSfCheckboxBorder:link,
+      .scfOptGroup .scSfCheckboxBorder
+      {
+      padding: 2px 20px;
+      }
+
+      .scfOptGroup .scSfCheckboxBorder:hover
+      {
+      padding:1px 19px 1px 19px;
+      }
+
+      .scfHeader .scSfCheckboxLabel
+      {
+      /*font-weight:600 ;*/
+      }
+
+    </Stylesheet>
+
+    <FormDialog ID="Dialog" Icon="Applications/16x16/checkbox.png">
+
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SelectFields,Sitecore.Forms.Core"/>
+    
+      <Script runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Utils.js"/>
+
+      <script type="text/JavaScript" language="javascript">
+        function changeState(sender, event){
+        \r\n
+        var items = $(sender).up().next().next().select('input[type="checkbox"]');
+        \r\n
+        items.each(function(element){
+        element.checked = sender.checked;
+        });
+        }
+
+        function updateGroup(sender, event){
+
+        var group = $(sender).up().up();
+        var groupCheckbox = $(sender).up().up().previous().previous().down();
+        var state = true;
+
+        group.select('input[type="checkbox"]').each(function(element){
+        if(!element.checked){
+        state = false;
+        }
+        });
+
+        groupCheckbox.checked = state;
+        }
+      </script>
+      
+      <Scrollbox Width="99%" Height="490px">
+        <Border ID="Content" Class="scSfContent"  Align="left">
+        </Border>
+      </Scrollbox>
+
+    </FormDialog>
+  </Forms.SelectFields>
+</control>

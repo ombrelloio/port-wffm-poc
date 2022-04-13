@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xamlControls
+  xmlns:x="http://www.sitecore.net/xaml"
+  xmlns:ajax="http://www.sitecore.net/ajax"
+  xmlns:rest="http://www.sitecore.net/rest"
+  xmlns:r="http://www.sitecore.net/renderings"
+  xmlns:xmlcontrol="http://www.sitecore.net/xmlcontrols"
+  xmlns:p="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+  xmlns:asp="http://www.sitecore.net/microsoft/webcontrols"
+  xmlns:html="http://www.sitecore.net/microsoft/htmlcontrols"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:wfm="http://www.sitecore.net/wfm/webcontrols">
+
+  <Sitecore.Forms.Shell.UI.Dialogs.EnrollInEngagementPlan x:inherits="Sitecore.Forms.Shell.UI.Dialogs.EnrollInEngagementPlanPage,Sitecore.Forms.Core">
+    <x:register assembly="ComponentArt.Web.UI" namespace="ComponentArt.Web.UI" />
+    <x:register assembly="Sitecore.Forms.Core" namespace="Sitecore.Forms.Shell.UI.Controls"/>
+
+    <Sitecore.Controls.DialogPage  Icon="Software/32x32/graph_edge_directed.png" runat="server">
+
+      <AjaxScriptManager runat="server"/>
+      <ContinuationManager runat="server" />
+      <Stylesheet Src="WFM/ComboBoxWithNestedContent.css" DeviceDependant="true" runat="server" />
+      <Style runat="server" x:placeholder="Stylesheets">
+        .ui-title
+        {
+        display :block;
+        float:left;
+        margin-top :3px;
+        }
+        a.ui-link, a.ui-link:hover, a.ui-link:active, a.ui-link:visited
+        {
+        display :block;
+        color: #3A66DD;
+        text-decoration: none;
+        }
+      </Style>
+      <script type="text/javascript" language="javascript">
+        function OnItemStateChanged(sender, args){
+        var nodes = sender.select('input[type="checkbox"]');
+
+        if (nodes.first().checked){
+        var element = nodes.first().next();
+        ModeCombobox.set_text(element.innerText || element.innerHTML);
+        }
+        else
+        {
+        var text = "";
+        nodes.each(function(node){
+        if (node.checked){
+        text = text + ", " + node.next().innerHTML;
+        }
+        });
+
+        if (text.blank()){
+        text = sc.dictionary['Never'];
+        }
+
+        if (text.startsWith(",")){
+        text = text.substring(2);
+        }
+        ModeCombobox.set_text(text);
+        }
+        }
+
+
+
+        if (!window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox || window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox == 'undefined') {
+        window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox = new Object();
+        window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox.HandleInputMouseOut = function(){};
+        window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox.HandleInputMouseOver = function(){};
+        }
+
+        document.observe('dom:loaded', function() {
+        document.querySelector("[id$='_ModeCombobox_Input']").readOnly = true;
+        document.querySelector("[id$='_SelectPlanButton']").focus();
+        })
+      </script>
+
+      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td height="100%" vAlign="top">
+
+            <GridPanel Class="EntryGrid" Columns="3" runat="server"  Margin="30px 30px 10px 10px">
+
+              <Literal ID="EnrollVisitorLiteral" runat="server" GridPanel.Align="right" GridPanel.Width="20%"/>
+              <Border ID="ModeComboboxHolder" runat="server" style="position:relative;overflow:hide" Margin="5px 0px 0px 10px" GridPanel.ColSpan="2" >
+                <ComboBox ID="ModeCombobox"
+                          runat="server"
+                          KeyboardEnabled="false"
+                          AutoFilter="false"
+                          AutoHighlight="false"
+                          AutoComplete="false"
+                          DropHoverImageUrl="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/ddn-hover.png"
+                          DropImageUrl="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/ddn.png"
+                          Width="342"
+                          Height="18"
+                          DropDownWidth="342"
+                          DropDownHeight="230"
+                          DropDownOffsetY="2"
+                          DropDownOffsetX="-10"
+                          ItemCssClass="ddn-item"
+                          ItemHoverCssClass="ddn-item-hover"
+                          CssClass="cmb"
+                          HoverCssClass="cmb-hover"
+                          TextBoxCssClass="txt"
+                          DropDownResizingMode="bottom"
+                          DropDownCssClass="ddn"
+                          DropDownContentCssClass="ddn-con"
+                          Margin="0px 0px 0px 3px"
+                          CollapseDuration="0">
+                  <DropDownContent>
+                    <ComboBoxContent runat="server">
+                      <ControlledChecklist ID="RegisterMode" runat="server" ClientSideOnNodeStateChanged="OnItemStateChanged" />
+                    </ComboBoxContent>
+                  </DropDownContent>
+                </ComboBox>
+              </Border>
+
+              
+              <Literal ID="EngagementPlanLiteral" runat="server" GridPanel.Align="right" GridPanel.Width="15%" style="display:block;padding:5px 0px 0px 0px"/>
+              <Border runat="server"  Width="100%" GridPanel.Width="40%" Margin="4px 0px 0px 10px" ID="PlanBorder" >
+                <Literal ID="PlanName" Class="ui-title" runat="server" style="width:80%"  />
+                <html:HtmlInputHidden ID="SelectedPlanHolder" runat="server" />
+              </Border>              
+              <input type="button" runat="server" ID="SelectPlanButton" GridPanel.Width="10%" GridPanel.Align="right" GridPanel.vAlign="top" style="margin:5px 0px 0px 0px;width:60px" ajax:Click="OnSelectPlan" />
+
+
+              <Literal ID="StateLiteral" runat="server" GridPanel.Align="right" style="display:none;margin-top:-3px" />
+              <Border runat="server"  Width="100%" GridPanel.Width="50%" Margin="-6px 0px 0px 10px" ID="StateBorder" GridPanel.Colspan="2">
+                <Literal ID="StateName" Class="ui-title" runat="server" style="width:80%;text-decoration:italic"  />
+              </Border>
+            </GridPanel>
+          </td>
+        </tr>
+      </table>
+
+    </Sitecore.Controls.DialogPage>
+  </Sitecore.Forms.Shell.UI.Dialogs.EnrollInEngagementPlan>
+
+</xamlControls>
+

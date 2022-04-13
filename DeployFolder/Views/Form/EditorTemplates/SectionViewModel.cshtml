@@ -1,0 +1,24 @@
+﻿@using Sitecore.Forms.Mvc.Html
+@model Sitecore.Forms.Mvc.ViewModels.SectionViewModel
+
+@if (Model.ShowTitle && !string.IsNullOrEmpty(Model.Title))
+{
+    <fieldset class="@Model.CssClass">
+        <legend>@Html.BootstrapText("Title")</legend>
+        @if (Model.ShowInformation && !string.IsNullOrEmpty(Model.Information))
+        {
+            <p>@Html.BootstrapText("Information")</p>
+        }
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.EditorFor(x => Model.Fields)
+            </div>
+        </div>
+    </fieldset>
+}
+
+else
+{
+    @Html.EditorFor(x => Model.Fields)
+}

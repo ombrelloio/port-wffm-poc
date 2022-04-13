@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.WelcomeButton def:inherits="Sitecore.Forms.Shell.UI.Controls.XmlControl,Sitecore.Forms.Core">
+    <Border ID="Welcome" class="scFbWelcomeGrid" Margin="0px 0px 3px 0px"  Padding="10px 20px 10px 10px" onclick="javascript:return Sitecore.FormBuilder.selectControl(this,event,'Welcome', 'PropertySettings', true)" onmouseover="javascript:return Sitecore.FormBuilder.mouseMove(this,event,'Welcome')" onmouseout="javascript:return Sitecore.FormBuilder.mouseOver(this,event,'Welcome')" vAlign="middle">
+      <ThemedImage class="scFbArrowSection" id="WelcomeMarker"  Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/images/arrow.png"/>
+
+      <a href="#" style="height:30px" ID="WelcomeButton" Class="scFbWelcomeButton" RollOver="true" OnClick="javascript:return scForm.postEvent(this,event, 'AddNewField')" Padding="0px 20px 0px 10px">
+        <ThemedImage Src="Applications/24x24/add.png" Width="24" Height="24" Align="absmiddle" Margin="-6px 0px 0px 0px"/>
+        <Literal style="height:100%"  Class="scFbLargeButton" Text="$Text" Margin="0px 0px 0px 5px" Padding="5px 5px 8px 5px"/>
+      </a>
+
+    </Border>
+  </Forms.WelcomeButton>
+</control>

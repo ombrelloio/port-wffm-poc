@@ -1,0 +1,50 @@
+﻿@using Sitecore.Forms.Mvc
+@using Sitecore.Forms.Mvc.Html
+@model Sitecore.Forms.Mvc.ViewModels.Fields.DateField
+
+@using (Html.BeginField())
+{
+    @Html.HiddenFor(x => Model.Value, new { @class = "wfmDatebox" })
+
+
+    var htmlAttributes = new RouteValueDictionary
+    {
+       { "class", "form-control" },
+       {Constants.Tracking, "false"}
+    };    
+
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="input-group" style="width:100%">
+                <div class="input-group-addon">@Model.DayTitle</div>
+                @Html.DropDownListFor(x => x.Day, Model.Days, htmlAttributes)
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="input-group" style="width:100%">
+                <div class="input-group-addon">@Model.MonthTitle</div>
+                @Html.DropDownListFor(x => x.Month, Model.Months, htmlAttributes)
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="input-group" style="width:100%">
+                <div class="input-group-addon">@Model.YearTitle</div>
+                @Html.DropDownListFor(x => x.Year, Model.Years, htmlAttributes)
+            </div>
+        </div>
+    </div>
+
+    @Html.RenderScriptBlock(
+    @<script type="text/javascript">
+        if (typeof window.WffmFieldsData === 'undefined') {
+            window.WffmFieldsData = {}
+        }
+
+        window.WffmFieldsData["@Html.IdFor(x => Model.Value)"] =
+        {
+            dayId: "@Html.Id("Day")",
+            monthId: "@Html.Id("Month")",
+            yearId: "@Html.Id("Year")"
+        };
+    </script>)
+}

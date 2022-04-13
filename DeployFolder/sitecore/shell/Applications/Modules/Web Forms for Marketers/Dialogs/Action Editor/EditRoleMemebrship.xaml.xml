@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xamlControls
+  xmlns:x="http://www.sitecore.net/xaml"
+  xmlns:ajax="http://www.sitecore.net/ajax"
+  xmlns:rest="http://www.sitecore.net/rest"
+  xmlns:r="http://www.sitecore.net/renderings"
+  xmlns:xmlcontrol="http://www.sitecore.net/xmlcontrols"
+  xmlns:p="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+  xmlns:asp="http://www.sitecore.net/microsoft/webcontrols"
+  xmlns:html="http://www.sitecore.net/microsoft/htmlcontrols"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:wfm="http://www.sitecore.net/wfm/webcontrols">
+
+  <Sitecore.Forms.Shell.UI.Dialogs.EditRoleMembership x:inherits="Sitecore.Forms.Shell.UI.Dialogs.EditRoleMembershipPage,Sitecore.Forms.Core">
+    <x:register assembly="ComponentArt.Web.UI" namespace="ComponentArt.Web.UI" />
+    <x:register assembly="Sitecore.Forms.Core" namespace="Sitecore.Forms.Shell.UI.Controls"/>
+
+
+    
+    <Sitecore.Controls.DialogPage Icon="Network/32x32/id_card_edit.png" runat="server">
+
+      <AjaxScriptManager runat="server"/>
+      <ContinuationManager runat="server" />
+
+      <Stylesheet Src="WFM/DropDown.css" DeviceDependant="true" runat="server" />
+      <Style runat="server" x:placeholder="Stylesheets">
+        .EntryGrid {
+        padding:0px 4px 2px 2px;
+        }
+
+        .EntryGrid td {
+        white-space:nowrap;
+        
+        }
+
+        .TabStrip {
+        position:relative;
+        top:2px;
+        z-index:1;
+        }
+
+        .DefaultTab {
+        color:black;
+        background-image: url(/sitecore/shell/themes/standard/ComponentArt/Tabstrip/tab_bg.gif);
+        font-family:Tahoma;
+        font-size:8pt;
+        cursor:default;
+        }
+
+        .DefaultTabHover {
+        color:black;
+        background-image: url(/sitecore/shell/themes/standard/ComponentArt/Tabstrip/hover_tab_bg.gif);
+        font-family:Tahoma;
+        font-size:8pt;
+        cursor:default;
+        }
+
+        .SelectedTab {
+        color:black;
+        background-image: url(/sitecore/shell/themes/standard/ComponentArt/Tabstrip/selected_tab_bg.gif);
+        font-family:Tahoma;
+        font-size:8pt;
+        cursor:default;
+        }
+
+        .MultiPage {
+        background-color:White;
+        border: 1px solid #919B9C;
+        width:100%;
+        height:100%;
+        }
+
+        .PageContent {
+        background:#fbfbfb;
+        }
+
+        .scText,
+        .scPassword,
+        .scLookup,
+        .scChecklist {
+        width:100%;
+        }
+
+        .scMemo {
+        width:100%;
+        height:120px;
+        }
+
+        .scCheckbox {
+        }
+
+        .scFieldLabel {
+        color:#6487DC;
+        padding:4px 0px 2px 0px;
+        background:white;
+        border:none;
+        }
+
+        .ProfileRight{
+        width : 49%;
+        display:inline;
+        }
+
+        .ProfileLeft{
+        float : left;
+        display:inline;
+        }
+
+        .GroupBox
+        {
+
+        border-bottom : 0px;
+        border-right : 0px;
+        border-left : 0px;
+
+
+        margin:0px 20px 0px 0px;     
+        }
+
+        .GroupBox legend
+        {
+        padding : 0px 5px;
+        }
+
+        .CheckboxSetting label
+        {
+        margin-top:-5px;
+        }
+
+        .CallBack{
+
+        }
+
+        .MappingGrid
+        {
+        width:100%;
+        padding: 1px 5px;
+        }
+
+        .MappingGrid td
+        {
+        width:50%;
+        }
+
+        .MappingGrid select
+        {
+        width : 100%;
+        }
+
+        .MappingGrid span
+        {
+        height:15px;
+        }
+
+        .InactiveRequired
+        {
+        margin : 0px 0px 0px 5px;
+        }
+
+        .ValidationErrors
+        {
+        color:red;
+        }
+
+        ul, li
+        {
+        margin-top:0px;
+        margin-bottom:0px;
+        }
+      </Style>
+
+      <Stylesheet Src="WFM/ComboBoxWithNestedContent.css" DeviceDependant="true" runat="server" />
+      <script type="text/javascript" language="javascript">
+        function OnItemStateChanged(sender, args){
+        var nodes = sender.select('input[type="checkbox"]');
+
+        if (nodes.first().checked){
+        var element = nodes.first().next();
+        ModeCombobox.set_text(element.innerText || element.innerHTML);
+        }
+        else
+        {
+        var text = "";
+        nodes.each(function(node){
+        if (node.checked){
+        text = text + ", " + node.next().innerHTML;
+        }
+        });
+
+        if (text.blank()){
+        text = sc.dictionary['Never'];
+        }
+
+        if (text.startsWith(",")){
+        text = text.substring(2);
+        }
+        ModeCombobox.set_text(text);
+        }
+        }
+
+        if (!window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox || window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox == 'undefined') {
+        window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox = new Object();
+        window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox.HandleInputMouseOut = function(){};
+        window.ctl00_ctl00_ctl00_ctl00_ctl04_ModeCombobox.HandleInputMouseOver = function(){};
+        }
+
+        document.observe('dom:loaded', function() {
+          document.querySelector("[id$='_ModeCombobox_Input']").readOnly = true;
+        })
+      </script>
+
+
+      <html:HtmlInputHidden ID="MappedFields" runat="server" />
+
+      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td height="100%" vAlign="top">
+            
+            <Border runat="server" Margin="0px 0px 0px 0px" />
+            <Groupbox ID="IdentityUserGroupbox" Class="GroupBox" runat="server">
+
+              <GridPanel Class="EntryGrid" Columns="2" runat="server" Margin="10px 0px 0px 10px" Padding="0px 4px 5px 2px" Width="100%">
+
+                <Literal ID="UserNameLiteral" runat="server"  GridPanel.Width="160px"/>
+
+                <Border runat="server"  Width="100%" Margin="0px 20px 0px 0px">
+                  <asp:DropDownList Class="scDropDownLeft" ID="NameField" runat="server" Width="100%" />
+                  <Literal Class="InactiveRequired" ID="NameRequired" runat="server" Text="*" />
+                </Border>
+
+                <Literal ID="DomainLiteral" runat="server"  GridPanel.Width="160px" />
+                <Border runat="server" Width="100%" Margin="0px 20px 0px 0px" >
+                  <asp:DropDownList Class="scDropDownLeft" ID="DomainField" runat="server" Width="100%"  />
+                  <Literal Class="InactiveRequired" ID="DomainRequired" runat="server" Text="*" />
+                </Border>
+
+              </GridPanel>
+
+              <Checkbox  ID="AssociateUserWithVisitor" Checked="true" Margin="0px 4px 0px 10px" runat="server" />
+
+            </Groupbox>
+
+            <Border runat="server" Margin="17px 0px 0px 0px"/>
+
+            <Groupbox ID="RoleMembershipGroupbox" Class="GroupBox" runat="server">
+
+              <GridPanel Class="EntryGrid" Columns="2" runat="server" Margin="10px 0px 0px 10px" Padding="0px 4px 5px 2px" Width="100%" >
+                <Literal ID="ChangeRoleMemebrhipLiteral" runat="server"  GridPanel.Width="160px" Padding="15px 0px 0px 0px" GridPanel.vAlign="top"/>
+
+                <Border ID="ModeComboboxHolder" runat="server" style="position:relative;overflow:hide" >
+                  <ComboBox ID="ModeCombobox"
+                            runat="server"
+                            KeyboardEnabled="false"
+                            AutoFilter="false"
+                            AutoHighlight="false"
+                            AutoComplete="false"
+                            DropHoverImageUrl="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/ddn-hover.png"
+                            DropImageUrl="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/ddn.png"
+                            Width="100%"
+                            Height="18"
+                            DropDownWidth="303"
+                            DropDownHeight="230"
+                            DropDownOffsetY="2"
+                            DropDownOffsetX="-2"
+                            ItemCssClass="ddn-item"
+                            ItemHoverCssClass="ddn-item-hover"
+                            CssClass="cmb"
+                            HoverCssClass="cmb-hover"
+                            TextBoxCssClass="txt"
+                            DropDownResizingMode="bottom"
+                            DropDownCssClass="ddn"
+                            DropDownContentCssClass="ddn-con"
+                            Margin="0px 0px 0px 3px"
+                            CollapseDuration="0">
+                    <DropDownContent>
+                      <ComboBoxContent runat="server">
+                        <ControlledChecklist ID="ChangeRoleMode" runat="server" ClientSideOnNodeStateChanged="OnItemStateChanged" />
+                      </ComboBoxContent>
+                    </DropDownContent>
+                  </ComboBox>
+                </Border>
+
+              </GridPanel>
+
+              <CallBack id="AddUserToRolesCallBack" PostState="true" CacheContent="true" Padding="0"  CssClass="CallBack" runat="server" Width="100%" Align="center">
+                <Content>
+                  <asp:PlaceHolder id="AddRolesContent" runat="server" >
+                    <GridPanel Class="EntryGrid" Columns="2" runat="server" Margin="0px 0px 0px 10px" Padding="0px 4px 5px 2px" Width="100%">
+                      <Literal ID="AddUserToRoleLiteral"  GridPanel.Width="160px" runat="server"  GridPanel.vAlign="top"/>
+                      <Border runat="server" Width="100%" GridPanel.Style="padding:0px 0px 1px 2px">
+                        <html:HtmlInputHidden ID="AddedRolesValue" runat="server" />
+                        <asp:ListBox ID="AddRolesList" Rows="3" runat="server" Width="99%" />
+                      </Border>
+
+                      <Border runat="server"/>
+                      <Border runat="server" Width="100%" Align="right" Padding="0px">
+                        <input type="button" class="scButton" runat="server" ID="AddRoleButton" ajax:Click="Add_Click" style="padding:0px 0px;margin:0px 3px" GridPanel.vAlign="bottom"/>
+                      </Border>
+                    </GridPanel>
+                  </asp:PlaceHolder>
+                </Content>
+              </CallBack>
+
+              <CallBack id="RemoveUserToRolesCallBack" PostState="true" CacheContent="true" Padding="0"  CssClass="CallBack" runat="server" Width="100%" Align="center">
+                <Content>
+                  <asp:PlaceHolder id="RemoveRolesContent" runat="server" >
+
+                    <GridPanel Class="EntryGrid" Columns="2" runat="server" Margin="0px 0px 10px 10px" Padding="0px 4px 5px 2px" Width="100%">
+                      <Literal ID="RemoveUserFromRoleLiteral" GridPanel.Width="160px" runat="server"  GridPanel.vAlign="top"/>
+                      <Border runat="server" Width="100%" GridPanel.Style="padding:0px 0px 1px 2px" >
+                        <html:HtmlInputHidden ID="RemovedRolesValue" runat="server" />
+                        <asp:ListBox ID="RemoveRolesList" Rows="3" runat="server" Width="99%" />
+                      </Border>
+
+                      <Border runat="server" />
+                      <Border runat="server" Width="100%" Align="right" >
+                        <input type="button" class="scButton" runat="server" ID="RemoveRoleButton"  ajax:Click="Remove_Click" style="padding:0px 0px;margin:0px 3px" GridPanel.vAlign="bottom"/>
+                      </Border>
+                    </GridPanel>
+
+                  </asp:PlaceHolder>
+                </Content>
+              </CallBack>
+
+
+            </Groupbox>
+
+            <Border runat="server" Margin="0px 0px 0px 0px" />
+            <Groupbox ID="AuditGroupbox" Class="GroupBox" runat="server">
+
+              <GridPanel Class="EntryGrid" Columns="2" runat="server" Margin="10px 0px 10px 10px"  Padding="0px 4px 5px 2px" Width="100%">
+
+                <Literal ID="SaveAuditLiteral" runat="server" GridPanel.Width="160px" />
+                <asp:DropDownList ID="AuditField" Width="100%" Margin="0px 10px 0px 0px" runat="server"/>
+
+              </GridPanel>
+
+            </Groupbox>
+
+            <Border runat="server" ID="Summary" Class="ValidationErrors" Height="30px" Margin="0px 0px 0px 0px" />
+
+          </td>
+        </tr>
+      </table>
+
+
+    </Sitecore.Controls.DialogPage>
+  </Sitecore.Forms.Shell.UI.Dialogs.EditRoleMembership>
+
+</xamlControls>
+

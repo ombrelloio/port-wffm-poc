@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <SendMail.Editor>
+
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Controls/Sitecore.Runtime.js"/>
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Utils.js"/>
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Sitecore.EmailEditor.js"/>
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Sitecore.Forms.PopupMenu.js"/>
+    <Script runat="server" Src="/sitecore/shell/controls/lib/jquery/jquery.js"/>
+    <Script runat="server" type="text/javascript">
+      var $j = jQuery.noConflict();
+    </Script>
+    
+
+    <FormDialog ID="Dialog" Icon="Network/32x32/mail.png">
+
+     
+      <Stylesheet Src="FormBuilder.css" DeviceDependant="true"/>
+
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SendMailEditor,Sitecore.Forms.Core"/>
+
+      <ContextMenu ID="FromContextMenu" Width="100%" Height="10px"/>
+      <ContextMenu ID="ToContextMenu" Width="100%" Height="10px"/>
+      <ContextMenu ID="CCContextMenu" Width="100%" Height="10px" />
+      <ContextMenu ID="SubjectContextMenu" Width="100%" Height="10px"/>
+
+      <Border Padding="0" Width="100%" Height="100%">
+
+        <GridPanel class="tableSendEmail" Width="100%" Height="100%"  Style="table-layout:fixed">
+
+          <GridPanel Columns="2" Width="100%" vAlign="top" Padding="0px 0px 0px 0px">
+
+            <a ID="ToLink" onclick="javascript:return Sitecore.Wfm.PopupMenu.show(event,'ToContextMenu');" class="scRibbonToolbarLargeComboButtonBottom" href="#" GridPanel.Align="right">
+              <Literal  ID="ToLabel" class="header" Margin="0px 5px 0px 0px" style="margin : 0px 5px 0px 0px" />
+              <Image border="0" ID="ToMenuImg"
+                   class="scRibbonToolbarLargeComboButtonGlyph"   
+                   src="/sitecore/shell/themes/standard/Images/ribbondropdown.gif" style="margin-right:10px"/>
+            </a>
+            
+            <Edit  ID="To" GridPanel.Width="87%" Style="width:100%" Margin="0px 0px 0px 0px"/>
+
+            <a ID="CCLink" onclick="javascript:return Sitecore.Wfm.PopupMenu.show(event,'CCContextMenu');" class="scRibbonToolbarLargeComboButtonBottom" href="#" GridPanel.Align="right">
+              <Literal ID="CCLabel" class="header" Margin="0px 5px 0px 0px" style="margin : 0px 5px 0px 0px"/>  
+              <Image border="0" ID="CCMenuImg"                           
+                   class="scRibbonToolbarLargeComboButtonGlyph"
+                   src="/sitecore/shell/themes/standard/Images/ribbondropdown.gif" style="margin-right:10px"/>
+            </a>
+            <Edit  ID="CC" GridPanel.Width="87%" Width="100%" Margin="0px 0px 0px 0px"/>
+
+            <Literal ID="BCCLabel"  Margin="0px 5px 0px 0px" GridPanel.Align="right"/>
+            <Edit  ID="BCC" GridPanel.Width="87%" Width="100%" Margin="0px 0px 0px 0px"/>
+
+            <a ID="FromLink" onclick="javascript:return Sitecore.Wfm.PopupMenu.show(event,'FromContextMenu');" class="scRibbonToolbarLargeComboButtonBottom" href="#" GridPanel.Align="right">
+              <Literal  ID="FromLabel" class="header" Margin="0px 5px 0px 0px" style="margin : 0px 5px 0px 0px" />
+              <Image border="0" ID="FromMenuImg"
+                   class="scRibbonToolbarLargeComboButtonGlyph"
+                   src="/sitecore/shell/themes/standard/Images/ribbondropdown.gif" style="margin-right:10px"/>
+            </a>
+
+            <Edit  ID="From" GridPanel.Width="87%" Style="width:100%" Margin="0px 0px 0px 0px"/>
+
+            <a ID="SubjectLink" onclick="javascript:return Sitecore.Wfm.PopupMenu.show(event,'SubjectContextMenu');" class="scRibbonToolbarLargeComboButtonBottom" href="#" GridPanel.Align="right">
+              <Literal ID="SubjectLabel"   class="header" Margin="0px 5px 0px 0px" style="margin : 0px 5px 0px 0px"/>
+              <Image border="0" ID="SubjectMenuImg"
+                   class="scRibbonToolbarLargeComboButtonGlyph"
+                   src="/sitecore/shell/themes/standard/Images/ribbondropdown.gif" style="margin-right:10px"/>
+            </a>  
+
+            <Edit  ID="Subject" GridPanel.Width="87%"  Width="100%" Margin="0px 0px 0px 0px"/>
+
+            <Literal ID="LocalizedLabel" class="header" Margin="5px 0px"/>
+            <Checkbox  ID="Localized" checked="false" Width="100%" Margin="5px 0px"/>
+            
+          </GridPanel>
+
+          <Border Height="100%" GridPanel.Width="100%" GridPanel.Height="100%" GridPanel.VAlign="top">
+            <Border ID="HtmlEditorPane" Visible="false" Height="100%">
+              <GridPanel Width="100%" Height="100%" Style="table-layout:fixed">
+                <Memo ID="HtmlEditor" Style="width:100%;height:100%;border:none;margin:0px" Wrap="soft" GridPanel.Height="100%"/>
+              </GridPanel>
+            </Border>
+
+            <Frame ID="Editor" Width="100%" Height="100%"/>
+
+            <script type="text/javascript" runat="server">
+              $j("#Editor").bind("load", function() {
+              $j(this).contents().find(".InsertSitecoreLinkWFFM").attr("style", "background-image:url(/sitecore/shell/themes/standard/images/editor/linkmanager.gif) !important;background-position: -2px -2px;");})
+            </script>
+
+          </Border>
+
+          <Toolbar style="display:none">
+
+            <Border Class="scModeButtons" NoWrap="true" Width="49%" Style="display:inline">
+              <Toolbutton ID="DesignButton" Icon="Applications/16x16/text_view.png" IconSize="id16x16" Down="true" Click="ShowDesign"/>
+              <Toolbutton ID="HtmlButton" Icon="Software/16x16/text_code.png" IconSize="id16x16" Click="ShowHtml"/>
+              <Space Width="4"/>
+            </Border>
+            
+          </Toolbar>
+        </GridPanel>
+      </Border>
+    </FormDialog>
+
+  </SendMail.Editor>
+</control>

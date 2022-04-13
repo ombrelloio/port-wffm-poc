@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <VISplitter def:inherits="Sitecore.Form.UI.Controls.VSplitter,Sitecore.Forms.Core">
+    <Script type="text/JavaScript" language="javascript" src="/sitecore/shell/controls/SitecoreObjects.js"/>
+    <Script type="text/JavaScript" language="javascript" src="/sitecore/shell/controls/SitecoreVSplitter.js"/>
+
+    <Script type="text/javascript" runat="server">
+      scVSplitter.prototype._mouseUp = scVSplitter.prototype.mouseUp;
+      scVSplitter.prototype.mouseUp = function (tag, evt, id, target) {
+        this._mouseUp(tag, evt, id, target);
+        $j(tag).trigger('change');
+      }
+    </Script>
+    
+      <Image def:ID="Image" Class="v-splitter" Src="/sitecore/images/blank.gif" Cursor="move" Height="100%" Style="background:transparent url('/sitecore/shell/themes/standard/Images/seperator.png') no-repeat center center"/>
+    
+  </VISplitter>
+</control>
+

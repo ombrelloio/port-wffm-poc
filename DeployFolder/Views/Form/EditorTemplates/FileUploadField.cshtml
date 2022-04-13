@@ -1,0 +1,7 @@
+﻿@using Sitecore.Forms.Mvc.Html
+@model Sitecore.Forms.Mvc.ViewModels.Fields.FileUploadField
+
+@using (Html.BeginField())
+{   
+    @Html.TextBoxFor(m => m.Value, new { type = "file"}  )
+}

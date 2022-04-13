@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+   <Forms.MappingFields>
+
+      <Stylesheet Key="MappingWizard">
+
+        .scfContent {
+        padding-top : 15px;
+        }
+
+        .scfFieldScope{
+        width:100%;
+        margin:7px;
+        }
+
+
+        .scfFieldLabel
+        {
+        width:33%;
+		float: left;
+        }
+
+        .scfFieldSelect
+        {
+        width:65%;
+        right:0;
+        margin-right:20px;	
+        }
+
+      </Stylesheet>
+      
+      <FormDialog ID="Dialog" Icon="Software/32x32/step_new.png">
+
+         <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.MappingFields,Sitecore.Forms.Core"/>
+
+         <Border Class="scfContent" Width="100%" ID="Content" Align="left" Style="overflow:none;">
+
+         </Border>
+
+      </FormDialog>
+   </Forms.MappingFields>
+</control>

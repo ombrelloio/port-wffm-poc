@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.EmptyFormMessage>
+    
+    <Border ID="$ID" Class="noticeMessage">
+      <Inline>
+        <ThemedImage Src="Applications/24x24/information.png" Width="24" Height="24" Align="absmiddle" Margin="-3px 10px 0px 0px"/>
+        <Literal Text='$Title' Class='scFbMainMessage'/>
+      </Inline>
+      <br/>
+      <br/>
+      <Literal Class='scFbChildMessage' Text='$Desc'/>
+    </Border>
+
+  </Forms.EmptyFormMessage>
+</control>

@@ -1,0 +1,28 @@
+﻿<public:htc>
+
+<PUBLIC:ATTACH EVENT="oncontentready" HANDLER="SitecoreWfmAutocompleteHandlerInit" />
+
+<SCRIPT>
+
+    function SitecoreWfmAutocompleteHandlerInit() {
+        var input = element;
+
+        $scw(document).ready(function () {
+            input = $scw(input);
+
+            input.attr("AutoComplete", "off");
+            input.attr('name', input.attr('name') + "AutoComplete");
+
+            var forms = input.parents('form:first');
+            if (forms.length > 0) {
+
+                forms.submit(function () {
+                    input.attr('name', input.attr('name').replace('AutoComplete', ''));
+                });
+            }
+        });
+    }
+
+</SCRIPT>
+
+</public:htc>

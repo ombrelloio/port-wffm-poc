@@ -1,0 +1,10 @@
+﻿.form-inline.form-control {
+  margin: 3px;
+}
+
+.required-field .control-label:before,
+.required-field .checkbox:after {
+  color: #d00;
+  content: "*";
+  font-weight: bolder;
+}

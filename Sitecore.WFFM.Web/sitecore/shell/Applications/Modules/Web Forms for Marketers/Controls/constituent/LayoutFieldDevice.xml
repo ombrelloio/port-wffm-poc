@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <LayoutFieldDeviceStatic>
+    <Border ID="$DeviceID" Class="$DeviceClass" Click="$DeviceClick">
+      <GridPanel Width="100%" Height="100%" Columns="2">
+
+        <Border Align="center" Class="scContentControlLayoutDeviceName" GridPanel.NoWrap="true" GridPanel.VAlign="top">
+          <ThemedImage Src="$DeviceIcon" Height="32" Width="32"/>
+          <br/>
+          <Literal Text="$DeviceName"/>
+        </Border>
+
+        <Border Class="scContentControlLayoutDeviceRenderings" GridPanel.Width="100%" GridPanel.VAlign="top">
+
+          <Border Class="scRollOver" Foreground="#072D6B">
+            <Literal Class="scClickFont" Style="font-weight:bold" Text="$LayoutName"/>
+          </Border>
+
+          <Border Background="#dddddd" Margin="4px 0px 4px 0px">
+            <Space/>
+          </Border>
+          
+        </Border>
+
+      </GridPanel>
+    </Border>
+  </LayoutFieldDeviceStatic>
+</control>

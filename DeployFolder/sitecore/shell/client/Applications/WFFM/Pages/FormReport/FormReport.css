@@ -1,0 +1,81 @@
+﻿body.sc {
+  min-width: 700px;
+  overflow-x: auto;
+}
+/*should be delete after fixing header issue in speak project*/
+header.sc-globalHeader {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+header.sc-globalHeader .sc-global-logo {
+  margin-left: 15px;
+}
+/*----------*/
+.sc .sc-table thead tr th:after
+{
+  background: #d6d6d6 right center;
+  position: absolute;
+  width: 1px;
+  display: block;
+  height: 15px;
+  right: 0;
+  content: "";
+  top: 50%;
+  margin-top: -7px;
+}
+
+div[data-sc-id=SearchBorder] {
+    display: inline-block;
+    width: 450px;
+}
+
+.sc-accordion .sc-table {
+  border: none;
+}
+
+div[data-sc-id=VisitorsAccordion] {
+  margin-top: 20px;
+}
+
+.sc-messageBar {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.sc-advancedExpander-header-title-text {
+  text-transform: uppercase;
+}
+
+.sc .sc-table tbody tr td, 
+.sc .sc-table thead td, 
+.sc .sc-table tbody tr th, 
+.sc .sc-table thead th {
+  text-indent: 0; 
+  white-space: normal; 
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.sc .sc-table tbody tr td.ventilate:after, 
+.sc .sc-table thead td.ventilate:after {
+  top: 50%;
+  margin-top: -7px;
+}
+
+div.sc-border[data-sc-id=DescriptionBorder] {
+  padding-top: 4px;
+}
+
+div.sc-border[data-sc-id=Main] {
+  padding: 0 15px;
+}
+
+div.sc-accordion[data-sc-id=VisitorsAccordion] {
+  margin-bottom: 15px;
+}
+
+div.sc-advancedExpander[data-sc-id=VisitorsAccordion] .sc-advancedExpander-body
+{
+  border: none;
+}

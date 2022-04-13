@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <InlineButton>
+
+    <Inline RollOver="true" Class="scRollover" OnClick="$Click" Padding="0px 0px 0px 20px">
+      <ThemedImage Src="$Icon" Width="16" Height="16" Align="absmiddle" Margin="2px 2px 0px 0px"/>
+      <Literal Text="$Text"/>
+    </Inline>
+
+  </InlineButton>
+</control>

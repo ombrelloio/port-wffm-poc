@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+    <GroupListField>
+        <style type="text/css">
+
+            .scEditorFieldMarkerInputCell .scwfmwrap .scContentControlLayout
+            {
+            padding-left:10px;
+            margin-left:10px;
+
+            padding-right:10px;
+            margin-right:10px;
+            }
+
+            .scEditorFieldMarkerInputCell .scwfmwrap .scContentControlLayout .scContentControlLayoutDeviceRenderings .scContentControlLayout
+            {
+            padding: 0px;
+            margin: 0px;
+            }
+
+        </style>
+
+        <Border class="scwfmwrap">
+            <Border ID="$GroupID" Class="$GroupClass" Border="0">
+
+                <Border Class="scContentControlLayoutDeviceRenderings" Padding="4px 0px 4px 0px" Margin="5px 0px 0px 0px" GridPanel.Width="100%" GridPanel.VAlign="top">
+
+                    <Border Foreground="#072D6B" Class="$GroupClass" Border="0" >
+                        <Border Style="$Visible" style="float:right; padding-right:30px;margin-top:3px">
+                            <a class="scwfmEditLink" href="#" OnClick="$GroupClick" >
+                                <Literal Text="$EditMessage" />
+                            </a>
+                        </Border>
+
+                        <ALink Class="$GroupClass" OnClick="$GroupClick" Style="font-weight:bold" Border="0" Margin="0">
+                            <Literal Text="$GroupName" Class="$GroupClass" Border="0" Margin="0"/>
+                        </ALink>
+
+                    </Border>
+
+                    <Border Background="#dddddd" Margin="4px 5px 4px 0px" Padding="0 0 0 10">
+                        <Space/>
+                    </Border>
+
+                    <def:Placeholder/>
+
+                </Border>
+
+            </Border>
+        </Border>
+    </GroupListField>
+</control>

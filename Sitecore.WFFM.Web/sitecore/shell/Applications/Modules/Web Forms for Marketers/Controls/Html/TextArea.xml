@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition">
+  <TextArea def:inherits="Sitecore.Forms.Shell.UI.Controls.TextArea,Sitecore.Forms.Core"/>
+</control>

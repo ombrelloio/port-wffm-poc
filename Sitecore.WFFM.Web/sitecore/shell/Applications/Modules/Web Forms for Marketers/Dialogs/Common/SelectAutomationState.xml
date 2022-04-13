@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.SelectAutomationState>
+
+
+    <FormDialog ID="Dialog" Icon="Software/32x32/graph_edge_directed.png" >
+
+
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SelectAutomationState,Sitecore.Forms.Core"/>
+
+        <Border ID="Content" Class="scSfContent"  Align="left" Padding="0" Margin="0">
+          <Literal ID="SelectSate"></Literal>
+          <Border Padding="5px 0 0 0">
+            <AutomationStateList ID="StateList" Width="100%" Height="260px">
+            
+          </AutomationStateList>
+          </Border>
+        </Border>
+
+    </FormDialog>
+  </Forms.SelectAutomationState>
+</control>

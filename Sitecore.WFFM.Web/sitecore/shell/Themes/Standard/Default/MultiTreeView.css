@@ -1,0 +1,149 @@
+.scTitleTree
+{
+    font: 8pt tahoma;
+    font-weight: bold;
+    padding: 8px 4px 4px 4px;
+    margin-right: 8px;
+    border-bottom: 1px solid #999999;
+}
+
+.scFbProgressScope
+{
+    width: 100%;
+    text-align: center;
+    vertical-align: bottom;
+    height: 319px;
+    display: block;
+    padding: 30px 0px 30px 0px;
+}
+
+.scFbProgressImg
+{
+    background-color: white;
+}
+
+.scEmptyContentListText
+{
+    color: #999999;
+    font-style: italic;
+    padding: 4px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.disabledFormOut
+{
+    background-color: #d9d9d9;
+    font-size: smaller;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+.disabledFormIn
+{
+    text-align: left;
+    background-color: white;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+
+.scfGroupImage
+{
+    float: left;
+}
+
+.scfGroupName
+{
+}
+
+.scfSetting
+{
+    padding-left: 5px;
+}
+
+.scfGroupSection
+{
+    padding: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    vertical-align: top;
+    margin: 0px;
+}
+
+.scfGroupSection legend
+{
+}
+
+.scfGroupSection p
+{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+.scfImportant
+{
+}
+
+.scfOption, .scfOptionborder
+{
+}
+
+.scWfmConfirmText ul
+{
+    margin-top: 5px;
+}
+
+.scWfmConfirmText li
+{
+    display: block;
+    list-style-type: disc;
+    margin-left: 50px;
+}
+
+.scwfmOptionName
+{
+    text-align: right;
+}
+
+.scfShortDate
+{
+    position: absolute;
+}
+
+.scTreeitem {
+	cursor: default;
+	height: 16px;
+	white-space: nowrap;
+    color: black;
+     padding: 0px 3px 0px 0px;
+}
+
+.scTreeitem_Hover, .scTreeview .scTreeitem.hover {
+  background: #e8f5fd url(/sitecore/shell/themes/standard/Images/Tree/TreeNodeNormalBackground.png) repeat-x;
+  border: 1px solid #d8f0fa;
+  padding: 0px 3px 0px 0px;
+}
+
+.scTreeview .scTreeitemSelected
+{
+  background: #d5effc url(/sitecore/shell/themes/standard/Images/Tree/TreeNodeActiveBackground.png) repeat-x;
+  border: 1px solid #99defd;
+    padding: 0px 3px 0px 0px;
+}
+
+.scTreeview .scTreeitemSelected_Hover
+{
+  background: #d5effc url(/sitecore/shell/themes/standard/Images/Tree/TreeNodeActiveBackground.png) repeat-x;
+  border: 1px solid #99defd;
+    padding: 0px 3px 0px 0px;
+}

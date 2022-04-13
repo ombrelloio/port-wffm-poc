@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xamlControls
+  xmlns:x="http://www.sitecore.net/xaml"
+  xmlns:ajax="http://www.sitecore.net/ajax"
+  xmlns:rest="http://www.sitecore.net/rest"
+  xmlns:r="http://www.sitecore.net/renderings"
+  xmlns:xmlcontrol="http://www.sitecore.net/xmlcontrols"
+  xmlns:p="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+  xmlns:asp="http://www.sitecore.net/microsoft/webcontrols"
+  xmlns:html="http://www.sitecore.net/microsoft/htmlcontrols"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:wfm="http://www.sitecore.net/wfm/webcontrols">
+
+  <Sitecore.Forms.Shell.UI.Dialogs.ListItemsEditor x:inherits="Sitecore.Forms.Shell.UI.Dialogs.ListItemsEditorPage,Sitecore.Forms.Core">
+    <x:register assembly="ComponentArt.Web.UI" namespace="ComponentArt.Web.UI" />
+    <x:register assembly="Sitecore.Forms.Core" namespace="Sitecore.Forms.Shell.UI.Controls"/>
+
+
+
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Controls/Lib/Scriptaculous/builder.js"/>
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Controls/Lib/Scriptaculous/effects.js"/>
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Utils.js"/>
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Sitecore.Forms.PopupMenu.js"/>
+    <Script runat="server" type="text/javascript" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/Sitecore.Forms.ListItemsEditor.js"/>
+
+    <Sitecore.Controls.DialogPage Icon="Control/32x32/listbox.png" runat="server" >      
+      <AjaxScriptManager runat="server"/>
+      <ContinuationManager runat="server" />
+
+      <Stylesheet Src="Grid.css" DeviceDependant="true" runat="server" />
+      <Stylesheet runat="server" Src="Content Manager.css" DeviceDependant="true"/>
+      <Stylesheet runat="server" Src="default.css" DeviceDependant="true"/>
+      <Style runat="server" x:placeholder="Stylesheets">
+        .col-mnu
+        {
+        width:16px;
+        height:18px;
+        background:transparent url("/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/static_cm.png") no-repeat 0 0;
+        margin:0;
+        background-repeat:no-repeat;
+        }
+        .col-mnu-h { width:16px;height:18px;background:transparent url("/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/static_cm.png") no-repeat -21px 0;margin:0;
+        background-repeat:no-repeat;}
+        .col-mnu-d { width:16px;height:18px;background:transparent url("/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/static_cm.png") no-repeat -42px 0;margin:0;
+        background-repeat:no-repeat;}
+        .HiddenHeadingRow { display:none; }
+        .ScrollBar { background-image: url(/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/scroller/scroller_bg.gif)  no-repeat 0 0 }
+        .ScrollGrip { background-image: url(/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/scroller/scroll_gripBg.gif)  no-repeat 0 0}
+
+        .scWfmListItemEdit{
+        color : black;
+        }
+        .scWfmEmpty
+        {
+        color : #686868;
+        }
+
+        .link,
+        #ManualSettings a,
+        #ManualSettings a:active,
+        #ManualSettings a:hover,
+        #ManualSettings a:visited,
+        #ManualSettingsHolder a,
+        #ManualSettingsHolder a:active,
+        #ManualSettingsHolder a:hover,
+        #ManualSettingsHolder a:visited,
+        #PreviewHolder a,
+        #PreviewHolder a:active,
+        #PreviewHolder a:hover,
+        #PreviewHolder a:visited
+        {
+        color:#3A66DD
+        }
+
+        #ManualSettingsGrid a,
+        #ManualSettingsGrid a:active,
+        #ManualSettingsGrid a:hover,
+        #ManualSettingsGrid a:visited,
+        #QueryGridColumnValueHolder a,
+        #QueryGridColumnValueHolder a:active,
+        #QueryGridColumnValueHolder a:hover,
+        #QueryGridColumnValueHolder a:visited
+        {
+        color : black;
+        }
+
+        .link{
+        cursor:hand;
+        }
+
+        .scToolbutton, .scToolbutton_Hover, .scToolbutton_Down, .scToolbutton_Disabled
+        {
+        margin-left:2px;
+        }
+
+        .remove-img
+        {
+        margin-left:5px;
+        }
+
+        .disabled
+        {
+        background-color:#F7F7F2;
+        }
+
+        .scPopup {
+        overflow : auto;
+        overflow-x : hidden;
+        border-top : 1px solid #868686;
+        border-bottom : 1px solid #868686;
+        }
+
+        .scMenu{
+        border-top : 0;
+        border-bottom : 0;
+        }
+
+        #QueryGridColumnHolder,
+        #QueryGridColumnHolder table,
+        .Grid
+        {
+          width: 100% !important;
+        }
+
+        #QueryGridColumnHolder .col-mnu,
+        #QueryGridColumnHolder .col-mnu-d,
+        #QueryGridColumnHolder .col-mnu-h
+        {
+          width: 16px !important;
+        }
+
+      </Style>
+      <script type="text/javascript" runat="server">
+
+      </script>
+
+      <ContextMenu runat="server" ID="FieldsContextMenu" Width="100%" Height="10px"/>
+      <html:HtmlInputHidden ID="ItemValueField" Value="0" runat="server" />
+      <html:HtmlInputHidden ID="ItemTextField" Value="0" runat="server" />
+      <html:HtmlInputHidden ID="BrowserRootID" Value="0" runat="server" />
+      <html:HtmlInputHidden ID="QueryKeyHolder" Value="" runat="server" />
+
+      <html:HtmlInputHidden ID="EmptyTextListItemHolder" Value="0" runat="server" />
+      <html:HtmlInputHidden ID="EmptyValueListItemHolder" Value="" runat="server" />
+
+      <html:HtmlInputHidden ID="ShowOnlyValue" Value="" runat="server" />
+
+      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" style="position:relative">
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td height="100%" vAlign="top">
+            <GridPanel Columns="2" CellPadding="4" Width="100%"  Fixed="True" Style="table-layout:fixed" runat="server" vAlign="top">
+
+              <Literal runat="server" ID="SetItemsByLiteral" GridPanel.Width="20%"/>
+              <asp:DropDownList ID="SetItemsMode" runat="server" GridPanel.Width="80%" Width="100%" Margin="0" onchange="javascript:return scForm.postEvent(this,event,'OnItemsModeChanged',true)">
+                <asp:ListItem runat="server" Value="default">
+                  Manually entering names
+                </asp:ListItem>
+                <asp:ListItem runat="server" Value="root" >
+                  Selecting Sitecore items
+                </asp:ListItem>
+                <asp:ListItem runat="server" Value="xpath">
+                  Using Xpath Query
+                </asp:ListItem>
+                <asp:ListItem runat="server" Value="sitecore" >
+                  Using Sitecore Query
+                </asp:ListItem>
+                <asp:ListItem runat="server" Value="fast" >
+                  Using Fast Query
+                </asp:ListItem>
+              </asp:DropDownList>
+
+
+              <Border ID="SettingsHolder" runat="server" GridPanel.ColSpan="2" Padding="5 0 0 0">
+
+                <Border runat="server" ID="ManualSettings">
+                  <Border runat="server" Width="100%" Style="text-align:right;width:100%;padding-bottom:5px">
+                    <a id="EnterDifferentTextLink" class="link" onclick="javascript:return Sitecore.Wfm.ListEditor.showText();" runat="server">
+                      <Literal runat="server" ID="EnterDifferentTextToDisplayManual" />
+                    </a>
+
+                    <a id="UseOnlyValueTextLink" style="display:none" class="link" onclick="javascript:return Sitecore.Wfm.ListEditor.hideText();" runat="server">
+                      <Literal runat="server" ID="DoNotUseDifferentTextManual" />
+                    </a>
+                  </Border>
+
+                  <Border runat="server" ID="ManualSettingsHolder" style="height: 450px; overflow: auto;">
+
+                    <GridPanel ID="ManualSettingsGrid" runat="server" Columns="4" Width="100%" vAlign="top" style="table-layout:fixed">
+
+                      <a runat="server" ID="ValueLockLink" class="link" GridPanel.Width="45%" onclick="javascript:return Sitecore.Wfm.ListEditor.controlValuesLock()">
+                        <ThemedImage ID="LockValueImage" Src="/Network/16x16/lock.png" runat="server" Width="16" Height="16" style="margin-right:3px"/>
+                        <ThemedImage ID="UnLockValueImage" Src="/Network/16x16/lock_open.png" runat="server" Width="16" Height="16" style="margin-right:3px;display:none"/>
+                        <Literal runat="server" ID="ValueLiteral" style="height:16px;"/>
+                      </a>
+
+
+                      <GridPanel ID="TextCaptionGrid" runat="server" Columns="2" GridPanel.Width="45%" Width="100%">
+                        <Literal runat="server" ID="TextCaptionLiteral" Margin="0 0 0 5" GridPanel.Width="45%"/>
+                        <Literal runat="server" ID="TextLanguageMarker" GridPanel.Width="100%" GridPanel.Style="text-align:right" style="color:#686868"/>
+                      </GridPanel>
+
+                      <Literal runat="server" GridPanel.Width="25px"/>
+                      <Literal runat="server" GridPanel.Width="25px"/>
+
+                      <Edit ID="ListItem_ItemTextEdit" runat="server"  Width="100%"/>
+                      <Edit ID="ListItem_ItemValueEdit" runat="server" Width="100%" margin="0 0 0 5"/>
+
+                    </GridPanel>
+                  </Border>
+                </Border>
+
+                <GridPanel ID="FromRootSettingsGrid" Style="table-layout:fixed; margin-top:5px" runat="server" Columns="3" vAlign="top" Width="100%" GridPanel.ColSpan="2" Height="40px">
+                  <Literal runat="server" ID="SelectRootItemLiteral" GridPanel.Width="20%" GridPanel.vAlign="center" style="padding-top:6;height:20px"/>
+                  <Edit ID="FromRootEdit" ReadOnly="true" runat="server" GridPanel.Width="62%" Width="100%" GridPanel.vAlign="top" Margin="0 0 0 1" Value="/sitecore"/>
+                  <Button runat="server" ID="BrowseButton" Click="OnBrowseRoot" Width="76px" GridPanel.Align="right" GridPanel.vAlign="top">
+                    <Literal runat="server" ID="BrowseRootLiteral"/>
+                  </Button>
+                </GridPanel>
+
+                <GridPanel ID="XPathQuerySettingsGrid" runat="server" Columns="3" vAlign="top" Width="100%" GridPanel.ColSpan="2" Height="40px" Style="margin-top:5px">
+                  <Literal runat="server" ID="XPathQueryLiteral" GridPanel.Width="20%" GridPanel.vAlign="center" style="padding-top:6;height:20px"/>
+                  <Edit ID="XPathQueryEdit" runat="server" GridPanel.Width="62%" Width="100%" GridPanel.vAlign="top" Margin="0 0 0 1"/>
+                  <Button runat="server" ID="PreviewXPathButton" Click="OnPreviewClick" style="width:76px;" GridPanel.Align="right" GridPanel.vAlign="top" Style="margin-left:5px">
+                    <Literal ID="PreviewXpathLiteral" runat="server"/>
+                  </Button>
+                </GridPanel>
+
+                <GridPanel ID="SitecoreQuerySettingsGrid" runat="server" Columns="3" vAlign="top" Width="100%" GridPanel.ColSpan="2" Height="40px" Style="margin-top:5px">
+                  <Literal runat="server" ID="SitecoreQueryLiteral" GridPanel.Width="20%" GridPanel.vAlign="center" style="padding-top:6;height:20px"/>
+                  <Edit ID="SitecoreQueryEdit" runat="server" GridPanel.Width="62%" Width="100%" GridPanel.vAlign="top" Margin="0 0 0 1"/>
+                  <Button runat="server" ID="PreviewSitecoreButton" Click="OnPreviewClick" style="width:76px;" GridPanel.Align="right" GridPanel.vAlign="top" Style="margin-left:5px">
+                    <Literal ID="PreviewSitecoreQueryLiteral" runat="server"/>
+                  </Button>
+                </GridPanel>
+
+                <GridPanel ID="FastQuerySettingsGrid" runat="server" Columns="3" vAlign="top" Width="100%" GridPanel.ColSpan="2" Height="40px" Style="margin-top:5px">
+                  <Literal runat="server" ID="FastQueryLiteral" GridPanel.Width="20%" GridPanel.vAlign="center" style="padding-top:6;height:20px"/>
+                  <Edit ID="FastQueryEdit" runat="server" GridPanel.Width="62%" Width="100%" GridPanel.vAlign="top" Margin="0 0 0 1"/>
+                  <Button runat="server" ID="PreviewFastButton" Click="OnPreviewClick" style="width:76px;" GridPanel.Align="right" GridPanel.vAlign="top" Style="margin-left:5px">
+                    <Literal ID="PreviewFastQueryLiteral" runat="server"/>
+                  </Button>
+                </GridPanel>
+
+                <GridPanel ID="CustomSettingsGrid" runat="server" Columns="3" vAlign="top" Width="100%" GridPanel.ColSpan="2" Height="40px">
+                </GridPanel>
+              </Border>
+
+              <Border ID="PreviewHolder" runat="server" GridPanel.ColSpan="2">
+
+                <GridPanel runat="server" Width="100%" Height="100%" Columns="1" vAlign="top">
+
+                  <Border runat="server">
+                    <GridPanel runat="server" Border="0" Width="479" CellSpacing="0" CellPadding="0" Class="HeadingRow">
+                      <GridPanel ID="QueryGridColumnHolder" runat="server" Columns="2" Width="100%" Height="100%" GridPanel.Height="100%" >
+                        <Border ID="QueryGridColumnValueHolder" runat="server" GridPanel.Class="HeadingCell" GridPanel.Width="50%" style="TEXT-ALIGN: left; TEXT-OVERFLOW: ellipsis; overflow: hidden">
+
+                          <GridPanel runat="server" Border="0" CellSpacing="0" CellPadding="0" Width="100%" Columns="3" Height="100%">
+
+                             <Literal runat="server" ID="GridValueLiteral" GridPanel.Width="45%" GridPanel.Style="TEXT-ALIGN: left; WHITE-SPACE: nowrap" GridPanel.Class="HeadingCellText"></Literal>
+                            
+                            <Border  runat="server"  GridPanel.Align="right" >
+                              <Literal runat="server" ID="ValueFieldCaptionLiteral" style="color:#B5B5B5" Margin="0 5px 0 0" />
+                              <Literal runat="server" ID="ValueFieldLiteral" style="color:#B5B5B5" Margin="0 5px 0 0"/>
+                            </Border>
+
+                            <Literal runat="server" Text="" 
+                                     GridPanel.Style="overflow: hidden; font-size: 1px;"
+                                     GridPanel.onmouseup="this.className='col-mnu'"
+                                     GridPanel.onmousedown="this.className='col-mnu-d'"
+                                     GridPanel.onmouseout="this.className='col-mnu'"
+                                     GridPanel.onmouseover="this.className='col-mnu-h'"
+                                     GridPanel.class="col-mnu"
+                                     GridPanel.Width="16px"
+                                     GridPanel.onclick="javascript:return Sitecore.Wfm.PopupMenu.show(event, 'FieldsContextMenu', 350, 202, $('ctl00_ctl05_ctl00_ctl00_ctl05_ItemValueField'));">
+                            </Literal>
+                          </GridPanel>
+
+                        </Border>
+                        <Border ID="QueryGridColumnTextHolder" runat="server" GridPanel.Class="HeadingCell"  GridPanel.Width="50%" style="TEXT-ALIGN: left;  TEXT-OVERFLOW: ellipsis; overflow: hidden">
+                          <GridPanel runat="server" Border="0" CellSpacing="0" CellPadding="0" Width="100%" Columns="3" Height="100%">
+                            <Literal runat="server" ID="GridTextLiteral" GridPanel.Style="TEXT-ALIGN: left; WHITE-SPACE: nowrap" GridPanel.Class="HeadingCellText"></Literal>
+                            <Border runat="server" GridPanel.Width="70%" GridPanel.Align="right" style="overflow: hidden; height: 14px;">
+                              <Literal runat="server" ID="TextFieldCaptionLiteral" style="color:#B5B5B5" Margin="0 5px 0 0"/>
+                              <Literal runat="server" ID="TextFieldLiteral" style="color:#B5B5B5"  Margin="0 5px 0 0"/>
+                            </Border>
+                            <Literal runat="server"
+                                     GridPanel.Style="overflow: hidden; font-size: 1px;"
+                                     GridPanel.onmouseup="this.className='col-mnu'"
+                                     GridPanel.onmousedown="this.className='col-mnu-d'"
+                                     GridPanel.onmouseout="this.className='col-mnu'"
+                                     GridPanel.onmouseover="this.className='col-mnu-h'"
+                                     GridPanel.class="col-mnu"
+                                     GridPanel.Width="16px"
+                                     GridPanel.onclick="javascript:return Sitecore.Wfm.PopupMenu.show(event, 'FieldsContextMenu', 350, 202, $('ctl00_ctl05_ctl00_ctl00_ctl05_ItemTextField'));"
+                                     GridPanel.Align="right">
+                            </Literal>
+                          </GridPanel>
+
+                        </Border>
+                      </GridPanel>
+
+                    </GridPanel>
+
+                    <Border runat="server" ID="ListItemsHolder" style="width:479;height:291;overflow-y:auto;overflow-x:hidden;background-color:white;">
+                      <Grid id="ListItems"
+
+                        ShowFooter="false"
+                        AllowHorizontalScrolling="false"
+                        AllowMultipleSelect="false"
+                        AllowPaging="false"
+
+                        RunningMode="Callback"
+                        CssClass="Grid"
+                        FillContainer="false"
+                        ShowHeader="false"
+                        ManualPaging="true"
+                                                                      
+                        TreeLineImagesFolderUrl="/sitecore/shell/themes/standard/componentart/grid/lines/"
+                        TreeLineImageWidth="22"
+                        TreeLineImageHeight="19"
+                               
+                        ImagesBaseUrl="/sitecore/shell/themes/standard/componentart/grid/"
+                        IndentCellWidth="22"
+
+                        LoadingPanelEnabled="true"
+                        LoadingPanelClientTemplateId="LoadingFeedbackTemplate"
+                        LoadingPanelPosition="TopLeft"
+                        LoadingPanelFadeDuration="1000"
+                        LoadingPanelFadeMaximumOpacity="60"
+                        LoadingPanelOffsetX="14"
+                        LoadingPanelOffsetY="10"
+
+                        PageSize="2147483647"
+                            
+                        ClientSideOnAfterCallback="Sitecore.Wfm.ListEditor.listItemsOnUpdate"
+
+                        width="463"
+                        height="290"
+                        runat="server">
+
+                        <Levels>
+                          <GridLevel
+                            DataKeyField="ID"
+                            ShowTableHeading="false"
+                            ShowSelectorCells="false"
+                            RowCssClass="Row"
+                            ColumnReorderIndicatorImageUrl="reorder.gif"
+                            DataCellCssClass="DataCell"
+                            HeadingCellCssClass="HeadingCell"
+                            HeadingCellHoverCssClass="HeadingCellHover"
+                            HeadingCellActiveCssClass="HeadingCellActive"
+                            HeadingRowCssClass="HiddenHeadingRow"
+                            HeadingTextCssClass="HeadingCellText"
+                            SelectedRowCssClass="SelectedRow"
+                            GroupHeadingCssClass="GroupHeading"
+                            SortAscendingImageUrl="asc.gif"
+                            SortDescendingImageUrl="desc.gif"
+                            SortImageWidth="13"
+                            SortImageHeight="13"
+                            runat="server">
+                            <Columns runat="server">
+                              <GridColumn DataField="Value" Visible="true" runat="server" Width="232"/>
+                              <GridColumn DataField="Text" Visible="true" runat="server" Width="231"/>
+                            </Columns>
+                          </GridLevel>
+                        </Levels>
+                        <ClientTemplates>
+
+                          <ClientTemplate runat="server" Id="LoadingFeedbackTemplate">
+                            <table height="270" width="450" bgcolor="#e0e0e0">
+                              <tr>
+                                <td valign="center" align="center">
+                                  <table cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                      <td style="font-size:10px;font-family:Verdana;">Loading...&amp;nbsp;</td>
+                                      <td>
+                                        <img src="/sitecore/shell/Themes/Standard/Default/WFM/ComponentArt/images/spinner.gif" width="16" height="16" border="0" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </ClientTemplate>
+                        </ClientTemplates>
+                      </Grid>
+                    </Border>
+                  </Border>
+                </GridPanel>
+              </Border>
+
+            </GridPanel>
+          </td>
+        </tr>
+      </table>
+
+    </Sitecore.Controls.DialogPage>
+  </Sitecore.Forms.Shell.UI.Dialogs.ListItemsEditor>
+
+</xamlControls>

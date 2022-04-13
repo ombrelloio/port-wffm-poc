@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Forms.SelectForm>
+
+    <FormDialog ID="Dialog" Icon="Applications/32x32/form_green.png" >
+
+      <Stylesheet Src="FormBuilder.css" DeviceDependant="true"/>
+      <Stylesheet Src="MultiTreeView.css" DeviceDependant="true"/>
+      <CodeBeside Type="Sitecore.Forms.Shell.UI.Dialogs.SelectForm,Sitecore.Forms.Core"/>
+      
+      <Scrollbox ID="ExistingForms" Width="100%" Height="100%" Padding="10px 0px 10px 10px"/>
+      
+    </FormDialog>
+  </Forms.SelectForm>
+</control>
