@@ -67,7 +67,7 @@ namespace Sitecore.Shell.Applications.WebEdit.Dialogs.DateSelector
     protected override void OnPreRender(EventArgs e)
     {
       // ISSUE: explicit non-virtual call
-      OnPreRender(e);
+      base.OnPreRender(e);
       if (XamlControl.AjaxScriptManager.IsEvent)
         return;
       SelectDateOptions selectDateOptions = SelectDateOptions.Parse();

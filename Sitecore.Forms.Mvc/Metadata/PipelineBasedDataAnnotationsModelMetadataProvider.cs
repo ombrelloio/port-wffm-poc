@@ -38,7 +38,7 @@ namespace Sitecore.Forms.Mvc.Metadata
       object container,
       Type containerType)
     {
-      IEnumerable<ModelMetadata> metadataForProperties = ((AssociatedMetadataProvider) this).GetMetadataForProperties(container, containerType);
+      IEnumerable<ModelMetadata> metadataForProperties = base.GetMetadataForProperties(container, containerType);
       if (!(metadataForProperties is ModelMetadata[] modelMetadataArray1))
         modelMetadataArray1 = metadataForProperties.ToArray<ModelMetadata>();
       ModelMetadata[] modelMetadataArray2 = modelMetadataArray1;
@@ -52,7 +52,7 @@ namespace Sitecore.Forms.Mvc.Metadata
       Type containerType,
       string propertyName)
     {
-      ModelMetadata metadataForProperty = ((AssociatedMetadataProvider) this).GetMetadataForProperty(modelAccessor, containerType, propertyName);
+      ModelMetadata metadataForProperty = base.GetMetadataForProperty(modelAccessor, containerType, propertyName);
       this.RunCreateMetadataPipeline(containerType, metadataForProperty);
       return metadataForProperty;
     }
@@ -61,7 +61,7 @@ namespace Sitecore.Forms.Mvc.Metadata
       Func<object> modelAccessor,
       Type modelType)
     {
-      ModelMetadata metadataForType = ((AssociatedMetadataProvider) this).GetMetadataForType(modelAccessor, modelType);
+      ModelMetadata metadataForType = base.GetMetadataForType(modelAccessor, modelType);
       this.SaveModel(modelAccessor, modelType);
       return metadataForType;
     }

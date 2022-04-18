@@ -664,7 +664,7 @@ namespace Sitecore.Forms.Shell.UI
     public override void HandleMessage(Message message)
     {
       Assert.ArgumentNotNull((object) message, nameof (message));
-      ((BaseForm) this).HandleMessage(message);
+      base.HandleMessage(message);
       string name = message.Name;
       if (name == null)
         return;

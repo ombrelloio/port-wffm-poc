@@ -46,6 +46,6 @@ namespace Sitecore.Applications.WebEdit.Dialogs.DateSelector
 
     public static SelectDateOptions Parse() => new SelectDateOptions(new UrlString(HttpUtility.UrlDecode(Context.Request.QueryString.ToString())));
 
-    public override string ToString() => ((object) this._url).ToString();
+    public override string ToString() => this._url.ToString();
   }
 }
