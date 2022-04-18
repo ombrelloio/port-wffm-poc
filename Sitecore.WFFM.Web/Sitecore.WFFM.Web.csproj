@@ -70,14 +70,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Modules\Wffm\Captcha.config" />
-    <Content Include="App_Config\Modules\Wffm\Sitecore.Forms.CD.config" />
-    <Content Include="App_Config\Modules\Wffm\Sitecore.Forms.config" />
-    <Content Include="App_Config\Modules\Wffm\Sitecore.MvcForms.config" />
-    <Content Include="App_Config\Modules\Wffm\Sitecore.WFFM.Analytics.config" />
-    <Content Include="App_Config\Modules\Wffm\Sitecore.WFFM.Dependencies.config" />
-    <Content Include="App_Config\Modules\Wffm\Sitecore.WFFM.Services.config" />
-    <Content Include="App_Config\Modules\Wffm\Sitecore.WFFM.Speak.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Captcha.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Sitecore.Forms.CD.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Sitecore.Forms.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Sitecore.MvcForms.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Sitecore.WFFM.Analytics.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Sitecore.WFFM.Dependencies.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Sitecore.WFFM.Services.config" />
+    <Content Include="App_Config\Include\Modules\Wffm\Sitecore.WFFM.Speak.config" />
     <Content Include="Data\Sitecore_Wffm.ldf">
       <DependentUpon>Sitecore_Wffm.mdf</DependentUpon>
     </Content>
